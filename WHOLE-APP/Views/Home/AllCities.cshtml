@@ -1,0 +1,34 @@
+﻿@model CityWeather
+
+<DOCTYPE! html>
+    <html>
+        <head>
+            <title>Weather Application</title>
+            <meta charset="utf-8" />
+            <link href="~/StyleSheet.css" rel="stylesheet"/>
+        </head>
+        <body class="page-content">
+            <h1>Weather</h1>
+            <div class="margin-top-200">
+                @foreach(CityWeather city in ViewBag.Cities)
+                {
+                    string? Temps = "";
+
+                    @if (city.TemperatureCelsius <= 7) { Temps = "blue-back"; }
+                    @if (city.TemperatureCelsius > 7 && city.TemperatureCelsius <= 23) { Temps = "green-back"; }
+                    @if (city.TemperatureCelsius > 23) { Temps = "orange-back"; }
+
+                    <div class="box inline-block margin-left @Temps">
+                        <div class="text-left">
+                            <h2>@city.CityName</h2>
+                            <p class="text-dark-grey">@city.DateAndTime</p>
+                            <a href="/weather/@city.CityUniqueCode">Details of City</a>
+                        </div>
+                        <div class="text-right">
+                            <h2>@city.TemperatureCelsius °C</h2>
+                        </div>
+                    </div>
+                }
+            </div>
+        </body>
+    </html>

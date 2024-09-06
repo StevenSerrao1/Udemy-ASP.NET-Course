@@ -1,0 +1,33 @@
+﻿@model CityWeather
+
+<DOCTYPE! html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>City Weather</title>
+        <link href="~/StyleSheet.css" rel="stylesheet"/>
+    </head>
+    <body class="page-content">
+        <h1>CITY</h1>
+        @{
+            CityWeather ciadad = Model;
+            string? divClass = "";
+
+            if (ciadad.TemperatureCelsius <= 7) { divClass = "blue-back"; }
+            if (ciadad.TemperatureCelsius > 7 && ciadad.TemperatureCelsius <= 23) { divClass = "green-back"; }
+            if (ciadad.TemperatureCelsius > 23) { divClass = "orange-back"; }
+        }
+        <div class="container margin-top-200 super-margin">
+            <div class="box inline-block margin-left @divClass">
+                <div class="text-left">
+                    <h2>@ciadad.CityName</h2>
+                    <p class="text-dark-grey">@ciadad.DateAndTime</p>
+                </div>
+                <div class="text-right">
+                    <h2>@ciadad.TemperatureCelsius °C</h2>
+                </div>
+                <a href="/">GO BACK TO HOME PAGE</a>
+            </div>
+        </div>
+    </body>
+</html>

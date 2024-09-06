@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "CCXKF3f1o4Cxt8KvVdU/YOhRbLtuf7JbGcZo6QTtI8c=",
+  "Source": "Weather-App-1",
+  "BasePath": "_content/Weather-App-1",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Weather-App-1\\wwwroot",
+      "Source": "Weather-App-1",
+      "ContentRoot": "C:\\Users\\Steven\\Desktop\\Software Development\\Dev-Projects\\.NET Projects\\ASP.NET\\Practice-Exercises\\Weather-App-1\\WHOLE-APP\\wwwroot\\",
+      "BasePath": "_content/Weather-App-1",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Steven\\Desktop\\Software Development\\Dev-Projects\\.NET Projects\\ASP.NET\\Practice-Exercises\\Weather-App-1\\WHOLE-APP\\wwwroot\\StyleSheet.css",
+      "SourceId": "Weather-App-1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Steven\\Desktop\\Software Development\\Dev-Projects\\.NET Projects\\ASP.NET\\Practice-Exercises\\Weather-App-1\\WHOLE-APP\\wwwroot\\",
+      "BasePath": "_content/Weather-App-1",
+      "RelativePath": "StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\StyleSheet.css"
+    }
+  ]
+}

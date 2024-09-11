@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\wwwroot"
   ],
-  "SelectedNode": "\\Weather-App-1.sln",
+  "SelectedNode": "\\wwwroot\\StyleSheet.css",
   "PreviewInSolutionExplorer": false
 }

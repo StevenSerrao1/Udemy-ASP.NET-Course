@@ -3,28 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\Steven\\Desktop\\Software Development\\Dev-Projects\\.NET Projects\\ASP.NET\\Practice-Exercises\\Weather-App-1\\WHOLE-APP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{05EE1BA6-A4AC-4A19-BD02-999A7D522C68}|Weather-App-1.csproj|c:\\users\\steven\\desktop\\software development\\dev-projects\\.net projects\\asp.net\\practice-exercises\\weather-app-1\\whole-app\\wwwroot\\stylesheet.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{05EE1BA6-A4AC-4A19-BD02-999A7D522C68}|Weather-App-1.csproj|solutionrelative:wwwroot\\stylesheet.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05EE1BA6-A4AC-4A19-BD02-999A7D522C68}|Weather-App-1.csproj|c:\\users\\steven\\desktop\\software development\\dev-projects\\.net projects\\asp.net\\practice-exercises\\weather-app-1\\whole-app\\views\\home\\city.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{05EE1BA6-A4AC-4A19-BD02-999A7D522C68}|Weather-App-1.csproj|solutionrelative:views\\home\\city.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{05EE1BA6-A4AC-4A19-BD02-999A7D522C68}|Weather-App-1.csproj|c:\\users\\steven\\desktop\\software development\\dev-projects\\.net projects\\asp.net\\practice-exercises\\weather-app-1\\whole-app\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{05EE1BA6-A4AC-4A19-BD02-999A7D522C68}|Weather-App-1.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{05EE1BA6-A4AC-4A19-BD02-999A7D522C68}|Weather-App-1.csproj|c:\\users\\steven\\desktop\\software development\\dev-projects\\.net projects\\asp.net\\practice-exercises\\weather-app-1\\whole-app\\views\\shared\\_cityweather.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{05EE1BA6-A4AC-4A19-BD02-999A7D522C68}|Weather-App-1.csproj|solutionrelative:views\\shared\\_cityweather.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{05EE1BA6-A4AC-4A19-BD02-999A7D522C68}|Weather-App-1.csproj|c:\\users\\steven\\desktop\\software development\\dev-projects\\.net projects\\asp.net\\practice-exercises\\weather-app-1\\whole-app\\views\\home\\allcities.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{05EE1BA6-A4AC-4A19-BD02-999A7D522C68}|Weather-App-1.csproj|solutionrelative:views\\home\\allcities.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{05EE1BA6-A4AC-4A19-BD02-999A7D522C68}|Weather-App-1.csproj|c:\\users\\steven\\desktop\\software development\\dev-projects\\.net projects\\asp.net\\practice-exercises\\weather-app-1\\whole-app\\models\\cityweather.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{05EE1BA6-A4AC-4A19-BD02-999A7D522C68}|Weather-App-1.csproj|solutionrelative:models\\cityweather.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{05EE1BA6-A4AC-4A19-BD02-999A7D522C68}|Weather-App-1.csproj|c:\\users\\steven\\desktop\\software development\\dev-projects\\.net projects\\asp.net\\practice-exercises\\weather-app-1\\whole-app\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{05EE1BA6-A4AC-4A19-BD02-999A7D522C68}|Weather-App-1.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{05EE1BA6-A4AC-4A19-BD02-999A7D522C68}|Weather-App-1.csproj|c:\\users\\steven\\desktop\\software development\\dev-projects\\.net projects\\asp.net\\practice-exercises\\weather-app-1\\whole-app\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{05EE1BA6-A4AC-4A19-BD02-999A7D522C68}|Weather-App-1.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05EE1BA6-A4AC-4A19-BD02-999A7D522C68}|Weather-App-1.csproj|c:\\users\\steven\\desktop\\software development\\dev-projects\\.net projects\\asp.net\\practice-exercises\\weather-app-1\\whole-app\\views\\home\\city.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{05EE1BA6-A4AC-4A19-BD02-999A7D522C68}|Weather-App-1.csproj|solutionrelative:views\\home\\city.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05EE1BA6-A4AC-4A19-BD02-999A7D522C68}|Weather-App-1.csproj|c:\\users\\steven\\desktop\\software development\\dev-projects\\.net projects\\asp.net\\practice-exercises\\weather-app-1\\whole-app\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{05EE1BA6-A4AC-4A19-BD02-999A7D522C68}|Weather-App-1.csproj|solutionrelative:views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05EE1BA6-A4AC-4A19-BD02-999A7D522C68}|Weather-App-1.csproj|c:\\users\\steven\\desktop\\software development\\dev-projects\\.net projects\\asp.net\\practice-exercises\\weather-app-1\\whole-app\\models\\cityweather.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05EE1BA6-A4AC-4A19-BD02-999A7D522C68}|Weather-App-1.csproj|solutionrelative:models\\cityweather.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05EE1BA6-A4AC-4A19-BD02-999A7D522C68}|Weather-App-1.csproj|c:\\users\\steven\\desktop\\software development\\dev-projects\\.net projects\\asp.net\\practice-exercises\\weather-app-1\\whole-app\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{05EE1BA6-A4AC-4A19-BD02-999A7D522C68}|Weather-App-1.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{05EE1BA6-A4AC-4A19-BD02-999A7D522C68}|Weather-App-1.csproj|c:\\users\\steven\\desktop\\software development\\dev-projects\\.net projects\\asp.net\\practice-exercises\\weather-app-1\\whole-app\\wwwroot\\stylesheet.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{05EE1BA6-A4AC-4A19-BD02-999A7D522C68}|Weather-App-1.csproj|solutionrelative:wwwroot\\stylesheet.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,11 +46,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Software Development\\Dev-Projects\\.NET Projects\\ASP.NET\\Practice-Exercises\\Weather-App-1\\WHOLE-APP\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Steven\\Desktop\\Software Development\\Dev-Projects\\.NET Projects\\ASP.NET\\Practice-Exercises\\Weather-App-1\\WHOLE-APP\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Views\\_ViewImports.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-11T15:25:03.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "_CityWeather.cshtml",
+              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Software Development\\Dev-Projects\\.NET Projects\\ASP.NET\\Practice-Exercises\\Weather-App-1\\WHOLE-APP\\Views\\Shared\\_CityWeather.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_CityWeather.cshtml",
+              "ToolTip": "C:\\Users\\Steven\\Desktop\\Software Development\\Dev-Projects\\.NET Projects\\ASP.NET\\Practice-Exercises\\Weather-App-1\\WHOLE-APP\\Views\\Shared\\_CityWeather.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_CityWeather.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-11T15:22:57.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Software Development\\Dev-Projects\\.NET Projects\\ASP.NET\\Practice-Exercises\\Weather-App-1\\WHOLE-APP\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\Steven\\Desktop\\Software Development\\Dev-Projects\\.NET Projects\\ASP.NET\\Practice-Exercises\\Weather-App-1\\WHOLE-APP\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Views\\_ViewStart.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-11T15:14:13.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "StyleSheet.css",
               "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Software Development\\Dev-Projects\\.NET Projects\\ASP.NET\\Practice-Exercises\\Weather-App-1\\WHOLE-APP\\wwwroot\\StyleSheet.css",
               "RelativeDocumentMoniker": "wwwroot\\StyleSheet.css",
@@ -51,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Software Development\\Dev-Projects\\.NET Projects\\ASP.NET\\Practice-Exercises\\Weather-App-1\\WHOLE-APP\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -64,33 +115,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "City.cshtml",
               "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Software Development\\Dev-Projects\\.NET Projects\\ASP.NET\\Practice-Exercises\\Weather-App-1\\WHOLE-APP\\Views\\Home\\City.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\City.cshtml",
               "ToolTip": "C:\\Users\\Steven\\Desktop\\Software Development\\Dev-Projects\\.NET Projects\\ASP.NET\\Practice-Exercises\\Weather-App-1\\WHOLE-APP\\Views\\Home\\City.cshtml",
               "RelativeToolTip": "Views\\Home\\City.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAsAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-09-10T05:57:35.411Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "AllCities.cshtml",
               "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Software Development\\Dev-Projects\\.NET Projects\\ASP.NET\\Practice-Exercises\\Weather-App-1\\WHOLE-APP\\Views\\Home\\AllCities.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\AllCities.cshtml",
               "ToolTip": "C:\\Users\\Steven\\Desktop\\Software Development\\Dev-Projects\\.NET Projects\\ASP.NET\\Practice-Exercises\\Weather-App-1\\WHOLE-APP\\Views\\Home\\AllCities.cshtml",
               "RelativeToolTip": "Views\\Home\\AllCities.cshtml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABUAAABLAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-09-10T05:57:22.85Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "CityWeather.cs",
               "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Software Development\\Dev-Projects\\.NET Projects\\ASP.NET\\Practice-Exercises\\Weather-App-1\\WHOLE-APP\\Models\\CityWeather.cs",
               "RelativeDocumentMoniker": "Models\\CityWeather.cs",
@@ -103,13 +154,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Software Development\\Dev-Projects\\.NET Projects\\ASP.NET\\Practice-Exercises\\Weather-App-1\\WHOLE-APP\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\Steven\\Desktop\\Software Development\\Dev-Projects\\.NET Projects\\ASP.NET\\Practice-Exercises\\Weather-App-1\\WHOLE-APP\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA0AAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAowAcAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-10T05:56:48.381Z",
               "EditorCaption": ""

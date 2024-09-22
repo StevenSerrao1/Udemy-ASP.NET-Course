@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\WHOLE-APP
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Steven/Desktop/Software Development/Dev-Projects/.NET Projects/ASP.NET/Practice-Exercises/Weather-App-1/WHOLE-APP/Views/Components/CityWeather/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcG9uZW50c1xDaXR5V2VhdGhlclxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Steven/Desktop/Software Development/Dev-Projects/.NET Projects/ASP.NET/Practice-Exercises/Weather-App-1/WHOLE-APP/Views/Home/AllCities.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBbGxDaXRpZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

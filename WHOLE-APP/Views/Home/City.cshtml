@@ -1,26 +1,11 @@
-﻿@model CityWeather
+﻿<!-- THIS PAGE WILL UTILIZE A VIEWCOMPONENT (CityWeatherViewComponent in CityWeatherVC.cs) -->
 
+@model CityWeather
 
 @{
     ViewBag.Title = "City Weather";
-
-    CityWeather ciadad = Model;
-    string? divClass = "";
-
-    if (ciadad.TemperatureCelsius <= 7) { divClass = "blue-back"; }
-    if (ciadad.TemperatureCelsius > 7 && ciadad.TemperatureCelsius <= 23) { divClass = "green-back"; }
-    if (ciadad.TemperatureCelsius > 23) { divClass = "orange-back"; }
 }
 
 <div class="container margin-top-200 super-margin">
-    <div class="box inline-block margin-left @divClass">
-        <div class="text-left">
-            <h2>@ciadad.CityName</h2>
-            <p class="text-dark-grey">@ciadad.DateAndTime</p>
-        </div>
-        <div class="text-right">
-            <h2>@ciadad.TemperatureCelsius °C</h2>
-        </div>
-        <a href="/">GO BACK TO HOME PAGE</a>
-    </div>
+    @await Component.InvokeAsync("CityWeather", new {city = Model})
 </div>

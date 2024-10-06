@@ -1,0 +1,16 @@
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\Interfaces\bin\Debug\net8.0\Interfaces.deps.json
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\Interfaces\bin\Debug\net8.0\Interfaces.dll
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\Interfaces\bin\Debug\net8.0\Interfaces.pdb
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\Interfaces\bin\Debug\net8.0\SharedModels.dll
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\Interfaces\bin\Debug\net8.0\SharedModels.pdb
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\Interfaces\obj\Debug\net8.0\Interfaces.csproj.AssemblyReference.cache
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\Interfaces\obj\Debug\net8.0\Interfaces.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\Interfaces\obj\Debug\net8.0\Interfaces.AssemblyInfoInputs.cache
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\Interfaces\obj\Debug\net8.0\Interfaces.AssemblyInfo.cs
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\Interfaces\obj\Debug\net8.0\Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\Interfaces\obj\Debug\net8.0\Interfaces.sourcelink.json
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\Interfaces\obj\Debug\net8.0\Interfaces.csproj.Up2Date
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\Interfaces\obj\Debug\net8.0\Interfaces.dll
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\Interfaces\obj\Debug\net8.0\refint\Interfaces.dll
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\Interfaces\obj\Debug\net8.0\Interfaces.pdb
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\Interfaces\obj\Debug\net8.0\ref\Interfaces.dll

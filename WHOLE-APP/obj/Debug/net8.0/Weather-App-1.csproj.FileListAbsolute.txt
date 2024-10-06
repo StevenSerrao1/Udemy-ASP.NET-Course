@@ -35,6 +35,9 @@ C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\
 C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\WHOLE-APP\bin\Debug\net8.0\Weather-App-1.runtimeconfig.json
 C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\WHOLE-APP\bin\Debug\net8.0\Weather-App-1.dll
 C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\WHOLE-APP\bin\Debug\net8.0\Weather-App-1.pdb
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\WHOLE-APP\bin\Debug\net8.0\SharedModels.dll
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\WHOLE-APP\bin\Debug\net8.0\SharedModels.pdb
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\WHOLE-APP\obj\Debug\net8.0\Weather-App-1.csproj.AssemblyReference.cache
 C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\WHOLE-APP\obj\Debug\net8.0\Weather-App-1.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\WHOLE-APP\obj\Debug\net8.0\Weather-App-1.AssemblyInfoInputs.cache
 C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\WHOLE-APP\obj\Debug\net8.0\Weather-App-1.AssemblyInfo.cs
@@ -51,8 +54,13 @@ C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\
 C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\WHOLE-APP\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Weather-App-1.props
 C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\WHOLE-APP\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\WHOLE-APP\obj\Debug\net8.0\scopedcss\bundle\Weather-App-1.styles.css
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\WHOLE-APP\obj\Debug\net8.0\Weather-.7A4CDBDB.Up2Date
 C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\WHOLE-APP\obj\Debug\net8.0\Weather-App-1.dll
 C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\WHOLE-APP\obj\Debug\net8.0\refint\Weather-App-1.dll
 C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\WHOLE-APP\obj\Debug\net8.0\Weather-App-1.pdb
 C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\WHOLE-APP\obj\Debug\net8.0\Weather-App-1.genruntimeconfig.cache
 C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\WHOLE-APP\obj\Debug\net8.0\ref\Weather-App-1.dll
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\WHOLE-APP\bin\Debug\net8.0\Interfaces.dll
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\WHOLE-APP\bin\Debug\net8.0\Services.dll
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\WHOLE-APP\bin\Debug\net8.0\Interfaces.pdb
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\WHOLE-APP\bin\Debug\net8.0\Services.pdb

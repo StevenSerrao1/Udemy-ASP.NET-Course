@@ -2,7 +2,6 @@
 using Weather_App_1.Models;
 
 namespace Weather_App_1.ViewComponents
-
 {
     public class CityWeatherViewComponent : ViewComponent
     {

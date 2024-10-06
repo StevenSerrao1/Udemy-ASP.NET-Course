@@ -1,25 +1,26 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Interfaces;
+using Microsoft.AspNetCore.Mvc;
 using Weather_App_1.Models;
 
 namespace Weather_App_1.Controllers
 {
     public class HomeController : Controller
     {
-        // * Updated cities List and action methods according to DRY principle
-        List<CityWeather> cities = new List<CityWeather>
+        // * Initialize P/RO field for DI
+        private readonly IWeatherService _cities; 
+        
+        public HomeController(IWeatherService cities)
         {
-            new CityWeather { CityUniqueCode = "LDN", CityName = "London", DateAndTime = Convert.ToDateTime("2030-01-01 8:00"), TemperatureCelsius = 11 },
-            new CityWeather { CityUniqueCode = "NYC", CityName = "New York", DateAndTime = Convert.ToDateTime("2030-01-01 3:00"), TemperatureCelsius = 26 },
-            new CityWeather { CityUniqueCode = "PAR", CityName = "Paris", DateAndTime = Convert.ToDateTime("2030-01-01 9:00"), TemperatureCelsius = -1 }
-        };
+            _cities = cities;
+        }
 
         [Route("/")]
         public IActionResult AllCities()
         {
             // Sending viewbag assignment of cities for dynamic assignment of "AllCities.cshtml"
-            ViewBag.Cities = cities;
+            var allCities = _cities.GetWeatherDetails();
 
-            return View();
+            return View(allCities);
         }
 
         [Route("/weather/{cityCode}")]
@@ -32,17 +33,10 @@ namespace Weather_App_1.Controllers
                 return BadRequest("City code is required");
             }
 
-            CityWeather? ciadad = cities.FirstOrDefault(c => c.CityUniqueCode == cityCode);
-
-            // Check if cityCode corresponds to a valid city
-            if (ciadad == null)
-            {
-                // Handle the case when cityCode is invalid
-                return NotFound("City not found");
-            }
+            CityWeather? stad = _cities.GetWeatherByCityCode(cityCode);
 
             // Sending MODEL so that "City.cshtml" view contains strongly typed version
-            return View(ciadad);
+            return View(stad);
         }
     }
 }

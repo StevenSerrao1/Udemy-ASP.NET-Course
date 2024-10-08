@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "F73OJz49xWmYMEgQqNdl3RCt6JS+HDy+14H1+nkqxzI=",
+  "Source": "Social_Media_Links_App_Assignment",
+  "BasePath": "_content/Social_Media_Links_App_Assignment",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Social_Media_Links_App_Assignment\\wwwroot",
+      "Source": "Social_Media_Links_App_Assignment",
+      "ContentRoot": "C:\\Users\\Steven\\Desktop\\Software Development\\Dev-Projects\\.NET Projects\\ASP.NET\\Practice-Exercises\\Social_Media_Links_App_Assignment\\wwwroot\\",
+      "BasePath": "_content/Social_Media_Links_App_Assignment",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Steven\\Desktop\\Software Development\\Dev-Projects\\.NET Projects\\ASP.NET\\Practice-Exercises\\Social_Media_Links_App_Assignment\\wwwroot\\StyleSheet.css",
+      "SourceId": "Social_Media_Links_App_Assignment",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Steven\\Desktop\\Software Development\\Dev-Projects\\.NET Projects\\ASP.NET\\Practice-Exercises\\Social_Media_Links_App_Assignment\\wwwroot\\",
+      "BasePath": "_content/Social_Media_Links_App_Assignment",
+      "RelativePath": "StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\StyleSheet.css"
+    }
+  ]
+}

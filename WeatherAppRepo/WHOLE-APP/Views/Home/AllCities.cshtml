@@ -1,0 +1,13 @@
+﻿<!-- THIS PAGE WILL UTILIZE A PARTIAL VIEW (_CityWeather.cshtml) -->
+@model List<CityWeather>
+@{
+    ViewBag.Title = "Weather Application";
+
+}
+            
+<div class="margin-top-200">
+    @foreach(CityWeather city in Model)
+    {
+        <partial name="_CityWeather" model="city"></partial>
+    }
+</div>

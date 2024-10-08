@@ -1,0 +1,21 @@
+﻿@model CityWeather
+
+<div class="box inline-block margin-left @(GetTemperatureClass(Model.TemperatureCelsius))">
+    <div class="text-left">
+        <h2>@Model.CityName</h2>
+        <p class="text-dark-grey">@Model.DateAndTime</p>
+        <a href="/weather/@Model.CityUniqueCode">Details of City</a>
+    </div>
+    <div class="text-right">
+        <h2>@Model.TemperatureCelsius °C</h2>
+    </div>
+</div>
+
+@functions {
+    string GetTemperatureClass(int temp)
+    {
+        if (temp <= 7) return "blue-back";
+        else if (temp <= 23) return "green-back";
+        else return "orange-back";
+    }
+}

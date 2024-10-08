@@ -1,0 +1,12 @@
+﻿@model CityWeatherViewModel
+
+<div class="box inline-block margin-left @Model.TemperatureClass">
+    <div class="text-left">
+        <h2>@Model.CityWeather.CityName</h2>
+        <p class="text-dark-grey">@Model.CityWeather.DateAndTime</p>
+    </div>
+    <div class="text-right">
+        <h2>@Model.CityWeather.TemperatureCelsius °C</h2>
+    </div>
+    <a href="/">GO BACK TO HOME PAGE</a>
+</div>

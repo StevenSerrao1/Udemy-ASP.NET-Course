@@ -1,0 +1,27 @@
+﻿@*Added layout views to serve as a template for "City" and "AllCities" views*@
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" charset="utf-8"/>
+        <title>@ViewBag.Title</title>
+        <link href="~/StyleSheet.css" rel="stylesheet" />
+    </head>
+    <body class="page-content">
+        @*Dynamic header selection styling below*@
+        <div class="header">
+            @if (ViewBag.Title == "Weather Application")
+            {
+                <h1>Weather</h1>
+            }
+            @if (ViewBag.Title == "City Weather")
+            {
+                <h1>City</h1>
+            }
+        </div>
+        <div>
+            @RenderBody()
+        </div>
+    </body>
+</html>

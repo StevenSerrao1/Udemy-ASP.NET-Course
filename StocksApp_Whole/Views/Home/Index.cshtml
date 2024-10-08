@@ -1,0 +1,18 @@
+﻿@using StocksApp_Whole.Models;
+
+@model StockModel
+
+@{
+    ViewBag.Title = "HOME";
+}
+
+<div class="box trading-panel">
+    <div class="flex trading-panel-flex">
+        <div id="stock-price-panel">
+            <div class="stock">
+                <h1 class="stock-title">@Model.StockName (@Model.StockSymbol)</h1>
+                <h2>$ @Model.Price</h2>
+            </div>
+        </div>
+    </div>
+</div>

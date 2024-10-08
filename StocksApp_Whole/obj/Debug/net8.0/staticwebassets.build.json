@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "mJ3Ei/Psq7u11ssh7KhcmGra39smkZORacN1THhIaGk=",
+  "Source": "StocksApp_Whole",
+  "BasePath": "_content/StocksApp_Whole",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "StocksApp_Whole\\wwwroot",
+      "Source": "StocksApp_Whole",
+      "ContentRoot": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\wwwroot\\",
+      "BasePath": "_content/StocksApp_Whole",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\wwwroot\\StyleSheet.css",
+      "SourceId": "StocksApp_Whole",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\wwwroot\\",
+      "BasePath": "_content/StocksApp_Whole",
+      "RelativePath": "StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\StyleSheet.css"
+    }
+  ]
+}

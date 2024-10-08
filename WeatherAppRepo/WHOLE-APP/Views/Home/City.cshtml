@@ -1,0 +1,11 @@
+﻿<!-- THIS PAGE WILL UTILIZE A VIEWCOMPONENT (CityWeatherViewComponent in CityWeatherVC.cs) -->
+
+@model CityWeather
+
+@{
+    ViewBag.Title = "City Weather";
+}
+
+<div class="container margin-top-200 super-margin">
+    @await Component.InvokeAsync("CityWeather", new {city = Model})
+</div>

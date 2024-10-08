@@ -1,0 +1,12 @@
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\SharedModels\bin\Debug\net8.0\SharedModels.deps.json
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\SharedModels\bin\Debug\net8.0\SharedModels.dll
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\SharedModels\bin\Debug\net8.0\SharedModels.pdb
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\SharedModels\obj\Debug\net8.0\SharedModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\SharedModels\obj\Debug\net8.0\SharedModels.AssemblyInfoInputs.cache
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\SharedModels\obj\Debug\net8.0\SharedModels.AssemblyInfo.cs
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\SharedModels\obj\Debug\net8.0\SharedModels.csproj.CoreCompileInputs.cache
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\SharedModels\obj\Debug\net8.0\SharedModels.sourcelink.json
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\SharedModels\obj\Debug\net8.0\SharedModels.dll
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\SharedModels\obj\Debug\net8.0\refint\SharedModels.dll
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\SharedModels\obj\Debug\net8.0\SharedModels.pdb
+C:\Users\Steven\Desktop\Software Development\Dev-Projects\.NET Projects\ASP.NET\Practice-Exercises\Weather-App-1\SharedModels\obj\Debug\net8.0\ref\SharedModels.dll

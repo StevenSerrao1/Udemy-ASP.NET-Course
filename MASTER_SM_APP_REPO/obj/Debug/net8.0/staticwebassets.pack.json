@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Steven\\Desktop\\Software Development\\Dev-Projects\\.NET Projects\\ASP.NET\\Practice-Exercises\\Social_Media_Links_App_Assignment\\wwwroot\\StyleSheet.css",
+      "PackagePath": "staticwebassets\\StyleSheet.css"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Social_Media_Links_App_Assignment.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Social_Media_Links_App_Assignment.props",
+      "PackagePath": "build\\Social_Media_Links_App_Assignment.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Social_Media_Links_App_Assignment.props",
+      "PackagePath": "buildMultiTargeting\\Social_Media_Links_App_Assignment.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Social_Media_Links_App_Assignment.props",
+      "PackagePath": "buildTransitive\\Social_Media_Links_App_Assignment.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

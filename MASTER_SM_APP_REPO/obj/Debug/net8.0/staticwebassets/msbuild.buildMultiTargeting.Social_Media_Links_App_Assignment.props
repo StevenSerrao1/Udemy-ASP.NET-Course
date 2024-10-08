@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Social_Media_Links_App_Assignment.props" />
+</Project>

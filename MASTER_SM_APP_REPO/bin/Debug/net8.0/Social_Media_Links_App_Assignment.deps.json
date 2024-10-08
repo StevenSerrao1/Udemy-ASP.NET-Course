@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Social_Media_Links_App_Assignment/1.0.0": {
+        "runtime": {
+          "Social_Media_Links_App_Assignment.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Social_Media_Links_App_Assignment/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

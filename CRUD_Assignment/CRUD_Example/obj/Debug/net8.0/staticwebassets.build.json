@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "6qt+ddX7dl+ShGm7LZgZ4J5NCN7eWhE20KGuENLrQ3A=",
+  "Source": "CRUD_Example",
+  "BasePath": "_content/CRUD_Example",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "CRUD_Example\\wwwroot",
+      "Source": "CRUD_Example",
+      "ContentRoot": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\CRUD_Example\\wwwroot\\",
+      "BasePath": "_content/CRUD_Example",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\CRUD_Example\\wwwroot\\StyleSheet.css",
+      "SourceId": "CRUD_Example",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\CRUD_Example\\wwwroot\\",
+      "BasePath": "_content/CRUD_Example",
+      "RelativePath": "StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\StyleSheet.css"
+    }
+  ]
+}

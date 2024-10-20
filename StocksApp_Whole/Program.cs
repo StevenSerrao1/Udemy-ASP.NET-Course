@@ -1,8 +1,11 @@
+using StocksApp_Whole.ServiceContracts;
 using StocksApp_Whole.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IStocksService, StocksService>();
 
 builder.Services.AddHttpClient();
 

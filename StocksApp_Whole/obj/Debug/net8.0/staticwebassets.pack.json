@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\wwwroot\\Scripts\\JavaScript.js",
+      "PackagePath": "staticwebassets\\Scripts\\JavaScript.js"
+    },
+    {
       "Id": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\wwwroot\\StyleSheet.css",
       "PackagePath": "staticwebassets\\StyleSheet.css"
     },

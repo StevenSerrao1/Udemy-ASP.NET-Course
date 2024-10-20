@@ -5,6 +5,7 @@ using System.Globalization;
 using StocksApp_Whole.Models;
 using Microsoft.Extensions.Options;
 using StocksApp_Whole.Options;
+using StocksApp_Whole.ViewModels;
 
 namespace StocksApp_Whole.Controllers
 {
@@ -13,13 +14,14 @@ namespace StocksApp_Whole.Controllers
         private readonly IConfiguration _configuration;
         private readonly FinnhubService _finnhubService;
         private readonly IOptions<QuoteOptions> _options;
+        private readonly IStocksService _stocksService;
 
-        public HomeController(IConfiguration config, FinnhubService finnhub, IOptions<QuoteOptions> options)
+        public HomeController(IConfiguration config, IStocksService stocksService, FinnhubService finnhub, IOptions<QuoteOptions> options)
         {
             _configuration = config;
             _finnhubService = finnhub;
             _options = options;
-            
+            _stocksService = stocksService;
         }
 
         [Route("/trade/{stockSymbol}")]
@@ -39,21 +41,22 @@ namespace StocksApp_Whole.Controllers
             QuoteModel stock = new QuoteModel()
             {
                 StockSymbol = stockSymbol,
-                CurrentPrice = Convert.ToDouble(stockPrice["c"].ToString(), CultureInfo.InvariantCulture),
-                HighestPrice = Convert.ToDouble(stockPrice["h"].ToString(), CultureInfo.InvariantCulture),
-                LowestPrice = Convert.ToDouble(stockPrice["l"].ToString(), CultureInfo.InvariantCulture),
-                OpenPrice = Convert.ToDouble(stockPrice["o"].ToString(), CultureInfo.InvariantCulture),
+                CurrentPrice = stockPrice != null ? Convert.ToDouble(stockPrice["c"].ToString(), CultureInfo.InvariantCulture) : null,
+                HighestPrice = stockPrice != null ? Convert.ToDouble(stockPrice["h"].ToString(), CultureInfo.InvariantCulture) : null,
+                LowestPrice = stockPrice != null ? Convert.ToDouble(stockPrice["l"].ToString(), CultureInfo.InvariantCulture) : null,
+                OpenPrice = stockPrice != null ? Convert.ToDouble(stockPrice["o"].ToString(), CultureInfo.InvariantCulture) : null
             };
 
             stockInfo = await _finnhubService.GetCompanyProfile(stockSymbol);
 
-            StockModel fullStock = new StockModel()
+            StockViewModel fullStock = new StockViewModel()
             {
                 StockSymbol = stockSymbol,
-                Price = Convert.ToDouble(stockPrice["c"].ToString(), CultureInfo.InvariantCulture),
-                StockName = stockInfo["name"].ToString()
+                Price = stockPrice != null ? Convert.ToDouble(stockPrice["c"].ToString(), CultureInfo.InvariantCulture) : 0,
+                StockName = stockInfo != null ? stockInfo["name"].ToString() : null
             };
 
+            ViewBag.FinnhubToken = _configuration["FinnhubToken"];
 
             return View(fullStock);
         }

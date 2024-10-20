@@ -1,6 +1,6 @@
-﻿namespace StocksApp_Whole.Models
+﻿namespace StocksApp_Whole.ViewModels
 {
-    public class StockModel
+    public class StockViewModel
     {
         public string? StockSymbol { get; set; }
 

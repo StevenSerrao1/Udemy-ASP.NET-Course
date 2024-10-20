@@ -2,6 +2,6 @@
 {
     public class QuoteOptions
     {
-        public string DefaultStockSymbol { get; set; }
+        public string? DefaultStockSymbol { get; set; }
     }
 }

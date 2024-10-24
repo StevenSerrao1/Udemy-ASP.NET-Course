@@ -18,10 +18,16 @@ namespace Services
         private readonly List<Person> _personList;
         private readonly ICountriesService _countriesService;
 
-        public PersonService()
+        public PersonService(bool init = true)
         {
             _personList = new List<Person>();
             _countriesService = new CountriesService();
+
+            if(init)
+            {
+                _personList = AddMockPeople();
+            }
+
         }
 
         private PersonResponse ConvertPersonToPersonResponse(Person person)
@@ -130,9 +136,84 @@ namespace Services
 
         }
 
+        public List<Person> AddMockPeople()
+        {
+            List<Person> preAdders = new List<Person>()
+            {
+                new Person()
+                {
+                    PersonName = "Steve",
+                    PersonEmail = "stevesemail@gmail.com",
+                    CountryId = Guid.Parse("EE878C05-7FE6-4F23-8C44-A4CD10D410A2"),
+                    PersonId = Guid.Parse("123B6BED-36D2-495C-96DB-4B4325219A42"),
+                    DOB = new DateTime(2000, 02, 23),
+                    PersonAddress = "30 Rockefeller Ave, Klerskdorp, North-West",
+                    Gender = "Male",
+                    ReceivesNewsletters = true
+                },
+                new Person()
+                {
+                    PersonName = "Spencer",
+                    PersonEmail = "zugzwang@gmail.com",
+                    CountryId = Guid.Parse("02CA2B03-63BD-4891-9A59-E92436CA0F33"),
+                    PersonId = Guid.Parse("E0422365-6F36-4798-AD50-4F3E6258D878"),
+                    DOB = new DateTime(1980, 03, 09),
+                    PersonAddress = "Dolbow, Quantico, Virginia",
+                    Gender = "Male",
+                    ReceivesNewsletters = false
+                },
+                new Person()
+                {
+                    PersonName = "Homer",
+                    PersonEmail = "donuts@gmail.com",
+                    CountryId = Guid.Parse("02CA2B03-63BD-4891-9A59-E92436CA0F33"),
+                    PersonId = Guid.Parse("E0422365-6F36-4798-AD50-4F3E6258D878"),
+                    DOB = new DateTime(1960, 01, 01),
+                    PersonAddress = "91 Evergreen Terrace, Springfield, Massachusetts",
+                    Gender = "Male",
+                    ReceivesNewsletters = true
+                },
+                new Person()
+                {
+                    PersonName = "Fiona",
+                    PersonEmail = "fuckoff@gmail.com",
+                    CountryId = Guid.Parse("02CA2B03-63BD-4891-9A59-E92436CA0F33"),
+                    PersonId = Guid.Parse("8BD19D48-A0E7-4F03-BCB6-054C968D39DB"),
+                    DOB = new DateTime(1991, 04, 04),
+                    PersonAddress = "14 Rathole Ave., Chicago, Illinois",
+                    Gender = "Female",
+                    ReceivesNewsletters = false
+                },
+                new Person()
+                {
+                    PersonName = "Ryk",
+                    PersonEmail = "backstroke@gmail.com",
+                    CountryId = Guid.Parse("EE878C05-7FE6-4F23-8C44-A4CD10D410A2"),
+                    PersonId = Guid.Parse("0953EF08-4F88-4E69-869F-E9A15F68E846"),
+                    DOB = new DateTime(1941, 11, 30),
+                    PersonAddress = "940 Groothuis, Cape Town, Western Cape",
+                    Gender = "Male",
+                    ReceivesNewsletters = true
+                },
+                new Person()
+                {
+                    PersonName = "Max",
+                    PersonEmail = "needforspeed@gmail.com",
+                    CountryId = Guid.Parse("641670A5-FED6-44E9-AB25-E3B18C6DC7C8"),
+                    PersonId = Guid.Parse("62D41E59-C811-4BBF-B1BB-557F9E0D3B6C"),
+                    DOB = new DateTime(1997, 10, 15),
+                    PersonAddress = "Verstappen House, Berlin, Germany",
+                    Gender = "Male",
+                    ReceivesNewsletters = false
+                }
+            };
+
+            return preAdders;
+        }
+
         public List<PersonResponse> GetAllPersons()
         {
-            return _personList.Select(person => person.ToPersonResponse()).ToList();
+            return _personList.Select(person => ConvertPersonToPersonResponse(person)).ToList();
         }
 
         public PersonResponse? GetPersonByPersonId(Guid? personID)
@@ -185,6 +266,11 @@ namespace Services
                     person.PersonAddress.Contains(searchString, StringComparison.OrdinalIgnoreCase) : true
                 )).ToList(); break;
 
+                case nameof(Person.ReceivesNewsletters):
+                    matchingPeople = allPeople.Where(person =>
+                    person.ReceivesNewsletters.ToString().Contains(searchString, StringComparison.OrdinalIgnoreCase)
+                ).ToList(); break;
+
                 case nameof(Person.DOB):
                     matchingPeople = allPeople.Where(person =>
                     (person.DOB != null) ?
@@ -194,7 +280,7 @@ namespace Services
                 case nameof(Person.Gender):
                     matchingPeople = allPeople.Where(person =>
                     (!string.IsNullOrEmpty(person.Gender) ?
-                    person.Gender.Contains(searchString, StringComparison.OrdinalIgnoreCase) : true
+                    person.Gender.Equals(searchString, StringComparison.OrdinalIgnoreCase) : true
                 )).ToList(); break;
 
                 default: matchingPeople = allPeople; break;
@@ -290,7 +376,7 @@ namespace Services
             matchingPerson.PersonAddress = personUpdateRequest.PersonAddress;
             matchingPerson.ReceivesNewsletters = personUpdateRequest.ReceivesNewsletters;
 
-            return matchingPerson.ToPersonResponse();
+            return ConvertPersonToPersonResponse(matchingPerson);
         }
 
         public bool DeletePerson(Guid? PersonId)

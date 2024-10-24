@@ -1,0 +1,113 @@
+﻿@{
+    ViewBag.Title = "Create Page";
+}
+
+<a href="/" class="link-hover">Back to Home Page</a>
+<h2>Create Person</h2>
+
+<div class="w-50">
+    <form action="/persons/create" method="post">
+        @*Person Name*@
+        <div class="form-field flex">
+            <div class="w-25">
+                <label for="PersonName" class="form-label pt">Person Name:</label>
+            </div>
+            <div class="flex-1">
+                <input type="text" id="PersonName" name="PersonName" class="form-input"/>
+            </div>
+        </div>
+
+        @*Person Email*@
+        <div class="form-field flex">
+            <div class="w-25">
+                <label for="PersonEmail" class="form-label pt">Person Email:</label>
+            </div>
+            <div class="flex-1">
+                <input type="email" id="PersonEmail" name="PersonEmail" class="form-input" />
+            </div>
+        </div>
+
+        @*Date Of Birth*@
+        <div class="form-field flex">
+            <div class="w-25">
+                <label for="DOB" class="form-label pt">Date Of Birth:</label>
+            </div>
+            <div class="flex-1">
+                <input type="date" id="DOB" name="DOB" class="form-input" />
+            </div>
+        </div>
+
+        @*Gender*@
+        <div class="form-field flex">
+            <div class="w-25">
+                <label class="form-label">Gender:</label>
+            </div>
+            <div class="flex-1">
+                <input type="radio" id="Male" name="Gender" value="Male" />
+                <label for="Male">Male</label>
+                <input type="radio" id="Female" name="Gender" value="Female" class="ml"/>
+                <label for="Female">Female</label>
+                <input type="radio" id="Other" name="Gender" value="Other" class="ml"/>
+                <label for="Other">Other</label>
+            </div>
+        </div>
+
+        @*Country*@
+        <div class="form-field flex">
+            <div class="w-25">
+                <label for="CountryId" class="form-label">Country:</label>
+            </div>
+            <div class="flex-1">
+                <select name="CountryId" id="CountryId" class="form-input">
+                    <option value="">Please Select</option>
+                    @foreach (CountryResponse country in ViewBag.Countries)
+                    {
+                        <option value="@country.CountryID">@country.CountryName</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        @*Address*@
+        <div class="form-field flex">
+            <div class="w-25">
+                <label for="Address" class="form-label pt">Address:</label>
+            </div>
+            <div class="flex-1">
+                <textarea id="Address" name="PersonAddress" class="form-input"></textarea>
+            </div>
+        </div>
+
+        @*Receives Newsletters*@
+        <div class="form-field flex">
+            <div class="w-25">
+            </div>
+            <div class="flex-1">
+                <input type="checkbox" name="ReceivesNewsletters" id="ReceivesNewsletters" value="true"/>
+            <label for="ReceivesNewsletters" class="form-label">Receives Newsletters?</label>
+            </div>
+        </div>
+
+        @*Submit*@
+        <div class="form-field flex">
+            <div class="w-25">
+            </div>
+            <div class="flex-1">
+                <button class="button button-green-back">Create</button>
+                @*If the modelstate is invalid, print the list of errors below*@
+                @if(ViewBag.Errors != null)
+                {
+                    <div class="text-red ml">
+                        <ul>
+                        @foreach(string error in ViewBag.Errors)
+                        {
+                           <li  class="ml">@error</li>
+                        }
+                        </ul>
+                    </div>
+                }
+            </div>
+        </div>
+
+    </form>
+</div>

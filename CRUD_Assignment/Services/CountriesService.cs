@@ -9,9 +9,16 @@ namespace Services
     {
         private readonly List<Country> _countries;
 
-        public CountriesService()
+        public CountriesService(bool init = true)
         {
             _countries = new List<Country>();
+
+            if (init)
+            {
+                _countries = AddMockCountries();
+
+
+            }
         }
 
         public CountryResponse AddCountry(CountryAddRequest? countryAddRequest)
@@ -45,6 +52,44 @@ namespace Services
             // Return CountryResponse object with generated CountryID (GUID)
             return country.ToCountryResponse();
 
+        }
+
+        public List<CountryResponse> AddMockCountryResponses()
+        {
+            List<CountryResponse> countryResponseList = new List<CountryResponse>();
+            List<CountryAddRequest> countryARList = new List<CountryAddRequest>()
+            {
+                new CountryAddRequest() { CountryName = "Canada" },
+                new CountryAddRequest() { CountryName = "India" },
+                new CountryAddRequest() { CountryName = "U.S.A" },
+            };
+
+            foreach(CountryAddRequest countryAddRequest in countryARList)
+            {
+                countryResponseList.Add(AddCountry(countryAddRequest));
+            }
+
+            return countryResponseList;
+        }
+
+        public List<Country> AddMockCountries()
+        {
+            List<Country> countries = new List<Country>()
+            {
+                new Country { CountryName = "U.S.A", 
+                    CountryId = Guid.Parse("02CA2B03-63BD-4891-9A59-E92436CA0F33") },
+
+                new Country { CountryName = "Germany",
+                    CountryId = Guid.Parse("641670A5-FED6-44E9-AB25-E3B18C6DC7C8") },
+
+                new Country { CountryName = "Australia",
+                    CountryId = Guid.Parse("2B061FD2-F54C-4FF6-A77F-3036827F53D3") },
+
+                new Country { CountryName = "South-Africa",
+                    CountryId = Guid.Parse("EE878C05-7FE6-4F23-8C44-A4CD10D410A2") }
+            };
+
+            return countries;
         }
 
         public List<CountryResponse> GetAllCountries()

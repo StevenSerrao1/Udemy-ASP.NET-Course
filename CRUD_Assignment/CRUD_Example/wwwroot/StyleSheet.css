@@ -97,6 +97,10 @@
             background-color: #83b8cb;
         }
 
+.w-15 {
+    width: 15%;
+}
+
 .w-25 {
     width: 25%;
 }

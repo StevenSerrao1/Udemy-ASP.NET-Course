@@ -67,7 +67,7 @@ namespace ServiceContracts.DTO
                 PersonEmail = PersonEmail,
                 DOB = DOB,
                 CountryId = CountryId,
-                Gender = (GenderEnum)Enum.Parse(typeof(GenderEnum), Gender, true),
+                Gender = (GenderEnum)Enum.Parse(typeof(GenderEnum), Gender!, true),
                 ReceivesNewsletters = ReceivesNewsletters
             };
         }
@@ -75,6 +75,7 @@ namespace ServiceContracts.DTO
 
     public static class PersonExtensions
     {
+
         public static PersonResponse ToPersonResponse(this Person person)
         {
             return new PersonResponse()
@@ -87,7 +88,7 @@ namespace ServiceContracts.DTO
                 CountryId = person.CountryId,
                 Gender = person.Gender,
                 ReceivesNewsletters = person.ReceivesNewsletters,
-                Age = ((person.DOB != null) ? Math.Round((DateTime.Now - person.DOB.Value).TotalDays / 365.25) : null)
+                Age = ((person.DOB != null) ? Math.Floor((DateTime.Now - person.DOB.Value).TotalDays / 365.25) : null)
             };
         }
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\CRUD_Tests\\CRUD_Tests.csproj": {}
+    "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Tests\\CRUD_Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\CRUD_Tests\\CRUD_Tests.csproj": {
+    "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Tests\\CRUD_Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\CRUD_Tests\\CRUD_Tests.csproj",
+        "projectUniqueName": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Tests\\CRUD_Tests.csproj",
         "projectName": "CRUD_Tests",
-        "projectPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\CRUD_Tests\\CRUD_Tests.csproj",
+        "projectPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Tests\\CRUD_Tests.csproj",
         "packagesPath": "C:\\Users\\Steven\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\CRUD_Tests\\obj\\",
+        "outputPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,11 +33,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\ServiceContracts\\ServiceContracts.csproj": {
-                "projectPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\ServiceContracts\\ServiceContracts.csproj"
+              "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\ServiceContracts\\ServiceContracts.csproj": {
+                "projectPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\ServiceContracts\\ServiceContracts.csproj"
               },
-              "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\Services\\Services.csproj": {
-                "projectPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\Services\\Services.csproj"
+              "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Services\\Services.csproj": {
+                "projectPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Services\\Services.csproj"
               }
             }
           }
@@ -94,14 +94,14 @@
         }
       }
     },
-    "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\Entities\\Entities.csproj": {
+    "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\Steven\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\Entities\\obj\\",
+        "outputPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -159,14 +159,14 @@
         }
       }
     },
-    "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\ServiceContracts\\ServiceContracts.csproj": {
+    "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\ServiceContracts\\ServiceContracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\ServiceContracts\\ServiceContracts.csproj",
+        "projectUniqueName": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\ServiceContracts\\ServiceContracts.csproj",
         "projectName": "ServiceContracts",
-        "projectPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\ServiceContracts\\ServiceContracts.csproj",
+        "projectPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\ServiceContracts\\ServiceContracts.csproj",
         "packagesPath": "C:\\Users\\Steven\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\ServiceContracts\\obj\\",
+        "outputPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\ServiceContracts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -188,8 +188,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\Entities\\Entities.csproj"
+              "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Entities\\Entities.csproj"
               }
             }
           }
@@ -228,14 +228,14 @@
         }
       }
     },
-    "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\Services\\Services.csproj": {
+    "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\Services\\Services.csproj",
+        "projectUniqueName": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\Services\\Services.csproj",
+        "projectPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Services\\Services.csproj",
         "packagesPath": "C:\\Users\\Steven\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\Services\\obj\\",
+        "outputPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -257,8 +257,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\ServiceContracts\\ServiceContracts.csproj": {
-                "projectPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\ServiceContracts\\ServiceContracts.csproj"
+              "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\ServiceContracts\\ServiceContracts.csproj": {
+                "projectPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\ServiceContracts\\ServiceContracts.csproj"
               }
             }
           }

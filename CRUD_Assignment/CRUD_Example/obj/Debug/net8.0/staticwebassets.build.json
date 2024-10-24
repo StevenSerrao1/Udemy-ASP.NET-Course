@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "6qt+ddX7dl+ShGm7LZgZ4J5NCN7eWhE20KGuENLrQ3A=",
+  "Hash": "8I+dVHrPixgJIgv4O8S2jp0uRKUD4p6qT5R2R9Bv3ww=",
   "Source": "CRUD_Example",
   "BasePath": "_content/CRUD_Example",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "CRUD_Example\\wwwroot",
       "Source": "CRUD_Example",
-      "ContentRoot": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\CRUD_Example\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\",
       "BasePath": "_content/CRUD_Example",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\CRUD_Example\\wwwroot\\StyleSheet.css",
+      "Identity": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\StyleSheet.css",
       "SourceId": "CRUD_Example",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\CRUD_Assignment\\CRUD_Example\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\",
       "BasePath": "_content/CRUD_Example",
       "RelativePath": "StyleSheet.css",
       "AssetKind": "All",

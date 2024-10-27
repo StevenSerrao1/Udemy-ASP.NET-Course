@@ -6,17 +6,20 @@ using StocksApp_Whole.Models;
 using Microsoft.Extensions.Options;
 using StocksApp_Whole.Options;
 using StocksApp_Whole.ViewModels;
+using StocksApp_Whole.DTO;
+using System.Diagnostics;
 
 namespace StocksApp_Whole.Controllers
 {
-    public class HomeController : Controller
+    [Route("[controller]")]
+    public class TradeController : Controller
     {
         private readonly IConfiguration _configuration;
         private readonly FinnhubService _finnhubService;
         private readonly IOptions<QuoteOptions> _options;
         private readonly IStocksService _stocksService;
 
-        public HomeController(IConfiguration config, IStocksService stocksService, FinnhubService finnhub, IOptions<QuoteOptions> options)
+        public TradeController(IConfiguration config, IStocksService stocksService, FinnhubService finnhub, IOptions<QuoteOptions> options)
         {
             _configuration = config;
             _finnhubService = finnhub;
@@ -24,41 +27,111 @@ namespace StocksApp_Whole.Controllers
             _stocksService = stocksService;
         }
 
-        [Route("/trade/{stockSymbol}")]
-        public async Task<IActionResult> Index(string? stockSymbol)
+        [Route("/")]
+        public async Task<IActionResult> Index()
         {
+            // Load default stock info for non-empty home page
+            StockViewModel fullStock = await _stocksService.GetStockInfo("MSFT");
 
-            Dictionary<string, object>? stockPrice = null;
-            Dictionary<string, object>? stockInfo = null;
-
-            if (stockSymbol == null)
-            {
-                stockSymbol = "MSFT";
-            };
-
-            stockPrice = await _finnhubService.GetStockPriceQuote(stockSymbol);
-
-            QuoteModel stock = new QuoteModel()
-            {
-                StockSymbol = stockSymbol,
-                CurrentPrice = stockPrice != null ? Convert.ToDouble(stockPrice["c"].ToString(), CultureInfo.InvariantCulture) : null,
-                HighestPrice = stockPrice != null ? Convert.ToDouble(stockPrice["h"].ToString(), CultureInfo.InvariantCulture) : null,
-                LowestPrice = stockPrice != null ? Convert.ToDouble(stockPrice["l"].ToString(), CultureInfo.InvariantCulture) : null,
-                OpenPrice = stockPrice != null ? Convert.ToDouble(stockPrice["o"].ToString(), CultureInfo.InvariantCulture) : null
-            };
-
-            stockInfo = await _finnhubService.GetCompanyProfile(stockSymbol);
-
-            StockViewModel fullStock = new StockViewModel()
-            {
-                StockSymbol = stockSymbol,
-                Price = stockPrice != null ? Convert.ToDouble(stockPrice["c"].ToString(), CultureInfo.InvariantCulture) : 0,
-                StockName = stockInfo != null ? stockInfo["name"].ToString() : null
-            };
-
+            // Register current URL in ViewBag
+            ViewBag.CurrentUrl = "~/Trade/Index";
             ViewBag.FinnhubToken = _configuration["FinnhubToken"];
 
+            // Return view with model data
             return View(fullStock);
+        }
+
+        [Route("[action]/{stockSymbol?}")]
+        public async Task<IActionResult> Index(string? stockSymbol)
+        {
+            // Populate fullStock with stockinfo
+            StockViewModel fullStock = await _stocksService.GetStockInfo(stockSymbol);
+
+            // Register current URL in ViewBag
+            ViewBag.CurrentUrl = "~/Trade/Index";
+            ViewBag.FinnhubToken = _configuration["FinnhubToken"];
+
+            // Return view with model data
+            return View(fullStock);
+        }
+
+        [Route("[action]")]
+        [HttpPost]
+        public async Task<IActionResult> BuyOrder(BuyOrderRequest buyOrderRequest)
+        {
+            //update date of order
+            buyOrderRequest.DateAndTimeOfOrder = DateTime.Now;
+            StockViewModel stockTradeSuccess = await _stocksService.GetStockInfo(buyOrderRequest.StockSymbol);
+            buyOrderRequest.Price = stockTradeSuccess.Price;
+            buyOrderRequest.StockName = stockTradeSuccess.StockName;
+
+            //re-validate the model object after updating the date
+            ModelState.Clear();
+            TryValidateModel(buyOrderRequest);
+
+            // Edge cases
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Errors = ModelState.Values
+                    .SelectMany(v => v.Errors)
+                    .Select(e => e.ErrorMessage)
+                    .ToList();
+
+                StockViewModel stockTrade = await _stocksService.GetStockInfo(buyOrderRequest.StockSymbol);
+                return View("Index", stockTrade);
+            }
+
+            //invoke service method
+            BuyOrderResponse buyOrderResponse = await _stocksService.CreateBuyOrder(buyOrderRequest);
+
+            return RedirectToAction(nameof(Orders));
+        }
+
+        [Route("[action]")]
+        [HttpPost]
+        public async Task<IActionResult> SellOrder(SellOrderRequest sellOrderRequest)
+        {
+            //update date of order
+            sellOrderRequest.DateAndTimeOfOrder = DateTime.Now;
+            StockViewModel stockTradeSuccess = await _stocksService.GetStockInfo(sellOrderRequest.StockSymbol);
+            sellOrderRequest.Price = stockTradeSuccess.Price;
+            sellOrderRequest.StockName = stockTradeSuccess.StockName;
+
+            //re-validate the model object after updating the date
+            ModelState.Clear();
+            TryValidateModel(sellOrderRequest);
+
+            // Edge cases
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Errors = ModelState.Values
+                    .SelectMany(v => v.Errors)
+                    .Select(e => e.ErrorMessage)
+                    .ToList();
+
+                StockViewModel stockTrade = await _stocksService.GetStockInfo(sellOrderRequest.StockSymbol);
+                return View("Index", stockTrade);
+            }
+
+            //invoke service method
+            SellOrderResponse sellOrderResponse = await _stocksService.CreateSellOrder(sellOrderRequest);
+
+            return RedirectToAction(nameof(Orders));
+        }
+
+        [Route("[action]")]
+        public async Task<IActionResult> Orders()
+        {
+            //invoke service methods
+            List<BuyOrderResponse> buyOrderResponses = await _stocksService.GetBuyOrders();
+            List<SellOrderResponse> sellOrderResponses = await _stocksService.GetSellOrders();
+
+            //create model object
+            OrdersModel orders = new OrdersModel() { BuyOrders = buyOrderResponses, SellOrders = sellOrderResponses };
+
+            ViewBag.TradingOptions = _options;
+
+            return View(orders);
         }
     }
 }

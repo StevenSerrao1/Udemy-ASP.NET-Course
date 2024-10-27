@@ -5,17 +5,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddScoped<IStocksService, StocksService>();
+builder.Services.AddSingleton<IStocksService, StocksService>();
 
 builder.Services.AddHttpClient();
 
-builder.Services.AddScoped<FinnhubService>();
+builder.Services.AddSingleton<FinnhubService>();
 
 var app = builder.Build();
 
 app.UseStaticFiles();
-
-app.Map("/", () => "Hello, world!");
 
 app.UseRouting();
 

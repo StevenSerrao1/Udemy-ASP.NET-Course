@@ -18,12 +18,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\StocksApp_Whole
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Steven/Desktop/Udemy-Assignments/Stocks-App-With-Config-Repo/StocksApp_Whole/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Steven/Desktop/Udemy-Assignments/Stocks-App-With-Config-Repo/StocksApp_Whole/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Steven/Desktop/Udemy-Assignments/Stocks-App-With-Config-Repo/StocksApp_Whole/Views/Trade/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhZGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Steven/Desktop/Udemy-Assignments/Stocks-App-With-Config-Repo/StocksApp_Whole/Views/Trade/Orders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhZGVcT3JkZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Steven/Desktop/Udemy-Assignments/Stocks-App-With-Config-Repo/StocksApp_Whole/Views/_ViewImports.cshtml]

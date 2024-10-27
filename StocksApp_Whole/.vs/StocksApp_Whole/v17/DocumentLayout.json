@@ -3,64 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\stocksapp_whole\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\stocksapp_whole\\views\\trade\\orders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|solutionrelative:views\\trade\\orders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\stocksapp_whole\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\stocksapp_whole\\services\\finnhubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|solutionrelative:services\\finnhubservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\stocksapp_whole\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\stocksapp_whole\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\stocksapp_whole\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\stocksapp_whole\\views\\trade\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|solutionrelative:views\\trade\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\stocksapp_whole\\services\\stocksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|solutionrelative:services\\stocksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\stocksapp_whole\\unittests\\stocksservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|solutionrelative:unittests\\stocksservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\stocksapp_whole\\dto\\buyorderresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|solutionrelative:dto\\buyorderresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\stocksapp_whole\\dto\\sellorderresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|solutionrelative:dto\\sellorderresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\stocksapp_whole\\dto\\buyorderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|solutionrelative:dto\\buyorderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\stocksapp_whole\\entities\\buyorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|solutionrelative:entities\\buyorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\stocksapp_whole\\servicecontracts\\istocksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|solutionrelative:servicecontracts\\istocksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\stocksapp_whole\\services\\helpers\\validationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|solutionrelative:services\\helpers\\validationhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\stocksapp_whole\\entities\\sellorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|solutionrelative:entities\\sellorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\stocksapp_whole\\dto\\sellorderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|solutionrelative:dto\\sellorderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\stocksapp_whole\\models\\ordersmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25DCA0E1-A9A5-4376-AC21-2FD26CA0DD6E}|StocksApp_Whole.csproj|solutionrelative:models\\ordersmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,90 +38,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "BuyOrderRequest.cs",
-              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\DTO\\BuyOrderRequest.cs",
-              "RelativeDocumentMoniker": "DTO\\BuyOrderRequest.cs",
-              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\DTO\\BuyOrderRequest.cs",
-              "RelativeToolTip": "DTO\\BuyOrderRequest.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAA4wBcAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T11:26:36.305Z",
-              "IsPinned": true,
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAABkAAABxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-27T06:33:08.54Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BuyOrderResponse.cs",
-              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\DTO\\BuyOrderResponse.cs",
-              "RelativeDocumentMoniker": "DTO\\BuyOrderResponse.cs",
-              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\DTO\\BuyOrderResponse.cs",
-              "RelativeToolTip": "DTO\\BuyOrderResponse.cs",
-              "ViewState": "AQIAADIAAAAAAAAAAAAQwEEAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T11:26:33.222Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T11:00:38.488Z",
+              "Title": "Orders.cshtml",
+              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\Views\\Trade\\Orders.cshtml",
+              "RelativeDocumentMoniker": "Views\\Trade\\Orders.cshtml",
+              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\Views\\Trade\\Orders.cshtml",
+              "RelativeToolTip": "Views\\Trade\\Orders.cshtml",
+              "ViewState": "AQIAADoAAAAAAAAAAAAAABsAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-27T05:44:20.162Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FinnhubService.cs",
-              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\Services\\FinnhubService.cs",
-              "RelativeDocumentMoniker": "Services\\FinnhubService.cs",
-              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\Services\\FinnhubService.cs",
-              "RelativeToolTip": "Services\\FinnhubService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 6,
+              "Title": "OrdersModel.cs",
+              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\Models\\OrdersModel.cs",
+              "RelativeDocumentMoniker": "Models\\OrdersModel.cs",
+              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\Models\\OrdersModel.cs",
+              "RelativeToolTip": "Models\\OrdersModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T10:57:59.695Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-20T10:56:48.537Z",
+              "WhenOpened": "2024-10-26T08:14:57.881Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "appsettings.Development.json",
-              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\appsettings.Development.json",
-              "RelativeToolTip": "appsettings.Development.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-20T10:56:45.062Z",
+              "Title": "StocksService.cs",
+              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\Services\\StocksService.cs",
+              "RelativeDocumentMoniker": "Services\\StocksService.cs",
+              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\Services\\StocksService.cs",
+              "RelativeToolTip": "Services\\StocksService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAKQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T14:04:20.627Z",
               "EditorCaption": ""
             },
             {
@@ -164,113 +100,35 @@
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADsAAAAAAAAA",
+              "ViewState": "AQIAADsAAAAAAAAAAAAxwEcAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-20T10:53:50.725Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "BuyOrder.cs",
-              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\Entities\\BuyOrder.cs",
-              "RelativeDocumentMoniker": "Entities\\BuyOrder.cs",
-              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\Entities\\BuyOrder.cs",
-              "RelativeToolTip": "Entities\\BuyOrder.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T10:02:12.631Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "SellOrder.cs",
-              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\Entities\\SellOrder.cs",
-              "RelativeDocumentMoniker": "Entities\\SellOrder.cs",
-              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\Entities\\SellOrder.cs",
-              "RelativeToolTip": "Entities\\SellOrder.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T08:54:23.909Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "ValidationHelper.cs",
-              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\Services\\Helpers\\ValidationHelper.cs",
-              "RelativeDocumentMoniker": "Services\\Helpers\\ValidationHelper.cs",
-              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\Services\\Helpers\\ValidationHelper.cs",
-              "RelativeToolTip": "Services\\Helpers\\ValidationHelper.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T08:40:59.639Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "StocksServiceTest.cs",
-              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\UnitTests\\StocksServiceTest.cs",
-              "RelativeDocumentMoniker": "UnitTests\\StocksServiceTest.cs",
-              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\UnitTests\\StocksServiceTest.cs",
-              "RelativeToolTip": "UnitTests\\StocksServiceTest.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAgwFIBAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T14:06:25.618Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "StocksService.cs",
-              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\Services\\StocksService.cs",
-              "RelativeDocumentMoniker": "Services\\StocksService.cs",
-              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\Services\\StocksService.cs",
-              "RelativeToolTip": "Services\\StocksService.cs",
-              "ViewState": "AQIAAH8AAAAAAAAAAAA0wKoAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T14:04:20.627Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
               "Title": "IStocksService.cs",
               "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\ServiceContracts\\IStocksService.cs",
               "RelativeDocumentMoniker": "ServiceContracts\\IStocksService.cs",
               "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\ServiceContracts\\IStocksService.cs",
               "RelativeToolTip": "ServiceContracts\\IStocksService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAlAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAA1wBQAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-19T11:46:58.966Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "SellOrderRequest.cs",
-              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\DTO\\SellOrderRequest.cs",
-              "RelativeDocumentMoniker": "DTO\\SellOrderRequest.cs",
-              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\DTO\\SellOrderRequest.cs",
-              "RelativeToolTip": "DTO\\SellOrderRequest.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAiwB4AAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T11:26:31.77Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "SellOrderResponse.cs",
-              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\DTO\\SellOrderResponse.cs",
-              "RelativeDocumentMoniker": "DTO\\SellOrderResponse.cs",
-              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\DTO\\SellOrderResponse.cs",
-              "RelativeToolTip": "DTO\\SellOrderResponse.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAIwD0AAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T11:25:23.541Z",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\Views\\Trade\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Trade\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\StocksApp_Whole\\Views\\Trade\\Index.cshtml",
+              "RelativeToolTip": "Views\\Trade\\Index.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-24T09:02:37.558Z",
               "EditorCaption": ""
             }
           ]

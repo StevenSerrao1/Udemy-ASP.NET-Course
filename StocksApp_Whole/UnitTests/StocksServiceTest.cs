@@ -6,6 +6,7 @@ using StocksApp_Whole.Services;
 using Moq;
 using Xunit.Abstractions;
 using Xunit.Sdk;
+using StocksApp_Whole.ViewModels;
 
 namespace StocksApp_Whole.UnitTests
 {
@@ -13,10 +14,19 @@ namespace StocksApp_Whole.UnitTests
     {
         private readonly IStocksService _stocksService;
         private readonly ITestOutputHelper _outputHelper;
+        private readonly Mock<FinnhubService> _finnhubServiceMock;
 
         public StocksServiceTest(ITestOutputHelper testOutputHelper)
         {
-            _stocksService = new StocksService();
+            _finnhubServiceMock = new Mock<FinnhubService>();
+
+            _finnhubServiceMock.Setup(x => x.GetCompanyProfile(It.IsAny<string>()))
+                           .ReturnsAsync(new Dictionary<string, object>
+                           {
+                               { "name", "Apple Inc." } // Simulated company name
+                           });
+
+            _stocksService = new StocksService(_finnhubServiceMock.Object);
             _outputHelper = testOutputHelper;
         }
 
@@ -389,5 +399,39 @@ namespace StocksApp_Whole.UnitTests
             }
         }
         #endregion
+
+        #region GetStockInfo() test cases
+
+        [Fact]
+        public async Task GetStockInfo_NullStockSymbol()
+        {
+            StockViewModel actualStock = new StockViewModel();
+            StockViewModel expectedStock = new StockViewModel();
+
+            actualStock = await _stocksService.GetStockInfo(null);
+            string? actualStockSymbol = actualStock.StockSymbol;
+
+            string? expectedStockSymbol = expectedStock.StockSymbol = "MSFT";
+
+            Assert.Equal(expectedStockSymbol, actualStockSymbol);
+        }
+
+        [Fact]
+        public async Task GetStockInfo_Successful()
+        {
+            StockViewModel stock = new StockViewModel();
+
+            stock = await _stocksService.GetStockInfo("AAPL");
+
+            _outputHelper.WriteLine("Expected Symbol: " + stock.StockSymbol);
+            _outputHelper.WriteLine("Expected Name: " + stock.StockName);
+            Assert.NotNull(stock.StockSymbol);
+            Assert.NotNull(stock.StockName);
+            Assert.Contains(stock.StockSymbol, "AAPL");
+            Assert.Contains(stock.StockName, "Apple Inc.");
+        }
+
+        #endregion
+
     }
 }

@@ -2,6 +2,9 @@
 using StocksApp_Whole.ServiceContracts;
 using StocksApp_Whole.Entities;
 using StocksApp_Whole.Services.Helpers;
+using StocksApp_Whole.ViewModels;
+using System.Globalization;
+using StocksApp_Whole.Services;
 
 namespace StocksApp_Whole.Services
 {
@@ -10,13 +13,14 @@ namespace StocksApp_Whole.Services
 
         private readonly List<BuyOrder> _buyOrders;
         private readonly List<SellOrder> _sellOrders;
+        private readonly FinnhubService _finnhubService;
 
-        public StocksService()
+        public StocksService(FinnhubService finnhub)
         {
             _buyOrders = new List<BuyOrder>();
             _sellOrders = new List<SellOrder>();
+            _finnhubService = finnhub;
         }
-
 
         public BuyOrderRequest CreateMockBuyOrderRequest()
         {
@@ -169,6 +173,24 @@ namespace StocksApp_Whole.Services
         {
             List<SellOrderResponse> AllSellOrders = _sellOrders.Select(sellorder => sellorder.ToSellOrderResponse()).ToList();
             return Task.FromResult(AllSellOrders);
+        }
+
+        public async Task<StockViewModel> GetStockInfo(string? stockSymbol)
+        {
+            if (stockSymbol == null) stockSymbol = "MSFT";
+
+            // Fetch stock price and company profile
+            Dictionary<string, object>? stockPrice = await _finnhubService.GetStockPriceQuote(stockSymbol);
+            Dictionary<string, object>? stockInfo = await _finnhubService.GetCompanyProfile(stockSymbol);
+
+            StockViewModel fullStock = new StockViewModel()
+            {
+                StockSymbol = stockSymbol,
+                Price = stockPrice != null ? Convert.ToDouble(stockPrice["c"].ToString(), CultureInfo.InvariantCulture) : 0,
+                StockName = stockInfo != null ? stockInfo["name"].ToString() : null
+            };
+
+            return fullStock;
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using StocksApp_Whole.DTO;
+using StocksApp_Whole.ViewModels;
 
 namespace StocksApp_Whole.ServiceContracts
 {
@@ -16,5 +17,7 @@ namespace StocksApp_Whole.ServiceContracts
         Task<List<BuyOrderResponse>> GetBuyOrders();
 
         Task<List<SellOrderResponse>> GetSellOrders();
+
+        Task<StockViewModel> GetStockInfo(string? stockSymbol);
     }
 }

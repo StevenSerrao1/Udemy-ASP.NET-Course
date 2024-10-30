@@ -106,8 +106,8 @@ C:\Users\Steven\Desktop\Udemy-Assignments\CRUD_Assignment\CRUD_Tests\bin\Debug\n
 C:\Users\Steven\Desktop\Udemy-Assignments\CRUD_Assignment\CRUD_Tests\bin\Debug\net8.0\Services.pdb
 C:\Users\Steven\Desktop\Udemy-Assignments\CRUD_Assignment\CRUD_Tests\bin\Debug\net8.0\Entities.pdb
 C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\CRUD_Tests\bin\Debug\net8.0\CoverletSourceRootsMapping_CRUD_Tests
-C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\CRUD_Tests\bin\Debug\net8.0\testhost.exe
 C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\CRUD_Tests\bin\Debug\net8.0\testhost.dll
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\CRUD_Tests\bin\Debug\net8.0\testhost.exe
 C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\CRUD_Tests\bin\Debug\net8.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
 C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\CRUD_Tests\bin\Debug\net8.0\xunit.runner.reporters.netcoreapp10.dll
 C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\CRUD_Tests\bin\Debug\net8.0\xunit.runner.utility.netcoreapp10.dll

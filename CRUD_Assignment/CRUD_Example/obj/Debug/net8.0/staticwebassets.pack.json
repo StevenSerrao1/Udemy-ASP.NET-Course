@@ -1,6 +1,22 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\JS\\jquery.min.js",
+      "PackagePath": "staticwebassets\\JS\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\JS\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\JS\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\JS\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\JS\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\JS\\logo_image.jpg",
+      "PackagePath": "staticwebassets\\JS\\logo_image.jpg"
+    },
+    {
       "Id": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\StyleSheet.css",
       "PackagePath": "staticwebassets\\StyleSheet.css"
     },

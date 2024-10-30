@@ -3,7 +3,8 @@
     "",
     "\\Controllers",
     "\\Views",
-    "\\Views\\Persons"
+    "\\Views\\Persons",
+    "\\Views\\Shared"
   ],
   "SelectedNode": "\\CRUD_Example.sln",
   "PreviewInSolutionExplorer": false

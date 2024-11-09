@@ -7,6 +7,8 @@ using ServiceContracts.DTO;
 using Xunit.Abstractions;
 using Xunit.Sdk;
 using Entities;
+using Moq;
+using Microsoft.EntityFrameworkCore;
 
 namespace CRUD_Tests
 {
@@ -19,8 +21,10 @@ namespace CRUD_Tests
 
         public PersonServiceTest(ITestOutputHelper output)
         {
-            _personService = new PersonService();
-            _countriesService = new CountriesService(false);
+            _countriesService = new CountriesService(new PersonsDbContext(new DbContextOptionsBuilder<PersonsDbContext>().Options));
+
+            _personService = new PersonService(new PersonsDbContext(new DbContextOptionsBuilder<PersonsDbContext>().Options), _countriesService);
+
             _outputHelper = output;
         }
 
@@ -100,13 +104,13 @@ namespace CRUD_Tests
         public void GetPersonByPersonId_NullId()
         {
             // Arrange
-            Guid? personBeforeMethod = null;
+            Guid personBeforeMethod = Guid.Empty;
 
             // Act
             PersonResponse? personAfterMethod = _personService.GetPersonByPersonId(personBeforeMethod);
 
             // Assert
-            Assert.Null(personAfterMethod!.PersonId);
+            Assert.Empty(personAfterMethod!.PersonId.ToString());
         }
 
         [Fact]
@@ -136,8 +140,7 @@ namespace CRUD_Tests
 
             PersonResponse personResponse = _personService.AddPerson(personAddRequest);
 
-            Assert.NotNull(personResponse.PersonId);
-
+            Assert.NotEmpty(personResponse.PersonId.ToString());
 
             PersonResponse? personSearchedById = _personService.GetPersonByPersonId(personResponse.PersonId);
 

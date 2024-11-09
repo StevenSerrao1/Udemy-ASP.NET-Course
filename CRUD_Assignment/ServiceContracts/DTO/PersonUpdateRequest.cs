@@ -26,7 +26,7 @@ namespace ServiceContracts.DTO
         public DateTime? DOB { get; set; }
         public string? PersonAddress { get; set; }
         public GenderEnum? Gender { get; set; }
-        public Guid? PersonId { get; set; }
+        public Guid PersonId { get; set; }
         public bool ReceivesNewsletters { get; set; }
 
         public Person ToPerson()

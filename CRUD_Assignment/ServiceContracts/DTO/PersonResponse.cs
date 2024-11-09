@@ -21,7 +21,7 @@ namespace ServiceContracts.DTO
         public string? PersonAddress { get; set; }
         public string? Gender { get; set; }
         public bool ReceivesNewsletters { get; set; }
-        public Guid? PersonId { get; set; }
+        public Guid PersonId { get; set; }
         public double? Age { get; set; }
 
         /// <summary>

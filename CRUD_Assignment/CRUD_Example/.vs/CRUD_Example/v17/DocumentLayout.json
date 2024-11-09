@@ -3,34 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DA74D4F8-C381-4004-A0D8-320559B6A654}|CRUD_Example.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\crud_assignment\\crud_example\\views\\persons\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA74D4F8-C381-4004-A0D8-320559B6A654}|CRUD_Example.csproj|solutionrelative:views\\persons\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C95E1128-CF9A-40F4-823B-EBB777A7BB95}|..\\Entities\\Entities.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\crud_assignment\\entities\\migrations\\20241109082119_getallpersons_spupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Entities\\Migrations\\20241109075935_TINColumn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C95E1128-CF9A-40F4-823B-EBB777A7BB95}|..\\Entities\\Entities.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\crud_assignment\\entities\\personsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C95E1128-CF9A-40F4-823B-EBB777A7BB95}|..\\Entities\\Entities.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\crud_assignment\\entities\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DA74D4F8-C381-4004-A0D8-320559B6A654}|CRUD_Example.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\crud_assignment\\crud_example\\controllers\\personscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA74D4F8-C381-4004-A0D8-320559B6A654}|CRUD_Example.csproj|solutionrelative:controllers\\personscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA74D4F8-C381-4004-A0D8-320559B6A654}|CRUD_Example.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\crud_assignment\\crud_example\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA74D4F8-C381-4004-A0D8-320559B6A654}|CRUD_Example.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA74D4F8-C381-4004-A0D8-320559B6A654}|CRUD_Example.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\crud_assignment\\crud_example\\views\\persons\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA74D4F8-C381-4004-A0D8-320559B6A654}|CRUD_Example.csproj|solutionrelative:views\\persons\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA74D4F8-C381-4004-A0D8-320559B6A654}|CRUD_Example.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\crud_assignment\\crud_example\\views\\persons\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA74D4F8-C381-4004-A0D8-320559B6A654}|CRUD_Example.csproj|solutionrelative:views\\persons\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F9127706-07EA-4919-8B3E-4FB2DED78D5F}|..\\Services\\Services.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\crud_assignment\\services\\personservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA74D4F8-C381-4004-A0D8-320559B6A654}|CRUD_Example.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\crud_assignment\\crud_example\\views\\shared\\_gridcolumn.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA74D4F8-C381-4004-A0D8-320559B6A654}|CRUD_Example.csproj|solutionrelative:views\\shared\\_gridcolumn.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C95E1128-CF9A-40F4-823B-EBB777A7BB95}|..\\Entities\\Entities.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\crud_assignment\\entities\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,45 +29,75 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\Views\\Persons\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Persons\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\Views\\Persons\\Index.cshtml",
-              "RelativeToolTip": "Views\\Persons\\Index.cshtml",
-              "ViewState": "AQIAAFMAAAAAAAAAAAAAAGMAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-29T15:56:24.521Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\Views\\Persons\\Delete.cshtml",
-              "RelativeDocumentMoniker": "Views\\Persons\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\Views\\Persons\\Delete.cshtml",
-              "RelativeToolTip": "Views\\Persons\\Delete.cshtml",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAAAkAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-29T15:53:01.599Z",
+              "Title": "20241109082119_getAllPersons_spUpdate.cs",
+              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Entities\\Migrations\\20241109082119_getAllPersons_spUpdate.cs",
+              "RelativeDocumentMoniker": "..\\Entities\\Migrations\\20241109082119_getAllPersons_spUpdate.cs",
+              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Entities\\Migrations\\20241109082119_getAllPersons_spUpdate.cs",
+              "RelativeToolTip": "..\\Entities\\Migrations\\20241109082119_getAllPersons_spUpdate.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAowAoAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T12:46:29.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20241109075935_TINColumn.cs",
+              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Entities\\Migrations\\20241109075935_TINColumn.cs",
+              "RelativeDocumentMoniker": "..\\Entities\\Migrations\\20241109075935_TINColumn.cs",
+              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Entities\\Migrations\\20241109075935_TINColumn.cs",
+              "RelativeToolTip": "..\\Entities\\Migrations\\20241109075935_TINColumn.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T07:59:36.545Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "_GridColumn.cshtml",
-              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\Views\\Shared\\_GridColumn.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_GridColumn.cshtml",
-              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\Views\\Shared\\_GridColumn.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_GridColumn.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-29T14:40:27.855Z",
+              "DocumentIndex": 3,
+              "Title": "Person.cs",
+              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Entities\\Person.cs",
+              "RelativeDocumentMoniker": "..\\Entities\\Person.cs",
+              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Entities\\Person.cs",
+              "RelativeToolTip": "..\\Entities\\Person.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAA+wB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T07:56:44.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PersonsController.cs",
+              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\Controllers\\PersonsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PersonsController.cs",
+              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\Controllers\\PersonsController.cs",
+              "RelativeToolTip": "Controllers\\PersonsController.cs",
+              "ViewState": "AQIAAHYAAAAAAAAAAAAEwIAAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T07:44:30.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PersonsDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Entities\\PersonsDbContext.cs",
+              "RelativeDocumentMoniker": "..\\Entities\\PersonsDbContext.cs",
+              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Entities\\PersonsDbContext.cs",
+              "RelativeToolTip": "..\\Entities\\PersonsDbContext.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAIA0wDYAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T05:54:35.066Z",
               "EditorCaption": ""
             },
             {
@@ -89,60 +108,9 @@
               "RelativeDocumentMoniker": "..\\Services\\PersonService.cs",
               "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Services\\PersonService.cs",
               "RelativeToolTip": "..\\Services\\PersonService.cs",
-              "ViewState": "AQIAAGEBAAAAAAAAAIAzwGIBAABUAAAA",
+              "ViewState": "AQIAACQBAAAAAAAAAAAnwGkBAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-29T07:55:15.547Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\Views\\Persons\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Views\\Persons\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\Views\\Persons\\Edit.cshtml",
-              "RelativeToolTip": "Views\\Persons\\Edit.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAwAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-29T07:27:14.31Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAAAwAAABvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-28T09:05:34.199Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Person.cs",
-              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Entities\\Person.cs",
-              "RelativeDocumentMoniker": "..\\Entities\\Person.cs",
-              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Entities\\Person.cs",
-              "RelativeToolTip": "..\\Entities\\Person.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T05:52:14.932Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PersonsController.cs",
-              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\Controllers\\PersonsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PersonsController.cs",
-              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\Controllers\\PersonsController.cs",
-              "RelativeToolTip": "Controllers\\PersonsController.cs",
-              "ViewState": "AQIAAK0AAAAAAAAAAAAIwLQAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T14:55:04.263Z",
+              "WhenOpened": "2024-11-06T05:58:58.112Z",
               "EditorCaption": ""
             }
           ]

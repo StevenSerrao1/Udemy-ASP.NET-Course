@@ -15,18 +15,13 @@ namespace Services
 {
     public class PersonService : IPersonService
     {
-        private readonly List<Person> _personList;
+        private readonly PersonsDbContext _personsDb;
         private readonly ICountriesService _countriesService;
 
-        public PersonService(bool init = true)
+        public PersonService(PersonsDbContext dbContext, ICountriesService countriesService)
         {
-            _personList = new List<Person>();
-            _countriesService = new CountriesService();
-
-            if(init)
-            {
-                _personList = AddMockPeople();
-            }
+            _personsDb = dbContext;
+            _countriesService = countriesService;
 
         }
 
@@ -126,7 +121,10 @@ namespace Services
             person.PersonId = Guid.NewGuid();
 
             // Add into List<Person>
-            _personList.Add(person);
+            //_personsDb.Persons.Add(person);
+            _personsDb.sp_AddPerson(person);
+            // Save changes to DbSet - UNNECESSARY WHEN USING STORED PROCEDURES
+            //_personsDb.SaveChanges();
 
             // Convert "person" from Person type to PersonResponse type WITH CountryId
             PersonResponse personResponse = ConvertPersonToPersonResponse(person);
@@ -213,7 +211,15 @@ namespace Services
 
         public List<PersonResponse> GetAllPersons()
         {
-            return _personList.Select(person => ConvertPersonToPersonResponse(person)).ToList();
+            // Doing it WITH a stored db procedure
+            return _personsDb.sp_GetAllPersons().Select(person => ConvertPersonToPersonResponse(person)).ToList();
+
+            // One way to do it without stored procedure
+            // SELECT * from Persons
+            //return _personsDb.Persons.ToList().Select(person => ConvertPersonToPersonResponse(person)).ToList();
+
+            // Below, it is impossible to use a custom method within a LINQ to entity expression
+            //return _personsDb.Persons.Select(person => ConvertPersonToPersonResponse(person)).ToList();
         }
 
         public PersonResponse? GetPersonByPersonId(Guid? personID)
@@ -222,7 +228,7 @@ namespace Services
             if (personID == null) return new PersonResponse() { PersonName = "ID is null"};
 
             // Get Matching person from List<Person> by PersonId
-            Person? person = _personList.FirstOrDefault(persona => persona.PersonId == personID);
+            Person? person = _personsDb.Persons.FirstOrDefault(persona => persona.PersonId == personID);
 
             // Convert matching person from Person to PersonResponse object type
             if (person == null) return new PersonResponse() { PersonName = "PERSON is null" };
@@ -361,20 +367,25 @@ namespace Services
             ValidationHelpers.ValidateObject(personUpdateRequest);
 
             // Get matching Person from List<Person> based on PersonId
-            Person? matchingPerson = _personList.FirstOrDefault(p => p.PersonId == personUpdateRequest.PersonId);
+            Person? matchingPerson = _personsDb.Persons.FirstOrDefault(p => p.PersonId == personUpdateRequest.PersonId);
 
             // Check if matchingPerson is not null
             if (matchingPerson == null) throw new ArgumentException("PersonId does not exist");
 
-            // Update details from PUR to PersonResponse type
-            matchingPerson.PersonName = personUpdateRequest.PersonName;
-            matchingPerson.PersonId = personUpdateRequest.PersonId;
-            matchingPerson.PersonEmail = personUpdateRequest.PersonEmail;
-            matchingPerson.Gender = personUpdateRequest.Gender.ToString();
-            matchingPerson.DOB = personUpdateRequest.DOB;
-            matchingPerson.CountryId = personUpdateRequest.CountryId;
-            matchingPerson.PersonAddress = personUpdateRequest.PersonAddress;
-            matchingPerson.ReceivesNewsletters = personUpdateRequest.ReceivesNewsletters;
+            // Call the stored procedure through the DbContext
+            _personsDb.sp_UpdatePerson(
+                personUpdateRequest.PersonId,
+                personUpdateRequest.DOB,
+                personUpdateRequest.Gender.ToString(),
+                personUpdateRequest.PersonAddress,
+                personUpdateRequest.PersonEmail,
+                personUpdateRequest.PersonName,
+                personUpdateRequest.ReceivesNewsletters,
+                personUpdateRequest.CountryId
+            );
+
+            // Save changes to entity object
+            // _personsDb.SaveChanges(); // UPDATE
 
             return ConvertPersonToPersonResponse(matchingPerson);
         }
@@ -385,16 +396,19 @@ namespace Services
             if (PersonId == null) throw new ArgumentNullException("PersonId is null");
 
             // Get matching Person from List<Person>
-            Person? matchingPerson = _personList.FirstOrDefault(p => p.PersonId == PersonId);
+            Person? matchingPerson = _personsDb.Persons.FirstOrDefault(p => p.PersonId == PersonId);
 
             // Check if Person is null
             if (matchingPerson == null) return false;
 
             // Delete Person object from List
-            _personList.Remove(matchingPerson);
+            _personsDb.sp_DeletePerson(matchingPerson);
+
+            // Save changes to DbSet by saving DELETION of person - UNNECESSARY WHEN USING STORED PROCEDURES
+            //_personsDb.SaveChanges(); // DELETE
 
             // Return boolean value to indicate success of deletion
-            return _personList.Contains(matchingPerson) ? false : true;
+            return _personsDb.Persons.Contains(matchingPerson) ? false : true;
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ServiceContracts.Enums;
 using Entities;
+using System.Xml.Linq;
 
 namespace ServiceContracts.DTO
 {
@@ -88,7 +89,8 @@ namespace ServiceContracts.DTO
                 CountryId = person.CountryId,
                 Gender = person.Gender,
                 ReceivesNewsletters = person.ReceivesNewsletters,
-                Age = ((person.DOB != null) ? Math.Floor((DateTime.Now - person.DOB.Value).TotalDays / 365.25) : null)
+                Age = ((person.DOB != null) ? Math.Floor((DateTime.Now - person.DOB.Value).TotalDays / 365.25) : null),
+                Country = person.Country?.CountryName
             };
         }
 

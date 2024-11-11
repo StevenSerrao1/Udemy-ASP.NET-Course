@@ -21,7 +21,7 @@ namespace Entities
         {
             base.OnModelCreating(modelBuilder);
 
-            // Assign Entity types to tables with string value names
+            // Assign/Map Entity types to tables with string value names
             modelBuilder.Entity<Country>().ToTable("Countries");
             modelBuilder.Entity<Person>().ToTable("Persons");
 
@@ -47,8 +47,36 @@ namespace Entities
             {
                 Console.WriteLine($"PersonName: {person.PersonName}, PersonId: {person.PersonId}, CountryId: {person.CountryId}");
             }
+
+            //
+            // F L U E N T API
+            //
+
+            // Add property configuration for TIN column
+            modelBuilder.Entity<Person>()
+                .Property(prop => prop.TIN)
+                .HasColumnName("TaxIdentificationNumber")
+                .HasColumnType("varchar(8)")
+                .HasDefaultValue("ABC12345");
+
+            // Add unique value constraint to TIN column for each person / p = person
+            // modelBuilder.Entity<Person>()
+            // .HasIndex(p => p.TIN).IsUnique();
+
+            // Associate a check constraint with TIN property
+            modelBuilder.Entity<Person>()
+                .ToTable(t => t.HasCheckConstraint("CHK_TIN", "len([TaxIdentificationNumber]) = 8"));
+
+            // T A B L E RELATIONS
+            //modelBuilder.Entity<Person>(entity => {
+            //    entity.HasOne<Country>(c => c.Country)
+            //    .WithMany(p => p.Persons)
+            //    .HasForeignKey(c => c.CountryId);
+            //});
+                
         }
 
+        #region Stored Procedure Methods
         // Create a method to call the stored procedure - GET ALL PEOPLE FROM DB
         public List<Person> sp_GetAllPersons()
         {
@@ -112,5 +140,6 @@ namespace Entities
                 parameters.ToArray()
             );
         }
+        #endregion
     }
 }

@@ -7,6 +7,8 @@
 <h1>Persons</h1>
 
 <a asp-controller="Persons" asp-action="Create">Create a Person</a>
+<a asp-controller="Persons" asp-action="PersonsPDF" class="ml">Download as PDF</a>
+<a asp-controller="Persons" asp-action="AllPeopleCSV" class="ml">Download all people as CSV</a>
 
 <form asp-controller="Persons" asp-action="Index" method="get">
     <div class="box flex">

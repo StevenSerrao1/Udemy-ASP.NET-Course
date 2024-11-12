@@ -61,5 +61,11 @@ namespace ServiceContracts
         /// <returns>Boolean value determining success in deleting person</returns>
         public Task<bool> DeletePerson(Guid? PersonId);
 
+        /// <summary>
+        /// Returns an object of Person type as a CSV file
+        /// </summary>
+        /// <returns>Task<MemoryStream></returns>
+        public Task<MemoryStream> GetAllPeopleCSV();
+
     }
 }

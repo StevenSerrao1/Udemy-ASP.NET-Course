@@ -1,6 +1,7 @@
 ﻿using Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Rotativa.AspNetCore;
 using ServiceContracts;
 using ServiceContracts.DTO;
 using ServiceContracts.Enums;
@@ -186,6 +187,32 @@ namespace CRUD_Example.Controllers
             await _personsService.DeletePerson(person.PersonId);
 
             return RedirectToAction("Index");
+        }
+
+        [Route("[action]")]
+        public async Task<IActionResult> PersonsPDF()
+        {
+            List<PersonResponse> people = await _personsService.GetAllPersons();
+
+            return new ViewAsPdf("PersonsPDF", people)
+            {
+                PageMargins = new Rotativa.AspNetCore.Options.Margins()
+                {
+                    Top = 20,
+                    Right = 20,
+                    Left = 20,
+                    Bottom = 20
+                },
+                PageOrientation = Rotativa.AspNetCore.Options.Orientation.Landscape
+            };
+        }
+
+        [Route("[action]")]
+        public async Task<IActionResult> AllPeopleCSV()
+        {
+           MemoryStream ms = await _personsService.GetAllPeopleCSV();
+
+           return File(ms, "application/octet-stream", "allpeople.csv");
         }
 
     }

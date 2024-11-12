@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+xsPqcgGW53YG7VcYTOMkhiXwckZf0ETkPBbHRpAzGw=",
+  "Hash": "GLazQLYOhknX+8zqnUcsxhYj6N90usR5hRW7i73xqcs=",
   "Source": "CRUD_Example",
   "BasePath": "_content/CRUD_Example",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\JS\\logo_image.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\Rotativa\\wkhtmltopdf.exe",
+      "SourceId": "CRUD_Example",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\",
+      "BasePath": "_content/CRUD_Example",
+      "RelativePath": "Rotativa/wkhtmltopdf.exe",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Rotativa\\wkhtmltopdf.exe"
     },
     {
       "Identity": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\StyleSheet.css",

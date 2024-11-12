@@ -1,0 +1,36 @@
+﻿@model IEnumerable<PersonResponse>
+
+@{
+    Layout = null;
+}
+<link href="@("http://" + Context.Request.Host.ToString() + "/Styesheet.css")" rel="stylesheet"/>
+<h1>Persons</h1>
+    <table class="table w-100 mt">
+        <thead>
+            <tr>
+                <th>Person Name</th>
+                <th>Person Email</th>
+                <th>Date Of Birth</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Country</th>
+                <th>Address</th>
+                <th>Newsletters?</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (PersonResponse person in Model)
+            {
+                <tr>
+                    <td style="width:14%">@person.PersonName</td>
+                    <td style="width:17%">@person.PersonEmail</td>
+                    <td style="width:11%">@person.DOB?.ToString("dd MMM yyyy")</td>
+                    <td style="width:9%">@person.Age</td>
+                    <td style="width:8%">@person.Gender</td>
+                    <td style="width:11%">@person.Country</td>
+                    <td style="width:14%">@person.PersonAddress</td>
+                    <td style="width:9%">@person.ReceivesNewsletters</td>
+                </tr>
+            }
+        </tbody>
+    </table>

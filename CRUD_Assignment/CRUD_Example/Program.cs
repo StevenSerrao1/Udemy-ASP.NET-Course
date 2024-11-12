@@ -27,6 +27,8 @@ if(builder.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 }
 
+Rotativa.AspNetCore.RotativaConfiguration.Setup("wwwroot", wkhtmltopdfRelativePath: "Rotativa");
+
 // Enable features such as static file use, routing and controller mapping
 app.UseStaticFiles();
 app.UseRouting();

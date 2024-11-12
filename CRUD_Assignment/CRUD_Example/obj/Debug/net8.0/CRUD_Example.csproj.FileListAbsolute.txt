@@ -174,3 +174,6 @@ C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assig
 C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\CRUD_Example\obj\Debug\net8.0\CRUD_Example.pdb
 C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\CRUD_Example\obj\Debug\net8.0\CRUD_Example.genruntimeconfig.cache
 C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\CRUD_Example\obj\Debug\net8.0\ref\CRUD_Example.dll
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\CRUD_Example\bin\Debug\net8.0\Rotativa.AspNetCore.dll
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\CRUD_Example\obj\Debug\net8.0\CRUD_Example.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\CRUD_Example\bin\Debug\net8.0\CsvHelper.dll

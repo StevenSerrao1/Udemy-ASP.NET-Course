@@ -12,6 +12,9 @@ using Services;
 using ServiceContracts.Enums;
 using Microsoft.EntityFrameworkCore;
 using System.Runtime.CompilerServices;
+using CsvHelper;
+using System.Globalization;
+using CsvHelper.Configuration;
 
 namespace Services
 {
@@ -24,7 +27,6 @@ namespace Services
         {
             _personsDb = dbContext;
             _countriesService = countriesService;
-
         }
 
         public async Task<PersonResponse> AddPerson(PersonAddRequest personAddRequest)
@@ -331,6 +333,45 @@ namespace Services
 
             // Return boolean value to indicate success of deletion
             return _personsDb.Persons.Contains(matchingPerson) ? false : true;
+        }
+
+        public async Task<MemoryStream> GetAllPeopleCSV()
+        {
+            MemoryStream memStream = new MemoryStream();
+            StreamWriter sw = new StreamWriter(memStream);
+            List<PersonResponse> persons = await _personsDb.Persons.Include("Country").Select(temp => temp.ToPersonResponse()).ToListAsync();
+
+            CsvConfiguration csvConfig = new CsvConfiguration(CultureInfo.InvariantCulture);
+            CsvWriter cw = new CsvWriter(sw, csvConfig);
+
+            // Person, Email, DOB, Age, Gender, Country, Address, RN
+            cw.WriteField(nameof(PersonResponse.PersonName));
+            cw.WriteField(nameof(PersonResponse.PersonEmail));
+            cw.WriteField(nameof(PersonResponse.DOB));
+            cw.WriteField(nameof(PersonResponse.Age));
+            cw.WriteField(nameof(PersonResponse.Gender));
+            cw.WriteField(nameof(PersonResponse.Country));
+            cw.WriteField(nameof(PersonResponse.PersonAddress));
+            cw.WriteField(nameof(PersonResponse.ReceivesNewsletters));
+            cw.NextRecord();
+
+            foreach(PersonResponse person in persons)
+            {
+                cw.WriteField(person.PersonName);
+                cw.WriteField(person.PersonEmail);
+                if (person.DOB.HasValue) cw.WriteField(person.DOB.Value.ToString("yyyy-MM-dd")); 
+                else cw.WriteField("");
+                cw.WriteField(person.Age);
+                cw.WriteField(person.Gender);
+                cw.WriteField(person.Country);
+                cw.WriteField(person.PersonAddress);
+                cw.WriteField(person.ReceivesNewsletters);
+                cw.NextRecord();
+                await cw.FlushAsync();
+            }
+
+            memStream.Position = 0;
+            return memStream;
         }
     }
 }

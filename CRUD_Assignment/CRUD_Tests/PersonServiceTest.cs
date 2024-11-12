@@ -31,41 +31,41 @@ namespace CRUD_Tests
         #region AddPerson() test cases
 
         [Fact]
-        public void AddPerson_NullPerson()
+        public async Task AddPerson_NullPerson()
         {
             // Arrange
             PersonAddRequest? personAddRequest = null;
 
             // Assert
-            Assert.ThrowsAsync<ArgumentNullException>(
+            await Assert.ThrowsAsync<ArgumentNullException>(
                 // Act
-                () => _personService.AddPerson(personAddRequest!)
+               async () => await _personService.AddPerson(personAddRequest!)
             );
         }
 
         [Fact]
-        public void AddPerson_NullName()
+        public async Task AddPerson_NullName()
         {
             // Arrange
             PersonAddRequest? personAddRequest = new PersonAddRequest() { PersonName = null };            
 
             // Assert
-            Assert.ThrowsAsync<ArgumentException>(
+            await Assert.ThrowsAsync<ArgumentException>(
                 // Act
-                () => _personService.AddPerson(personAddRequest)
+                async () => await _personService.AddPerson(personAddRequest)
             );
         }
 
         [Fact]
-        public void AddPerson_NullEmail()
+        public async Task AddPerson_NullEmail()
         {
             // Arrange
             PersonAddRequest? personAddRequest = new PersonAddRequest() { PersonEmail = null };
 
             // Assert
-            Assert.ThrowsAsync<ArgumentException>(
+            await Assert.ThrowsAsync<ArgumentException>(
                 // Act
-                () => _personService.AddPerson(personAddRequest)
+                async () => await _personService.AddPerson(personAddRequest)
             );
         }
 
@@ -445,62 +445,62 @@ namespace CRUD_Tests
             });
         }
 
-        // If PersonName is null/empty, throw ArgumentNullException
-        //[Fact]
-        //public void UpdatePerson_NullName()
-        //{
-        //    // Create a list of people, because we assume the list is empty by default
-        //    List<PersonAddRequest> people = _personService.AddCountriesAndPeople();
+        // If (PersonName is null/empty) throw ArgumentNullException
+       [Fact]
+        public async Task UpdatePerson_NullName()
+        {
+            // Create a list of people, because we assume the list is empty by default
+            PersonAddRequest people = new PersonAddRequest() { PersonAddress = "abcdef lane", CountryId = Guid.Parse("12e15727-d369-49a9-8b13-bc22e9362179"),  PersonEmail = "wtf@gmail.com", PersonName = null, DOB = DateTime.Parse("2000-02-11"), Gender = ServiceContracts.Enums.GenderEnum.Male, ReceivesNewsletters = false };
 
-        //    // Use AddPerson() to convert a PersonAddRequest type to a PersonResponse type
-        //    PersonResponse personResponse = _personService.AddPerson(people[0]);
+            // Use AddPerson() to convert a PersonAddRequest type to a PersonResponse type
+            PersonResponse personResponse = await _personService.AddPerson(people);
 
-        //    // Convert PersonResponse type to PersonUpdateRequest type
-        //    PersonUpdateRequest? pur = personResponse.ToPersonUpdateRequest();
+            // Convert PersonResponse type to PersonUpdateRequest type
+            PersonUpdateRequest? pur = personResponse.ToPersonUpdateRequest();
 
-        //    // Assign PersonName a null value
-        //    pur.PersonName = null;
+            // Assign PersonName a null value
+            pur.PersonName = null;
 
-        //    // Throw exception for null name value
-        //    Assert.Throws<ArgumentException>(() =>
-        //    {
-        //        _personService.UpdatePerson(pur);
-        //    });
-        //}
+            // Throw exception for null name value
+            await Assert.ThrowsAsync<ArgumentException>(async () =>
+            {
+                await _personService.UpdatePerson(pur);
+            });
+        }
 
         // If PersonUpdateRequest is valid, return UPDATED PersonResponse object
         // In this case, PersonName and PersonEmail will be updated
-        //[Fact]
-        //public void UpdatePerson_ValidUpdate()
-        //{
-        //    // Create a list of people, because we assume the list is empty by default
-        //    List<PersonAddRequest> people = _personService.AddCountriesAndPeople();
+       [Fact]
+        public async Task UpdatePerson_ValidUpdate()
+        {
+            // Create a list of people, because we assume the list is empty by default
+            PersonAddRequest people = new PersonAddRequest() { PersonAddress = "abcdef lane", CountryId = Guid.Parse("12e15727-d369-49a9-8b13-bc22e9362179"), PersonEmail = "wtf@gmail.com", PersonName = null, DOB = DateTime.Parse("2000-02-11"), Gender = ServiceContracts.Enums.GenderEnum.Male, ReceivesNewsletters = false };
 
-        //    // Use AddPerson() to convert a PersonAddRequest type to a PersonResponse type
-        //    PersonResponse personResponse = _personService.AddPerson(people[0]);
+            // Use AddPerson() to convert a PersonAddRequest type to a PersonResponse type
+            PersonResponse personResponse = await _personService.AddPerson(people);
 
-        //    // Use output helper to check Name and Email details BEFORE updating
-        //    _outputHelper.WriteLine($"Email: {personResponse.PersonEmail}, Name : {personResponse.PersonName}");
+            // Use output helper to check Name and Email details BEFORE updating
+            _outputHelper.WriteLine($"Email: {personResponse.PersonEmail}, Name : {personResponse.PersonName}");
 
-        //    // Convert PersonResponse type to PersonUpdateRequest type
-        //    PersonUpdateRequest? pur = personResponse.ToPersonUpdateRequest();
+            // Convert PersonResponse type to PersonUpdateRequest type
+            PersonUpdateRequest? pur = personResponse.ToPersonUpdateRequest();
 
-        //    // Assign updated details
-        //    pur.PersonName = "Aaron";
-        //    pur.PersonEmail = "hotchman69@bau.gov";
+            // Assign updated details
+            pur.PersonName = "Aaron";
+            pur.PersonEmail = "hotchman69@bau.gov";
 
-        //    // Convert updated person into PersonResponse object
-        //    PersonResponse updatedPerson = _personService.UpdatePerson(pur);
+            // Convert updated person into PersonResponse object
+            PersonResponse updatedPerson = await _personService.UpdatePerson(pur);
 
-        //    // Create object that retrieves the updatedPerson ONLY FOR COMPARISON
-        //    PersonResponse? personReponseActual = _personService.GetPersonByPersonId(updatedPerson.PersonId);
+            // Create object that retrieves the updatedPerson ONLY FOR COMPARISON
+            PersonResponse? personReponseActual = await _personService.GetPersonByPersonId(updatedPerson.PersonId);
 
-        //    // Use output helper to check Name and Email details AFTER updating
-        //    _outputHelper.WriteLine($"Email: {updatedPerson.PersonEmail}, Name : {updatedPerson.PersonName}");
+            // Use output helper to check Name and Email details AFTER updating
+            _outputHelper.WriteLine($"Email: {updatedPerson.PersonEmail}, Name : {updatedPerson.PersonName}");
 
-        //    // Throw exception for null name value
-        //    Assert.Equal(updatedPerson, personReponseActual);
-        //}
+            // Throw exception for null name value
+            Assert.Equal(updatedPerson, personReponseActual);
+        }
         #endregion
 
         #region DeletePerson() test cases

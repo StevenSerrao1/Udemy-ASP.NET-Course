@@ -15,6 +15,8 @@ namespace StocksApp_Whole.UnitTests
         private readonly IStocksService _stocksService;
         private readonly ITestOutputHelper _outputHelper;
         private readonly Mock<FinnhubService> _finnhubServiceMock;
+        private readonly StockMarketDbContext _stocksDb;
+        private readonly StockMarketDbContext _stocksDb2;
 
         public StocksServiceTest(ITestOutputHelper testOutputHelper)
         {
@@ -26,7 +28,7 @@ namespace StocksApp_Whole.UnitTests
                                { "name", "Apple Inc." } // Simulated company name
                            });
 
-            _stocksService = new StocksService(_finnhubServiceMock.Object);
+            _stocksService = new StocksService(_stocksDb, _stocksDb2, _finnhubServiceMock.Object);
             _outputHelper = testOutputHelper;
         }
 

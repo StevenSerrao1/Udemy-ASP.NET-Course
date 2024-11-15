@@ -4,6 +4,7 @@ using StocksApp_Whole.Entities;
 using StocksApp_Whole.Services.Helpers;
 using StocksApp_Whole.ViewModels;
 using System.Globalization;
+using Microsoft.EntityFrameworkCore;
 using StocksApp_Whole.Services;
 
 namespace StocksApp_Whole.Services
@@ -11,14 +12,14 @@ namespace StocksApp_Whole.Services
     public class StocksService : IStocksService
     {
 
-        private readonly List<BuyOrder> _buyOrders;
-        private readonly List<SellOrder> _sellOrders;
+        private readonly StockMarketDbContext _buyOrdersDb;
+        private readonly StockMarketDbContext _sellOrdersDb;
         private readonly FinnhubService _finnhubService;
 
-        public StocksService(FinnhubService finnhub)
+        public StocksService(StockMarketDbContext sellOrders, StockMarketDbContext buyOrders, FinnhubService finnhub)
         {
-            _buyOrders = new List<BuyOrder>();
-            _sellOrders = new List<SellOrder>();
+            _buyOrdersDb = buyOrders;
+            _sellOrdersDb = sellOrders;
             _finnhubService = finnhub;
         }
 
@@ -115,7 +116,7 @@ namespace StocksApp_Whole.Services
             };
         }
 
-        public Task<BuyOrderResponse> CreateBuyOrder(BuyOrderRequest? buyOrderRequest)
+        public async Task<BuyOrderResponse> CreateBuyOrder(BuyOrderRequest? buyOrderRequest)
         {
             // Check if buyOrderRequest is null
             if (buyOrderRequest == null) throw new ArgumentNullException(nameof(buyOrderRequest));
@@ -130,16 +131,17 @@ namespace StocksApp_Whole.Services
             buyOrder.BuyOrderID = Guid.NewGuid();
 
             // Add buyOrder into mock database of List<BuyOrder> type
-            _buyOrders.Add(buyOrder);
+            _buyOrdersDb.Add(buyOrder);
+            await _buyOrdersDb.SaveChangesAsync();
 
             // Convert to BuyOrderResponse type
             BuyOrderResponse buyOrderResponse = buyOrder.ToBuyOrderResponse();
 
             // Return await BuyOrderResponse
-            return Task.FromResult(buyOrderResponse);
+            return buyOrderResponse;
         }
 
-        public Task<SellOrderResponse> CreateSellOrder(SellOrderRequest? sellOrderRequest)
+        public async Task<SellOrderResponse> CreateSellOrder(SellOrderRequest? sellOrderRequest)
         {
             // Check if sellOrderRequest is null
             if (sellOrderRequest == null) throw new ArgumentNullException(nameof(sellOrderRequest));
@@ -154,25 +156,28 @@ namespace StocksApp_Whole.Services
             sellOrder.SellOrderID = Guid.NewGuid();
 
             // Add sellOrder into mock database of List<SellOrder> type
-            _sellOrders.Add(sellOrder);
+            _sellOrdersDb.Add(sellOrder);
+            await _sellOrdersDb.SaveChangesAsync();
 
             // Convert to sellOrderResponse type
             SellOrderResponse sellOrderResponse = sellOrder.ToSellOrderResponse();;
 
             // Return await sellOrderResponse
-            return Task.FromResult(sellOrderResponse);
+            return sellOrderResponse;
         }
 
-        public Task<List<BuyOrderResponse>> GetBuyOrders()
+        public async Task<List<BuyOrderResponse>> GetBuyOrders()
         {
-            List<BuyOrderResponse> AllBuyOrders = _buyOrders.Select(buyorder => buyorder.ToBuyOrderResponse()).ToList();
-            return Task.FromResult(AllBuyOrders);
+            var buyOrders = await _buyOrdersDb.buyOrderDb.ToListAsync();
+            // Doing it WITH a stored db procedure
+            return buyOrders.Select(bo => bo.ToBuyOrderResponse()).ToList();
         }
 
-        public Task<List<SellOrderResponse>> GetSellOrders()
+        public async Task<List<SellOrderResponse>> GetSellOrders()
         {
-            List<SellOrderResponse> AllSellOrders = _sellOrders.Select(sellorder => sellorder.ToSellOrderResponse()).ToList();
-            return Task.FromResult(AllSellOrders);
+            var sellOrders = await _sellOrdersDb.sellOrderDb.ToListAsync();
+            // Doing it WITH a stored db procedure
+            return sellOrders.Select(so => so.ToSellOrderResponse()).ToList();
         }
 
         public async Task<StockViewModel> GetStockInfo(string? stockSymbol)

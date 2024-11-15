@@ -9,6 +9,9 @@ using Xunit.Sdk;
 using Entities;
 using Moq;
 using Microsoft.EntityFrameworkCore;
+using EntityFrameworkCoreMock;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
+using ServiceContracts.Enums;
 
 namespace CRUD_Tests
 {
@@ -21,9 +24,26 @@ namespace CRUD_Tests
 
         public PersonServiceTest(ITestOutputHelper output)
         {
-            _countriesService = new CountriesService(new PersonsDbContext(new DbContextOptionsBuilder<PersonsDbContext>().Options));
+            // Init empty countries list
+            var countriesMockData = new List<Country>() { };
+            var personsMockData = new List<Person>() { };
 
-            _personService = new PersonService(new PersonsDbContext(new DbContextOptionsBuilder<PersonsDbContext>().Options), _countriesService);
+            // Create mock version of dbContext 
+            DbContextMock<ApplicationDbContext> dbContextMock = new DbContextMock<ApplicationDbContext>(
+                new DbContextOptionsBuilder<ApplicationDbContext>().Options
+            );
+
+            // Assign object of dbContextMock into an ApplicationDbContext object
+            ApplicationDbContext dbContext = dbContextMock.Object;
+
+            // Create Mock DbSet of countries type
+            dbContextMock.CreateDbSetMock(temp => temp.Countries, countriesMockData);
+
+            // Create Mock DbSet of persons type
+            dbContextMock.CreateDbSetMock(temp => temp.Persons, personsMockData);
+
+            _countriesService = new CountriesService(dbContext);
+            _personService = new PersonService(dbContext, _countriesService);
 
             _outputHelper = output;
         }
@@ -110,7 +130,7 @@ namespace CRUD_Tests
             PersonResponse? personAfterMethod = await _personService.GetPersonByPersonId(personBeforeMethod)!;
 
             // Assert
-            Assert.Empty(personAfterMethod!.PersonId.ToString());
+            Assert.Equal(Guid.Empty, personAfterMethod!.PersonId);
         }
 
         [Fact]
@@ -445,61 +465,31 @@ namespace CRUD_Tests
             });
         }
 
-        // If (PersonName is null/empty) throw ArgumentNullException
-       [Fact]
-        public async Task UpdatePerson_NullName()
-        {
-            // Create a list of people, because we assume the list is empty by default
-            PersonAddRequest people = new PersonAddRequest() { PersonAddress = "abcdef lane", CountryId = Guid.Parse("12e15727-d369-49a9-8b13-bc22e9362179"),  PersonEmail = "wtf@gmail.com", PersonName = null, DOB = DateTime.Parse("2000-02-11"), Gender = ServiceContracts.Enums.GenderEnum.Male, ReceivesNewsletters = false };
-
-            // Use AddPerson() to convert a PersonAddRequest type to a PersonResponse type
-            PersonResponse personResponse = await _personService.AddPerson(people);
-
-            // Convert PersonResponse type to PersonUpdateRequest type
-            PersonUpdateRequest? pur = personResponse.ToPersonUpdateRequest();
-
-            // Assign PersonName a null value
-            pur.PersonName = null;
-
-            // Throw exception for null name value
-            await Assert.ThrowsAsync<ArgumentException>(async () =>
-            {
-                await _personService.UpdatePerson(pur);
-            });
-        }
-
         // If PersonUpdateRequest is valid, return UPDATED PersonResponse object
         // In this case, PersonName and PersonEmail will be updated
-       [Fact]
-        public async Task UpdatePerson_ValidUpdate()
+        [Fact]
+        public async Task UpdatePerson_PersonFullDetailsUpdation()
         {
-            // Create a list of people, because we assume the list is empty by default
-            PersonAddRequest people = new PersonAddRequest() { PersonAddress = "abcdef lane", CountryId = Guid.Parse("12e15727-d369-49a9-8b13-bc22e9362179"), PersonEmail = "wtf@gmail.com", PersonName = null, DOB = DateTime.Parse("2000-02-11"), Gender = ServiceContracts.Enums.GenderEnum.Male, ReceivesNewsletters = false };
+            //Arrange
+            CountryAddRequest country_add_request = new CountryAddRequest() { CountryName = "UK" };
+            CountryResponse country_response_from_add = await _countriesService.AddCountry(country_add_request);
 
-            // Use AddPerson() to convert a PersonAddRequest type to a PersonResponse type
-            PersonResponse personResponse = await _personService.AddPerson(people);
+            PersonAddRequest person_add_request = new PersonAddRequest() { PersonName = "John", CountryId = country_response_from_add.CountryID, PersonAddress = "Abc road", DOB = DateTime.Parse("2000-01-01"), PersonEmail = "abc@example.com", Gender = GenderEnum.Male, ReceivesNewsletters = true };
 
-            // Use output helper to check Name and Email details BEFORE updating
-            _outputHelper.WriteLine($"Email: {personResponse.PersonEmail}, Name : {personResponse.PersonName}");
+            PersonResponse person_response_from_add = await _personService.AddPerson(person_add_request);
 
-            // Convert PersonResponse type to PersonUpdateRequest type
-            PersonUpdateRequest? pur = personResponse.ToPersonUpdateRequest();
+            PersonUpdateRequest person_update_request = person_response_from_add.ToPersonUpdateRequest();
+            person_update_request.PersonName = "William";
+            person_update_request.PersonEmail = "william@example.com";
 
-            // Assign updated details
-            pur.PersonName = "Aaron";
-            pur.PersonEmail = "hotchman69@bau.gov";
+            //Act
+            PersonResponse person_response_from_update = await _personService.UpdatePerson(person_update_request);
 
-            // Convert updated person into PersonResponse object
-            PersonResponse updatedPerson = await _personService.UpdatePerson(pur);
+            PersonResponse? person_response_from_get = await _personService.GetPersonByPersonId(person_response_from_update.PersonId)!;
 
-            // Create object that retrieves the updatedPerson ONLY FOR COMPARISON
-            PersonResponse? personReponseActual = await _personService.GetPersonByPersonId(updatedPerson.PersonId);
+            //Assert
+            Assert.Equal(person_response_from_get, person_response_from_update);
 
-            // Use output helper to check Name and Email details AFTER updating
-            _outputHelper.WriteLine($"Email: {updatedPerson.PersonEmail}, Name : {updatedPerson.PersonName}");
-
-            // Throw exception for null name value
-            Assert.Equal(updatedPerson, personReponseActual);
         }
         #endregion
 

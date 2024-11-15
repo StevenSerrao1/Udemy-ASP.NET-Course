@@ -14,7 +14,7 @@ builder.Services.AddScoped<ICountriesService, CountriesService>();
 builder.Services.AddScoped<IPersonService, PersonService>();
 
 // Initialize DbContext use
-builder.Services.AddDbContext<PersonsDbContext>(options => {
+builder.Services.AddDbContext<ApplicationDbContext>(options => {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection"));
 });
 

@@ -4,6 +4,8 @@ using System;
 using Services;
 using ServiceContracts.DTO;
 using Microsoft.EntityFrameworkCore;
+using EntityFrameworkCoreMock;
+using Moq;
 
 namespace CRUD_Tests
 {
@@ -13,7 +15,21 @@ namespace CRUD_Tests
 
         public CountriesServiceTest()
         {
-            _countriesService = new CountriesService(new PersonsDbContext(new DbContextOptionsBuilder<PersonsDbContext>().Options));
+            // Init empty countries list
+            var countriesMockData = new List<Country>() { };
+
+            // Create mock version of dbContext 
+            DbContextMock<ApplicationDbContext> dbContextMock = new DbContextMock<ApplicationDbContext>(
+                new DbContextOptionsBuilder<ApplicationDbContext>().Options
+            );
+
+            // Assign object of dbContextMock into an ApplicationDbContext object
+            ApplicationDbContext dbContext = dbContextMock.Object;
+
+            // Create Mock DbSet of countries type
+            dbContextMock.CreateDbSetMock(temp => temp.Countries, countriesMockData);
+
+            _countriesService = new CountriesService(dbContext);
         }
 
         #region AddCountry() Test Cases
@@ -52,18 +68,19 @@ namespace CRUD_Tests
 
         // If country name is duplicate, throw argument exception
         [Fact]
-        public void AddCountry_DuplicateCountryName()
+        public async Task AddCountry_DuplicateCountryName()
         {
             // Arrange / Make two countries with identical names
             CountryAddRequest country1 = new CountryAddRequest() { CountryName = "USA" };
             CountryAddRequest country2 = new CountryAddRequest() { CountryName = "USA" };
 
+            await _countriesService.AddCountry(country1);
+
             // Assert / Throw an excpetion based on that
-            Assert.Throws<ArgumentException>(() =>
+            await Assert.ThrowsAsync<ArgumentException>(async () =>
             {
                 // Act / use method that will err when duplicate country names are used
-                _countriesService.AddCountry(country1);
-                _countriesService.AddCountry(country2);
+                await _countriesService.AddCountry(country2);
             });
         }
 

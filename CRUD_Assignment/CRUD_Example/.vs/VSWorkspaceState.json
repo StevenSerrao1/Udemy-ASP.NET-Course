@@ -1,9 +1,7 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Views",
-    "\\Views\\Persons",
-    "\\Views\\Shared"
+    "\\Controllers"
   ],
   "SelectedNode": "\\CRUD_Example.sln",
   "PreviewInSolutionExplorer": false

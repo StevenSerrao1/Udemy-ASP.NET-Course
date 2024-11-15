@@ -20,10 +20,10 @@ namespace Services
 {
     public class PersonService : IPersonService
     {
-        private readonly PersonsDbContext _personsDb;
+        private readonly ApplicationDbContext _personsDb;
         private readonly ICountriesService _countriesService;
 
-        public PersonService(PersonsDbContext dbContext, ICountriesService countriesService)
+        public PersonService(ApplicationDbContext dbContext, ICountriesService countriesService)
         {
             _personsDb = dbContext;
             _countriesService = countriesService;

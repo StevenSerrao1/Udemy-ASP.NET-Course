@@ -77,5 +77,22 @@ namespace Services
             return resMatch;
         }
 
+        public async Task<CountryResponse?> GetCountryByName(string name)
+        {
+            // Check if "countryID" != null
+            if (name == null) return null!;
+
+            // Get matching country from List<Country> based id
+            Country? match = await _db.Countries.FirstOrDefaultAsync(c => c.CountryName == name);
+
+            // Check to see if matching country is null
+            if (match == null) return null!;
+
+            // Convert match from country to country response type
+            CountryResponse? resMatch = match.ToCountryResponse();
+
+            // return country response object
+            return resMatch;
+        }
     }
 }

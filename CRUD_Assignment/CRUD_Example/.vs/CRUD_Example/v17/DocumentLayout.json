@@ -3,19 +3,25 @@
   "WorkspaceRootPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2A1BB864-899D-493C-8C64-8A9C14A77592}|..\\RepositoryContracts\\RepositoryContracts.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\crud_assignment\\repositorycontracts\\ipersonsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5603939-6404-45B5-ABBE-A96A774D5842}|..\\Repositories\\Repositories.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\crud_assignment\\repositories\\personsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2A1BB864-899D-493C-8C64-8A9C14A77592}|..\\RepositoryContracts\\RepositoryContracts.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\crud_assignment\\repositorycontracts\\icountriesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2A1BB864-899D-493C-8C64-8A9C14A77592}|..\\RepositoryContracts\\RepositoryContracts.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\crud_assignment\\repositorycontracts\\ipersonsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9127706-07EA-4919-8B3E-4FB2DED78D5F}|..\\Services\\Services.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\crud_assignment\\services\\personservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B68A3453-06F0-4BF4-85D9-D561DF050D41}|..\\ServiceContracts\\ServiceContracts.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\crud_assignment\\servicecontracts\\dto\\personaddrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2A1BB864-899D-493C-8C64-8A9C14A77592}|..\\RepositoryContracts\\RepositoryContracts.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\crud_assignment\\repositorycontracts\\icountriesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B68A3453-06F0-4BF4-85D9-D561DF050D41}|..\\ServiceContracts\\ServiceContracts.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\crud_assignment\\servicecontracts\\icountriesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9127706-07EA-4919-8B3E-4FB2DED78D5F}|..\\Services\\Services.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\crud_assignment\\services\\countriesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5603939-6404-45B5-ABBE-A96A774D5842}|..\\Repositories\\Repositories.csproj|c:\\users\\steven\\desktop\\udemy-assignments\\stocks-app-with-config-repo\\crud_assignment\\repositories\\countriesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,45 +31,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ICountriesService.cs",
+              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\ServiceContracts\\ICountriesService.cs",
+              "RelativeDocumentMoniker": "..\\ServiceContracts\\ICountriesService.cs",
+              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\ServiceContracts\\ICountriesService.cs",
+              "RelativeToolTip": "..\\ServiceContracts\\ICountriesService.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAYwCIAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T15:50:54.666Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PersonsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Repositories\\PersonsRepository.cs",
+              "RelativeDocumentMoniker": "..\\Repositories\\PersonsRepository.cs",
+              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Repositories\\PersonsRepository.cs",
+              "RelativeToolTip": "..\\Repositories\\PersonsRepository.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAA6wEYAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T15:35:39.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CountriesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Repositories\\CountriesRepository.cs",
+              "RelativeDocumentMoniker": "..\\Repositories\\CountriesRepository.cs",
+              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Repositories\\CountriesRepository.cs",
+              "RelativeToolTip": "..\\Repositories\\CountriesRepository.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAywCAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T15:29:53.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "IPersonsRepository.cs",
               "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\RepositoryContracts\\IPersonsRepository.cs",
               "RelativeDocumentMoniker": "..\\RepositoryContracts\\IPersonsRepository.cs",
               "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\RepositoryContracts\\IPersonsRepository.cs",
               "RelativeToolTip": "..\\RepositoryContracts\\IPersonsRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADUAAAA/AAAA",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAowDYAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-17T10:17:35.62Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ICountriesRepository.cs",
               "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\RepositoryContracts\\ICountriesRepository.cs",
               "RelativeDocumentMoniker": "..\\RepositoryContracts\\ICountriesRepository.cs",
               "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\RepositoryContracts\\ICountriesRepository.cs",
               "RelativeToolTip": "..\\RepositoryContracts\\ICountriesRepository.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAYwCAAAAAzAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAxwBQAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-17T10:15:48.341Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PersonAddRequest.cs",
-              "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\ServiceContracts\\DTO\\PersonAddRequest.cs",
-              "RelativeDocumentMoniker": "..\\ServiceContracts\\DTO\\PersonAddRequest.cs",
-              "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\ServiceContracts\\DTO\\PersonAddRequest.cs",
-              "RelativeToolTip": "..\\ServiceContracts\\DTO\\PersonAddRequest.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAowAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T16:17:47.507Z"
             },
             {
               "$type": "Document",
@@ -73,30 +110,23 @@
               "RelativeDocumentMoniker": "..\\Services\\PersonService.cs",
               "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Services\\PersonService.cs",
               "RelativeToolTip": "..\\Services\\PersonService.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAA7wBYAAAAtAAAA",
+              "ViewState": "AQIAACUBAAAAAAAAAAAowE4BAABOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T07:55:23.788Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "CountriesService.cs",
               "DocumentMoniker": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Services\\CountriesService.cs",
               "RelativeDocumentMoniker": "..\\Services\\CountriesService.cs",
               "ToolTip": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Services\\CountriesService.cs",
               "RelativeToolTip": "..\\Services\\CountriesService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA0AAAA",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAcwFIAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T07:54:50.677Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
+              "WhenOpened": "2024-11-11T07:54:50.677Z",
+              "EditorCaption": ""
             }
           ]
         }

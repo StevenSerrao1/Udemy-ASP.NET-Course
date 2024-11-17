@@ -27,6 +27,12 @@ namespace ServiceContracts
         /// <returns>A country of CountryResponse type</returns>
         Task<CountryResponse>? GetCountryById(Guid? id);
 
+        /// <summary>
+        /// Returns a country based on its name
+        /// </summary>
+        /// <param name="name">Name to be matched</param>
+        /// <returns>A country of CountryResponse type or null</returns>
+        Task<CountryResponse?> GetCountryByName(string name);
         
     }
 }

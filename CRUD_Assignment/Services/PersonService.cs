@@ -329,7 +329,7 @@ namespace Services
             _personsDb.sp_DeletePerson(matchingPerson);
 
             // Save changes to DbSet by saving DELETION of person - UNNECESSARY WHEN USING STORED PROCEDURES
-            //_personsDb.SaveChanges(); // DELETE
+            await _personsDb.SaveChangesAsync(); // DELETE
 
             // Return boolean value to indicate success of deletion
             return _personsDb.Persons.Contains(matchingPerson) ? false : true;

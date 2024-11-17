@@ -12,8 +12,9 @@ using Microsoft.EntityFrameworkCore;
 using EntityFrameworkCoreMock;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
 using ServiceContracts.Enums;
-using AutoFixture;
-using Microsoft.AspNetCore.Mvc; // used to create dummy data for mock objects based on the model class type
+using AutoFixture; // used to create dummy data for mock objects based on the model class type
+using Microsoft.AspNetCore.Mvc;
+using FluentAssertions; 
 
 namespace CRUD_Tests
 {
@@ -62,11 +63,11 @@ namespace CRUD_Tests
             // Arrange
             PersonAddRequest? personAddRequest = null;
 
-            // Assert
-            await Assert.ThrowsAsync<ArgumentNullException>(
-                // Act
-               async () => await _personService.AddPerson(personAddRequest!)
-            );
+            // Act
+            Func<Task> action = async () => await _personService.AddPerson(personAddRequest!);
+
+            // ASSERT // now using Fluent Assertions
+            await action.Should().ThrowAsync<ArgumentNullException>();
         }
 
         [Fact]
@@ -77,11 +78,11 @@ namespace CRUD_Tests
                 .With(temp => temp.PersonName, null as string)
                 .Create();
 
+            //Act
+            Func<Task> action = async () => await _personService.AddPerson(personAddRequest);
+
             // Assert
-            await Assert.ThrowsAsync<ArgumentException>(
-                // Act
-                async () => await _personService.AddPerson(personAddRequest)
-            );
+            await action.Should().ThrowAsync<ArgumentException>();
         }
 
         [Fact]
@@ -92,11 +93,11 @@ namespace CRUD_Tests
                 .With(temp => temp.PersonEmail, null as string)
                 .Create();
 
-            // Assert
-            await Assert.ThrowsAsync<ArgumentException>(
-                // Act
-                async () => await _personService.AddPerson(personAddRequest)
-            );
+            // Act
+            Func<Task> action = async () => await _personService.AddPerson(personAddRequest);
+
+            // Assert // with fluent assertions
+            await action.Should().ThrowAsync<ArgumentException>();
         }
 
         [Fact]
@@ -114,8 +115,10 @@ namespace CRUD_Tests
             // Assert
             if (personResponse != null && listOfPersonResponses != null)
             {
-                Assert.True(personResponse.PersonId != Guid.Empty);
-                Assert.Contains(personResponse, listOfPersonResponses);
+                //Assert.True(personResponse.PersonId != Guid.Empty);
+                personResponse.PersonId.Should().NotBeEmpty();
+                //Assert.Contains(personResponse, listOfPersonResponses);
+                listOfPersonResponses.Should().Contain(personResponse);
             }
         }
 
@@ -133,7 +136,8 @@ namespace CRUD_Tests
             PersonResponse? personAfterMethod = await _personService.GetPersonByPersonId(personBeforeMethod)!;
 
             // Assert
-            Assert.Equal(Guid.Empty, personAfterMethod!.PersonId);
+            //Assert.Equal(Guid.Empty, personAfterMethod!.PersonId);
+            personAfterMethod!.PersonId.Should().BeEmpty();
         }
 
         [Fact]
@@ -144,8 +148,10 @@ namespace CRUD_Tests
 
             CountryResponse countryResponse = await _countriesService.AddCountry(countryAddRequest);
 
-            Assert.NotNull(countryResponse);
-            Assert.NotEqual(Guid.Empty, countryResponse.CountryID);
+            //Assert.NotNull(countryResponse);
+            countryResponse.Should().NotBeNull(); // FLUENT ASSERTION
+            //Assert.NotEqual(Guid.Empty, countryResponse.CountryID);
+            countryResponse.CountryID.Should().NotBeEmpty(); // FLUENT ASSERTION
 
             // Act
             PersonAddRequest personAddRequest = _fixture.Build<PersonAddRequest>()
@@ -154,13 +160,16 @@ namespace CRUD_Tests
 
             PersonResponse personResponse = await _personService.AddPerson(personAddRequest);
 
-            Assert.NotEmpty(personResponse.PersonId.ToString());
+            // Assert.NotEmpty(personResponse.PersonId.ToString());
+            personResponse.PersonId.ToString().Should().NotBeEmpty(); //FLUENT ASSERTION
 
             PersonResponse? personSearchedById = await _personService.GetPersonByPersonId(personResponse.PersonId)!;
 
             // Assert
-            Assert.NotNull(personSearchedById);
-            Assert.Equal(personResponse, personSearchedById);
+            // Assert.NotNull(personSearchedById);
+            personSearchedById.Should().NotBeNull(); // FLUENT ASSERTION
+            // Assert.Equal(personResponse, personSearchedById);
+            personSearchedById.Should().Be(personResponse); // FLUENT ASSERTION
         }
 
         #endregion
@@ -174,7 +183,8 @@ namespace CRUD_Tests
             List<PersonResponse> personList = await _personService.GetAllPersons();
 
             // Assert
-            Assert.Empty(personList);
+            //Assert.Empty(personList);
+            personList.Should().BeEmpty();
         }
 
         [Fact]
@@ -211,24 +221,25 @@ namespace CRUD_Tests
                 personResponseListBeforeCall.Add(await _personService.AddPerson(addRequest));
             }
             // Use IOutputHelper to print expected values
-            _outputHelper.WriteLine("Expected:");
-            foreach (PersonResponse person in personResponseListBeforeCall)
-            {
-                _outputHelper.WriteLine(person.ToString());
-            }
+            //_outputHelper.WriteLine("Expected:");
+            //foreach (PersonResponse person in personResponseListBeforeCall)
+            //{
+            //    _outputHelper.WriteLine(person.ToString());
+            //}
 
             List<PersonResponse> personResponseListAfterCall = await _personService.GetAllPersons();
             // Use IOutputHelper to print actual values
-            _outputHelper.WriteLine("Actual:");
-            foreach (PersonResponse persona in personResponseListAfterCall)
-            {
-                _outputHelper.WriteLine(persona.ToString());
-            }
+            //_outputHelper.WriteLine("Actual:");
+            //foreach (PersonResponse persona in personResponseListAfterCall)
+            //{
+            //    _outputHelper.WriteLine(persona.ToString());
+            //}
 
             // Assert
             foreach (PersonResponse person in personResponseListBeforeCall)
             {
-                Assert.Contains(person, personResponseListAfterCall);
+                // Assert.Contains(person, personResponseListAfterCall);
+                personResponseListAfterCall.Should().Contain(person);
             }
         }
 
@@ -272,26 +283,28 @@ namespace CRUD_Tests
             }
 
             // Use IOutputHelper to print expected values
-            _outputHelper.WriteLine("Expected:");
-            foreach (PersonResponse person in personResponseListBeforeCall)
-            {
-                _outputHelper.WriteLine(person.ToString());
-            }
+            //_outputHelper.WriteLine("Expected:");
+            //foreach (PersonResponse person in personResponseListBeforeCall)
+            //{
+            //    _outputHelper.WriteLine(person.ToString());
+            //}
 
             // The empty search below searches for the personname that has no value
             List<PersonResponse> personsListFromSearch = await _personService.GetFilteredPersons(nameof(Person.PersonName), "");
 
             // Use IOutputHelper to print actual values
-            _outputHelper.WriteLine("Actual:");
-            foreach (PersonResponse persona in personsListFromSearch)
-            {
-                _outputHelper.WriteLine(persona.ToString());
-            }
+            //_outputHelper.WriteLine("Actual:");
+            //foreach (PersonResponse persona in personsListFromSearch)
+            //{
+            //    _outputHelper.WriteLine(persona.ToString());
+            //}
 
             // Assert
             foreach (PersonResponse person in personResponseListBeforeCall)
             {
-                Assert.Contains(person, personsListFromSearch);
+                // Assert.Contains(person, personsListFromSearch);
+                personsListFromSearch.Should().Contain(person); // FLUENT ASSERTION
+
             }
         }
 
@@ -333,27 +346,28 @@ namespace CRUD_Tests
                 personResponseListBeforeCall.Add(await _personService.AddPerson(addRequest));
             }
             // Use IOutputHelper to print expected values
-            _outputHelper.WriteLine("Expected:");
-            foreach (PersonResponse person in personResponseListBeforeCall)
-            {
-                _outputHelper.WriteLine(person.ToString());
-            }
+            //_outputHelper.WriteLine("Expected:");
+            //foreach (PersonResponse person in personResponseListBeforeCall)
+            //{
+            //    _outputHelper.WriteLine(person.ToString());
+            //}
 
             List<PersonResponse> personsListFromSearch = await _personService.GetFilteredPersons(nameof(Person.PersonEmail), "gz");
 
             // Use IOutputHelper to print actual values
-            _outputHelper.WriteLine("Actual:");
-            foreach (PersonResponse persona in personsListFromSearch)
-            {
-                _outputHelper.WriteLine(persona.ToString());
-            }
+            //_outputHelper.WriteLine("Actual:");
+            //foreach (PersonResponse persona in personsListFromSearch)
+            //{
+            //    _outputHelper.WriteLine(persona.ToString());
+            //}
 
             // Assert
             foreach (PersonResponse person in personResponseListBeforeCall)
             {
                 if (person.PersonEmail != null && person.PersonEmail.Contains("gz", StringComparison.OrdinalIgnoreCase))
                 {
-                    Assert.Contains(person, personsListFromSearch);
+                    // Assert.Contains(person, personsListFromSearch);
+                    personsListFromSearch.Should().Contain(person); // FLUENT ASSERTION
                 }
             }
         }
@@ -401,30 +415,33 @@ namespace CRUD_Tests
             }
 
             // Use IOutputHelper to print expected values
-            _outputHelper.WriteLine("Expected List of Persons:");
-            foreach (PersonResponse person in personResponseListBeforeCall)
-            {
-                _outputHelper.WriteLine(person.ToString());
-            }
+            //_outputHelper.WriteLine("Expected List of Persons:");
+            //foreach (PersonResponse person in personResponseListBeforeCall)
+            //{
+            //    _outputHelper.WriteLine(person.ToString());
+            //}
 
             // Get list of people AFTER using Sort method in order to get ACTUAL value
             List<PersonResponse> personsListFromSort = await _personService.GetSortedPersons(personResponseListBeforeCall, nameof(Person.DOB), ServiceContracts.Enums.SortOrderEnum.Ascending);
 
             // Use IOutputHelper to print actual values
-            _outputHelper.WriteLine("Actual:");
-            foreach (PersonResponse persona in personsListFromSort)
-            {
-                _outputHelper.WriteLine(persona.ToString());
-            }
+            //_outputHelper.WriteLine("Actual:");
+            //foreach (PersonResponse persona in personsListFromSort)
+            //{
+            //    _outputHelper.WriteLine(persona.ToString());
+            //}
 
             // Call situational sort method in order to get EXPECTED value
             personResponseListBeforeCall = personResponseListBeforeCall.OrderBy(person => person.DOB).ToList();
 
             // Assert
-            for (int i = 0; i < personResponseListBeforeCall.Count; i++)
-            {
-                Assert.Equal(personResponseListBeforeCall[i], personsListFromSort[i]);
-            }
+            //for (int i = 0; i < personResponseListBeforeCall.Count; i++)
+            //{
+            //    // Assert.Equal(personResponseListBeforeCall[i], personsListFromSort[i]);
+            //    personsListFromSort[i].Should().Be(personResponseListBeforeCall[i]); // FLUENT ASSERTION
+            //}
+
+            personsListFromSort.Should().BeEquivalentTo(personResponseListBeforeCall);
         }
 
         #endregion
@@ -435,13 +452,18 @@ namespace CRUD_Tests
         [Fact]
         public async Task UpdatePerson_NullPerson()
         {
-            PersonUpdateRequest? pur = null;         
+            PersonUpdateRequest? pur = null;
 
-            await Assert.ThrowsAsync<ArgumentNullException>(async () =>
-            {
-                await _personService.UpdatePerson(pur);
-            });
+            //await Assert.ThrowsAsync<ArgumentNullException>(async () =>
+            //{
+            //    await _personService.UpdatePerson(pur);
+            //});
+
+            Func<Task> action = async () => await _personService.UpdatePerson(pur);
+
+            await action.Should().ThrowAsync<ArgumentNullException>(); // FLUENT ASSERTION
         }
+
 
         // If PersonId is invalid, throw ArgumentException
         [Fact]
@@ -449,10 +471,14 @@ namespace CRUD_Tests
         {
             PersonUpdateRequest? pur = new PersonUpdateRequest() { PersonId = Guid.NewGuid() };
 
-            await Assert.ThrowsAsync<ArgumentException>(async () =>
-            {
-                await _personService.UpdatePerson(pur);
-            });
+            //await Assert.ThrowsAsync<ArgumentException>(async () =>
+            //{
+            //    await _personService.UpdatePerson(pur);
+            //});
+
+            Func<Task> action = async () => await _personService.UpdatePerson(pur);
+
+            await action.Should().ThrowAsync<ArgumentException>();
         }
 
         // If PersonUpdateRequest is valid, return UPDATED PersonResponse object
@@ -501,7 +527,8 @@ namespace CRUD_Tests
 
             // Assert
             // Assert that the result returned is false
-            Assert.False(personFound);
+            // Assert.False(personFound);
+            personFound.Should().BeFalse();
         }
 
         //[Fact]

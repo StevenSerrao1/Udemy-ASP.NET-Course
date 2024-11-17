@@ -65,6 +65,10 @@
               "target": "Package",
               "version": "[2.4.0, )"
             },
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[6.12.2, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.11.1, )"

@@ -269,3 +269,5 @@ C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assig
 C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\CRUD_Tests\bin\Debug\net8.0\xunit.runner.visualstudio.testadapter.dll
 C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\CRUD_Tests\bin\Debug\net8.0\EntityFrameworkCoreMock.Moq.dll
 C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\CRUD_Tests\bin\Debug\net8.0\EntityFrameworkCoreMock.Shared.dll
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\CRUD_Tests\bin\Debug\net8.0\AutoFixture.dll
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\CRUD_Tests\bin\Debug\net8.0\Fare.dll

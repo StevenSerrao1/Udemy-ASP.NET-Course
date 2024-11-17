@@ -6,15 +6,20 @@ using ServiceContracts.DTO;
 using Microsoft.EntityFrameworkCore;
 using EntityFrameworkCoreMock;
 using Moq;
+using AutoFixture;
 
 namespace CRUD_Tests
 {
     public class CountriesServiceTest
     {
         private readonly ICountriesService _countriesService;
+        private readonly IFixture _fixture;
 
         public CountriesServiceTest()
         {
+            // Initialize fixture for mock data
+            _fixture = new Fixture();
+
             // Init empty countries list
             var countriesMockData = new List<Country>() { };
 
@@ -56,7 +61,9 @@ namespace CRUD_Tests
         public async Task AddCountry_CountryNameIsNull()
         {
             // Arrange / Make a country with a null valued name
-            CountryAddRequest country = new CountryAddRequest() { CountryName = null };
+            CountryAddRequest country = _fixture.Build<CountryAddRequest>()
+                .With(c => c.CountryName, null as string)
+                .Create();
 
             // Assert / Throw an excpetion based on that
             await Assert.ThrowsAsync<ArgumentNullException>(async () =>
@@ -89,7 +96,7 @@ namespace CRUD_Tests
         public async Task AddCountry_ProperCountryDetails()
         {
             // Arrange / Make a country with a null valued name
-            CountryAddRequest request = new CountryAddRequest() { CountryName = "RSA" };
+            CountryAddRequest request = _fixture.Create<CountryAddRequest>();
 
             // Act
             CountryResponse response = await _countriesService.AddCountry(request);
@@ -122,12 +129,7 @@ namespace CRUD_Tests
         public async Task GetAllCountries_AddCountries()
         {
             // Arrange
-            List<CountryAddRequest> country_request_list = new List<CountryAddRequest>()
-            {
-                new CountryAddRequest() { CountryName = "USA" },
-                new CountryAddRequest() { CountryName = "RSA" },
-                new CountryAddRequest() { CountryName = "FRA" },
-            };
+            List<CountryAddRequest> country_request_list = _fixture.CreateMany<CountryAddRequest>(3).ToList();
 
             List<CountryResponse> countries_response_list = new List<CountryResponse>();
 
@@ -158,10 +160,7 @@ namespace CRUD_Tests
         {
             // Arrange
             // Create new CountryAddRequest
-            CountryAddRequest country = new CountryAddRequest()
-            { 
-                CountryName = "USA" 
-            };
+            CountryAddRequest country = _fixture.Create<CountryAddRequest>();
 
             // Use .AddCountry() to assign into CountryResponse variable
             CountryResponse returned_country = await _countriesService.AddCountry(country);
@@ -190,9 +189,7 @@ namespace CRUD_Tests
             Assert.Null(countryNull);          
         }
 
-
         #endregion
-
 
     }
 }

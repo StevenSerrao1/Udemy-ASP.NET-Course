@@ -22,7 +22,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -30,8 +30,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {
               "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Entities\\Entities.csproj": {
                 "projectPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Entities\\Entities.csproj"
@@ -56,12 +56,13 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
             "CsvHelper": {
               "target": "Package",
@@ -101,7 +102,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -123,7 +124,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -131,8 +132,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {}
           }
         },
@@ -144,26 +145,27 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.10, )"
+              "version": "[9.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.10, )"
+              "version": "[9.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.10, )"
+              "version": "[9.0.0, )"
             },
             "Rotativa.AspNetCore": {
               "target": "Package",
@@ -186,7 +188,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -208,7 +210,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -216,8 +218,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {
               "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\RepositoryContracts\\RepositoryContracts.csproj": {
                 "projectPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\RepositoryContracts\\RepositoryContracts.csproj"
@@ -233,12 +235,13 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "imports": [
             "net461",
             "net462",
@@ -255,7 +258,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -277,7 +280,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -285,8 +288,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {
               "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Entities\\Entities.csproj": {
                 "projectPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Entities\\Entities.csproj"
@@ -302,12 +305,13 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "imports": [
             "net461",
             "net462",
@@ -324,7 +328,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -346,7 +350,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -354,8 +358,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {
               "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Entities\\Entities.csproj": {
                 "projectPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\Entities\\Entities.csproj"
@@ -371,12 +375,13 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "imports": [
             "net461",
             "net462",
@@ -393,7 +398,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -415,7 +420,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net9.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -423,8 +428,8 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net9.0": {
+            "targetAlias": "net9.0",
             "projectReferences": {
               "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\RepositoryContracts\\RepositoryContracts.csproj": {
                 "projectPath": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\RepositoryContracts\\RepositoryContracts.csproj"
@@ -443,12 +448,13 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
-        }
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "dependencies": {
             "CsvHelper": {
               "target": "Package",
@@ -456,7 +462,7 @@
             },
             "EPPlus": {
               "target": "Package",
-              "version": "[7.4.2, )"
+              "version": "[7.5.0, )"
             }
           },
           "imports": [
@@ -475,7 +481,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

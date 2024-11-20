@@ -1,0 +1,1588 @@
+{
+  "Version": 1,
+  "Hash": "gfjqctfhL6VND9KKiGxMloTb1wtM5921eCksd/YMW00=",
+  "Source": "CRUD_Example",
+  "BasePath": "_content/CRUD_Example",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "CRUD_Example\\wwwroot",
+      "Source": "CRUD_Example",
+      "ContentRoot": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\",
+      "BasePath": "_content/CRUD_Example",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\obj\\Debug\\net9.0\\compressed\\cn1fib26qy-dd6z7egasc.gz",
+      "SourceId": "CRUD_Example",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/CRUD_Example",
+      "RelativePath": "JS/jquery.min#[.{fingerprint=dd6z7egasc}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\JS\\jquery.min.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "7pi76fr1u9",
+      "Integrity": "lVOaS5HHoPiJvrr2uXW7gHNWFhsLK9jeO1zdzSrZIR4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\JS\\jquery.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\obj\\Debug\\net9.0\\compressed\\kxr3u86ek7-x0l543ewpl.gz",
+      "SourceId": "CRUD_Example",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/CRUD_Example",
+      "RelativePath": "JS/jquery.validate.min#[.{fingerprint=x0l543ewpl}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\JS\\jquery.validate.min.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "44z6ovniwi",
+      "Integrity": "RNs4CFjErwYZatEBpJxTbcR8pLQz9T+pq7d6y47sHpo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\JS\\jquery.validate.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\obj\\Debug\\net9.0\\compressed\\m392qvbtnk-qor4by0hh6.gz",
+      "SourceId": "CRUD_Example",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/CRUD_Example",
+      "RelativePath": "StyleSheet#[.{fingerprint=qor4by0hh6}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\StyleSheet.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "5fbd1xej7s",
+      "Integrity": "7x+lOjiakDKtvbHogWYIcFm471oOkcnRl+HZb0smUoU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\StyleSheet.css"
+    },
+    {
+      "Identity": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\obj\\Debug\\net9.0\\compressed\\q9if4bb385-d171zkdrjx.gz",
+      "SourceId": "CRUD_Example",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/CRUD_Example",
+      "RelativePath": "JS/jquery.validate.unobtrusive.min#[.{fingerprint=d171zkdrjx}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\JS\\jquery.validate.unobtrusive.min.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "5qwhdzonie",
+      "Integrity": "7ZiZmZv78zZlAFYEythLkvThSVrMMxXgtZcxrhH8waU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\JS\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\JS\\jquery.min.js",
+      "SourceId": "CRUD_Example",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\",
+      "BasePath": "_content/CRUD_Example",
+      "RelativePath": "JS/jquery.min#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dd6z7egasc",
+      "Integrity": "/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\JS\\jquery.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\JS\\jquery.validate.min.js",
+      "SourceId": "CRUD_Example",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\",
+      "BasePath": "_content/CRUD_Example",
+      "RelativePath": "JS/jquery.validate.min#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "x0l543ewpl",
+      "Integrity": "T7ad2xAWz7SU3JW6WeCeeFD277TAtBTy41NVPqCYNjs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\JS\\jquery.validate.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\JS\\jquery.validate.unobtrusive.min.js",
+      "SourceId": "CRUD_Example",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\",
+      "BasePath": "_content/CRUD_Example",
+      "RelativePath": "JS/jquery.validate.unobtrusive.min#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "d171zkdrjx",
+      "Integrity": "H8OdhvNWpxCHXd9Osw8R7yOsWj9CQKGDMlujYVBsYMw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\JS\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\JS\\logo_image.jpg",
+      "SourceId": "CRUD_Example",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\",
+      "BasePath": "_content/CRUD_Example",
+      "RelativePath": "JS/logo_image#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "dyxwkv4yey",
+      "Integrity": "5aMYLlUfW0thXETNjsjcs6dBd5yzFMJw2FMkjXjA5jA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\JS\\logo_image.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\Rotativa\\wkhtmltopdf.exe",
+      "SourceId": "CRUD_Example",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\",
+      "BasePath": "_content/CRUD_Example",
+      "RelativePath": "Rotativa/wkhtmltopdf#[.{fingerprint}]?.exe",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "cuquy3615b",
+      "Integrity": "ZNF2gjIL/9RbIgjtE7E21ZE56CVzdF8UVWzyXpXL2Ag=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Rotativa\\wkhtmltopdf.exe"
+    },
+    {
+      "Identity": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\StyleSheet.css",
+      "SourceId": "CRUD_Example",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\",
+      "BasePath": "_content/CRUD_Example",
+      "RelativePath": "StyleSheet#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qor4by0hh6",
+      "Integrity": "1qd9csLIEfP5CoH/x9XrY6zdd62WpbhEia9OnrSvblo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\StyleSheet.css"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "JS/jquery.min.dd6z7egasc.js",
+      "AssetFile": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\obj\\Debug\\net9.0\\compressed\\cn1fib26qy-dd6z7egasc.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000032312266"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30947"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lVOaS5HHoPiJvrr2uXW7gHNWFhsLK9jeO1zdzSrZIR4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Oct 2024 08:50:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dd6z7egasc"
+        },
+        {
+          "Name": "label",
+          "Value": "JS/jquery.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        }
+      ]
+    },
+    {
+      "Route": "JS/jquery.min.dd6z7egasc.js",
+      "AssetFile": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\JS\\jquery.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "89501"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Oct 2024 08:50:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dd6z7egasc"
+        },
+        {
+          "Name": "label",
+          "Value": "JS/jquery.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        }
+      ]
+    },
+    {
+      "Route": "JS/jquery.min.dd6z7egasc.js.gz",
+      "AssetFile": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\obj\\Debug\\net9.0\\compressed\\cn1fib26qy-dd6z7egasc.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30947"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lVOaS5HHoPiJvrr2uXW7gHNWFhsLK9jeO1zdzSrZIR4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Oct 2024 08:50:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dd6z7egasc"
+        },
+        {
+          "Name": "label",
+          "Value": "JS/jquery.min.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-lVOaS5HHoPiJvrr2uXW7gHNWFhsLK9jeO1zdzSrZIR4="
+        }
+      ]
+    },
+    {
+      "Route": "JS/jquery.min.js",
+      "AssetFile": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\obj\\Debug\\net9.0\\compressed\\cn1fib26qy-dd6z7egasc.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000032312266"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30947"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lVOaS5HHoPiJvrr2uXW7gHNWFhsLK9jeO1zdzSrZIR4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Oct 2024 08:50:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        }
+      ]
+    },
+    {
+      "Route": "JS/jquery.min.js",
+      "AssetFile": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\JS\\jquery.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "89501"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Oct 2024 08:50:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        }
+      ]
+    },
+    {
+      "Route": "JS/jquery.min.js.gz",
+      "AssetFile": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\obj\\Debug\\net9.0\\compressed\\cn1fib26qy-dd6z7egasc.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30947"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lVOaS5HHoPiJvrr2uXW7gHNWFhsLK9jeO1zdzSrZIR4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Oct 2024 08:50:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lVOaS5HHoPiJvrr2uXW7gHNWFhsLK9jeO1zdzSrZIR4="
+        }
+      ]
+    },
+    {
+      "Route": "JS/jquery.validate.min.js",
+      "AssetFile": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\obj\\Debug\\net9.0\\compressed\\kxr3u86ek7-x0l543ewpl.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000127097102"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7867"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RNs4CFjErwYZatEBpJxTbcR8pLQz9T+pq7d6y47sHpo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Oct 2024 08:51:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"T7ad2xAWz7SU3JW6WeCeeFD277TAtBTy41NVPqCYNjs=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-T7ad2xAWz7SU3JW6WeCeeFD277TAtBTy41NVPqCYNjs="
+        }
+      ]
+    },
+    {
+      "Route": "JS/jquery.validate.min.js",
+      "AssetFile": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\JS\\jquery.validate.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24489"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T7ad2xAWz7SU3JW6WeCeeFD277TAtBTy41NVPqCYNjs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Oct 2024 08:51:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-T7ad2xAWz7SU3JW6WeCeeFD277TAtBTy41NVPqCYNjs="
+        }
+      ]
+    },
+    {
+      "Route": "JS/jquery.validate.min.js.gz",
+      "AssetFile": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\obj\\Debug\\net9.0\\compressed\\kxr3u86ek7-x0l543ewpl.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7867"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RNs4CFjErwYZatEBpJxTbcR8pLQz9T+pq7d6y47sHpo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Oct 2024 08:51:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-RNs4CFjErwYZatEBpJxTbcR8pLQz9T+pq7d6y47sHpo="
+        }
+      ]
+    },
+    {
+      "Route": "JS/jquery.validate.min.x0l543ewpl.js",
+      "AssetFile": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\obj\\Debug\\net9.0\\compressed\\kxr3u86ek7-x0l543ewpl.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000127097102"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7867"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RNs4CFjErwYZatEBpJxTbcR8pLQz9T+pq7d6y47sHpo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Oct 2024 08:51:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"T7ad2xAWz7SU3JW6WeCeeFD277TAtBTy41NVPqCYNjs=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x0l543ewpl"
+        },
+        {
+          "Name": "label",
+          "Value": "JS/jquery.validate.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-T7ad2xAWz7SU3JW6WeCeeFD277TAtBTy41NVPqCYNjs="
+        }
+      ]
+    },
+    {
+      "Route": "JS/jquery.validate.min.x0l543ewpl.js",
+      "AssetFile": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\JS\\jquery.validate.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24489"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T7ad2xAWz7SU3JW6WeCeeFD277TAtBTy41NVPqCYNjs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Oct 2024 08:51:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x0l543ewpl"
+        },
+        {
+          "Name": "label",
+          "Value": "JS/jquery.validate.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-T7ad2xAWz7SU3JW6WeCeeFD277TAtBTy41NVPqCYNjs="
+        }
+      ]
+    },
+    {
+      "Route": "JS/jquery.validate.min.x0l543ewpl.js.gz",
+      "AssetFile": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\obj\\Debug\\net9.0\\compressed\\kxr3u86ek7-x0l543ewpl.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7867"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RNs4CFjErwYZatEBpJxTbcR8pLQz9T+pq7d6y47sHpo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Oct 2024 08:51:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x0l543ewpl"
+        },
+        {
+          "Name": "label",
+          "Value": "JS/jquery.validate.min.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-RNs4CFjErwYZatEBpJxTbcR8pLQz9T+pq7d6y47sHpo="
+        }
+      ]
+    },
+    {
+      "Route": "JS/jquery.validate.unobtrusive.min.d171zkdrjx.js",
+      "AssetFile": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\obj\\Debug\\net9.0\\compressed\\q9if4bb385-d171zkdrjx.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000450045005"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2221"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7ZiZmZv78zZlAFYEythLkvThSVrMMxXgtZcxrhH8waU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Oct 2024 08:51:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"H8OdhvNWpxCHXd9Osw8R7yOsWj9CQKGDMlujYVBsYMw=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "d171zkdrjx"
+        },
+        {
+          "Name": "label",
+          "Value": "JS/jquery.validate.unobtrusive.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-H8OdhvNWpxCHXd9Osw8R7yOsWj9CQKGDMlujYVBsYMw="
+        }
+      ]
+    },
+    {
+      "Route": "JS/jquery.validate.unobtrusive.min.d171zkdrjx.js",
+      "AssetFile": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\JS\\jquery.validate.unobtrusive.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5871"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"H8OdhvNWpxCHXd9Osw8R7yOsWj9CQKGDMlujYVBsYMw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Oct 2024 08:51:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "d171zkdrjx"
+        },
+        {
+          "Name": "label",
+          "Value": "JS/jquery.validate.unobtrusive.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-H8OdhvNWpxCHXd9Osw8R7yOsWj9CQKGDMlujYVBsYMw="
+        }
+      ]
+    },
+    {
+      "Route": "JS/jquery.validate.unobtrusive.min.d171zkdrjx.js.gz",
+      "AssetFile": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\obj\\Debug\\net9.0\\compressed\\q9if4bb385-d171zkdrjx.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2221"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7ZiZmZv78zZlAFYEythLkvThSVrMMxXgtZcxrhH8waU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Oct 2024 08:51:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "d171zkdrjx"
+        },
+        {
+          "Name": "label",
+          "Value": "JS/jquery.validate.unobtrusive.min.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7ZiZmZv78zZlAFYEythLkvThSVrMMxXgtZcxrhH8waU="
+        }
+      ]
+    },
+    {
+      "Route": "JS/jquery.validate.unobtrusive.min.js",
+      "AssetFile": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\obj\\Debug\\net9.0\\compressed\\q9if4bb385-d171zkdrjx.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000450045005"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2221"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7ZiZmZv78zZlAFYEythLkvThSVrMMxXgtZcxrhH8waU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Oct 2024 08:51:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"H8OdhvNWpxCHXd9Osw8R7yOsWj9CQKGDMlujYVBsYMw=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-H8OdhvNWpxCHXd9Osw8R7yOsWj9CQKGDMlujYVBsYMw="
+        }
+      ]
+    },
+    {
+      "Route": "JS/jquery.validate.unobtrusive.min.js",
+      "AssetFile": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\JS\\jquery.validate.unobtrusive.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5871"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"H8OdhvNWpxCHXd9Osw8R7yOsWj9CQKGDMlujYVBsYMw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Oct 2024 08:51:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-H8OdhvNWpxCHXd9Osw8R7yOsWj9CQKGDMlujYVBsYMw="
+        }
+      ]
+    },
+    {
+      "Route": "JS/jquery.validate.unobtrusive.min.js.gz",
+      "AssetFile": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\obj\\Debug\\net9.0\\compressed\\q9if4bb385-d171zkdrjx.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2221"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7ZiZmZv78zZlAFYEythLkvThSVrMMxXgtZcxrhH8waU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Oct 2024 08:51:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7ZiZmZv78zZlAFYEythLkvThSVrMMxXgtZcxrhH8waU="
+        }
+      ]
+    },
+    {
+      "Route": "JS/logo_image.dyxwkv4yey.jpg",
+      "AssetFile": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\JS\\logo_image.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8806"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5aMYLlUfW0thXETNjsjcs6dBd5yzFMJw2FMkjXjA5jA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Oct 2024 16:43:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "dyxwkv4yey"
+        },
+        {
+          "Name": "label",
+          "Value": "JS/logo_image.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-5aMYLlUfW0thXETNjsjcs6dBd5yzFMJw2FMkjXjA5jA="
+        }
+      ]
+    },
+    {
+      "Route": "JS/logo_image.jpg",
+      "AssetFile": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\JS\\logo_image.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8806"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5aMYLlUfW0thXETNjsjcs6dBd5yzFMJw2FMkjXjA5jA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Oct 2024 16:43:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-5aMYLlUfW0thXETNjsjcs6dBd5yzFMJw2FMkjXjA5jA="
+        }
+      ]
+    },
+    {
+      "Route": "Rotativa/wkhtmltopdf.cuquy3615b.exe",
+      "AssetFile": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\Rotativa\\wkhtmltopdf.exe",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "41563648"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.microsoft.portable-executable"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZNF2gjIL/9RbIgjtE7E21ZE56CVzdF8UVWzyXpXL2Ag=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Jun 2020 00:24:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cuquy3615b"
+        },
+        {
+          "Name": "label",
+          "Value": "Rotativa/wkhtmltopdf.exe"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZNF2gjIL/9RbIgjtE7E21ZE56CVzdF8UVWzyXpXL2Ag="
+        }
+      ]
+    },
+    {
+      "Route": "Rotativa/wkhtmltopdf.exe",
+      "AssetFile": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\Rotativa\\wkhtmltopdf.exe",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "41563648"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/vnd.microsoft.portable-executable"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ZNF2gjIL/9RbIgjtE7E21ZE56CVzdF8UVWzyXpXL2Ag=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 11 Jun 2020 00:24:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ZNF2gjIL/9RbIgjtE7E21ZE56CVzdF8UVWzyXpXL2Ag="
+        }
+      ]
+    },
+    {
+      "Route": "StyleSheet.css",
+      "AssetFile": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\obj\\Debug\\net9.0\\compressed\\m392qvbtnk-qor4by0hh6.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000682593857"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1464"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7x+lOjiakDKtvbHogWYIcFm471oOkcnRl+HZb0smUoU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Oct 2024 06:43:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"1qd9csLIEfP5CoH/x9XrY6zdd62WpbhEia9OnrSvblo=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1qd9csLIEfP5CoH/x9XrY6zdd62WpbhEia9OnrSvblo="
+        }
+      ]
+    },
+    {
+      "Route": "StyleSheet.css",
+      "AssetFile": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\StyleSheet.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5820"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1qd9csLIEfP5CoH/x9XrY6zdd62WpbhEia9OnrSvblo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Oct 2024 06:43:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1qd9csLIEfP5CoH/x9XrY6zdd62WpbhEia9OnrSvblo="
+        }
+      ]
+    },
+    {
+      "Route": "StyleSheet.css.gz",
+      "AssetFile": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\obj\\Debug\\net9.0\\compressed\\m392qvbtnk-qor4by0hh6.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1464"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7x+lOjiakDKtvbHogWYIcFm471oOkcnRl+HZb0smUoU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Oct 2024 06:43:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7x+lOjiakDKtvbHogWYIcFm471oOkcnRl+HZb0smUoU="
+        }
+      ]
+    },
+    {
+      "Route": "StyleSheet.qor4by0hh6.css",
+      "AssetFile": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\obj\\Debug\\net9.0\\compressed\\m392qvbtnk-qor4by0hh6.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000682593857"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1464"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7x+lOjiakDKtvbHogWYIcFm471oOkcnRl+HZb0smUoU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Oct 2024 06:43:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"1qd9csLIEfP5CoH/x9XrY6zdd62WpbhEia9OnrSvblo=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qor4by0hh6"
+        },
+        {
+          "Name": "label",
+          "Value": "StyleSheet.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1qd9csLIEfP5CoH/x9XrY6zdd62WpbhEia9OnrSvblo="
+        }
+      ]
+    },
+    {
+      "Route": "StyleSheet.qor4by0hh6.css",
+      "AssetFile": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\wwwroot\\StyleSheet.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5820"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1qd9csLIEfP5CoH/x9XrY6zdd62WpbhEia9OnrSvblo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Oct 2024 06:43:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qor4by0hh6"
+        },
+        {
+          "Name": "label",
+          "Value": "StyleSheet.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1qd9csLIEfP5CoH/x9XrY6zdd62WpbhEia9OnrSvblo="
+        }
+      ]
+    },
+    {
+      "Route": "StyleSheet.qor4by0hh6.css.gz",
+      "AssetFile": "C:\\Users\\Steven\\Desktop\\Udemy-Assignments\\Stocks-App-With-Config-Repo\\CRUD_Assignment\\CRUD_Example\\obj\\Debug\\net9.0\\compressed\\m392qvbtnk-qor4by0hh6.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1464"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7x+lOjiakDKtvbHogWYIcFm471oOkcnRl+HZb0smUoU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 23 Oct 2024 06:43:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qor4by0hh6"
+        },
+        {
+          "Name": "label",
+          "Value": "StyleSheet.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7x+lOjiakDKtvbHogWYIcFm471oOkcnRl+HZb0smUoU="
+        }
+      ]
+    }
+  ]
+}

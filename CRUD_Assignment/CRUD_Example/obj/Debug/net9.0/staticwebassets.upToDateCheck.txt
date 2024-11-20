@@ -1,0 +1,10 @@
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\CRUD_Example\wwwroot\JS\jquery.min.js
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\CRUD_Example\wwwroot\JS\jquery.validate.min.js
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\CRUD_Example\wwwroot\StyleSheet.css
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\CRUD_Example\wwwroot\JS\jquery.validate.unobtrusive.min.js
+wwwroot\JS\jquery.min.js
+wwwroot\JS\jquery.validate.min.js
+wwwroot\JS\jquery.validate.unobtrusive.min.js
+wwwroot\JS\logo_image.jpg
+wwwroot\Rotativa\wkhtmltopdf.exe
+wwwroot\StyleSheet.css

@@ -1,0 +1,16 @@
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\ServiceContracts\bin\Debug\net9.0\ServiceContracts.deps.json
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\ServiceContracts\bin\Debug\net9.0\ServiceContracts.dll
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\ServiceContracts\bin\Debug\net9.0\ServiceContracts.pdb
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\ServiceContracts\bin\Debug\net9.0\Entities.dll
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\ServiceContracts\bin\Debug\net9.0\Entities.pdb
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\ServiceContracts\obj\Debug\net9.0\ServiceContracts.csproj.AssemblyReference.cache
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\ServiceContracts\obj\Debug\net9.0\ServiceContracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\ServiceContracts\obj\Debug\net9.0\ServiceContracts.AssemblyInfoInputs.cache
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\ServiceContracts\obj\Debug\net9.0\ServiceContracts.AssemblyInfo.cs
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\ServiceContracts\obj\Debug\net9.0\ServiceContracts.csproj.CoreCompileInputs.cache
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\ServiceContracts\obj\Debug\net9.0\ServiceContracts.sourcelink.json
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\ServiceContracts\obj\Debug\net9.0\ServiceC.04662A29.Up2Date
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\ServiceContracts\obj\Debug\net9.0\ServiceContracts.dll
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\ServiceContracts\obj\Debug\net9.0\refint\ServiceContracts.dll
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\ServiceContracts\obj\Debug\net9.0\ServiceContracts.pdb
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\ServiceContracts\obj\Debug\net9.0\ref\ServiceContracts.dll

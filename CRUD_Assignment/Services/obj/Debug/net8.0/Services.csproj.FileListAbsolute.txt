@@ -34,3 +34,5 @@ C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assig
 C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\Services\obj\Debug\net8.0\refint\Services.dll
 C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\Services\obj\Debug\net8.0\Services.pdb
 C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\Services\obj\Debug\net8.0\ref\Services.dll
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\Services\bin\Debug\net8.0\RepositoryContracts.dll
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\CRUD_Assignment\Services\bin\Debug\net8.0\RepositoryContracts.pdb

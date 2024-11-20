@@ -36,7 +36,7 @@ namespace Repositories
             return await _db.Countries.FirstOrDefaultAsync(c => c.CountryId == countryId);
         }
 
-        public async Task<Country?> GetCountryByCountryName(string countryName)
+        public async Task<Country?> GetCountryByCountryName(string? countryName)
         {
             return await _db.Countries.FirstOrDefaultAsync(c => c.CountryName == countryName);
         }

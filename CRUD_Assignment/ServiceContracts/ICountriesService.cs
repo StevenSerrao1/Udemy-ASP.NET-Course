@@ -32,7 +32,7 @@ namespace ServiceContracts
         /// </summary>
         /// <param name="name">Name to be matched</param>
         /// <returns>A country of CountryResponse type or null</returns>
-        Task<CountryResponse?> GetCountryByName(string name);
+        Task<CountryResponse?> GetCountryByName(string? name);
         
     }
 }

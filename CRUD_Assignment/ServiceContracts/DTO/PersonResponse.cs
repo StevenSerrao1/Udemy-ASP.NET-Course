@@ -68,7 +68,7 @@ namespace ServiceContracts.DTO
                 PersonEmail = PersonEmail,
                 DOB = DOB,
                 CountryId = CountryId,
-                Gender = (GenderEnum)Enum.Parse(typeof(GenderEnum), Gender!, true),
+                Gender = (GenderEnum)Enum.Parse(typeof(GenderEnum), Gender, true),
                 ReceivesNewsletters = ReceivesNewsletters
             };
         }

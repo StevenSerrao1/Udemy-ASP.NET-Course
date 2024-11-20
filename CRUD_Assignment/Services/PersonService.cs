@@ -15,17 +15,19 @@ using System.Runtime.CompilerServices;
 using CsvHelper;
 using System.Globalization;
 using CsvHelper.Configuration;
+using RepositoryContracts;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Services
 {
     public class PersonService : IPersonService
     {
-        private readonly ApplicationDbContext _personsDb;
+        private readonly IPersonsRepository _personsRepo;
         private readonly ICountriesService _countriesService;
 
-        public PersonService(ApplicationDbContext dbContext, ICountriesService countriesService)
+        public PersonService(IPersonsRepository dbContext, ICountriesService countriesService)
         {
-            _personsDb = dbContext;
+            _personsRepo = dbContext;
             _countriesService = countriesService;
         }
 
@@ -44,10 +46,11 @@ namespace Services
             person.PersonId = Guid.NewGuid();
 
             // Add into List<Person>
-            _personsDb.Persons.Add(person);
-            //_personsDb.sp_AddPerson(person);
+            //_personsRepo.Persons.Add(person);
+            //_personsRepo.sp_AddPerson(person);
             // Save changes to DbSet - UNNECESSARY WHEN USING STORED PROCEDURES
-            await _personsDb.SaveChangesAsync();
+            // await _personsRepo.SaveChangesAsync();
+            await _personsRepo.AddPerson(person);
 
             // Convert "person" from Person type to PersonResponse type WITH CountryId
             PersonResponse personResponse = person.ToPersonResponse();
@@ -134,16 +137,16 @@ namespace Services
 
         public async Task<List<PersonResponse>> GetAllPersons()
         {
-            var persons = await _personsDb.Persons.Include("Country").ToListAsync();
+            var persons = await _personsRepo.GetAllPersons();
             // Doing it WITH a stored db procedure
             return persons.Select(person => person.ToPersonResponse()).ToList();
 
             // One way to do it without stored procedure
             // SELECT * from Persons
-            //return _personsDb.Persons.ToList().Select(person => ConvertPersonToPersonResponse(person)).ToList();
+            //return _personsRepo.Persons.ToList().Select(person => ConvertPersonToPersonResponse(person)).ToList();
 
             // Below, it is impossible to use a custom method within a LINQ to entity expression
-            //return _personsDb.Persons.Select(person => ConvertPersonToPersonResponse(person)).ToList();
+            //return _personsRepo.Persons.Select(person => ConvertPersonToPersonResponse(person)).ToList();
         }
 
         public async Task<PersonResponse?>? GetPersonByPersonId(Guid? personID)
@@ -152,7 +155,7 @@ namespace Services
             if (personID == null) return new PersonResponse() { PersonName = "ID is null"};
 
             // Get Matching person from List<Person> by PersonId
-            Person? person = await _personsDb.Persons.Include("Country").FirstOrDefaultAsync(persona => persona.PersonId == personID);
+            Person? person = await _personsRepo.GetPersonByPersonId(personID.Value);
 
             // Convert matching person from Person to PersonResponse object type
             if (person == null) return new PersonResponse() { PersonName = "PERSON is null" };
@@ -176,48 +179,48 @@ namespace Services
             }
 
             // Get matching people from List<Person> based on parameters
-            switch (searchBy)
+            List<Person> people = searchBy switch
             {
-                case nameof(Person.PersonName):
-                    matchingPeople = allPeople.Where(person =>
+                nameof(Person.PersonName) =>
+                    await _personsRepo.GetFilteredPersons(person =>
                     (!string.IsNullOrEmpty(person.PersonName) ?
-                    person.PersonName.Contains(searchString, StringComparison.OrdinalIgnoreCase) : true
-                )).ToList(); break;
+                    person.PersonName.Contains(searchString) : true
+                    )),
 
-                case nameof(Person.PersonEmail):
-                    matchingPeople = allPeople.Where(person =>
+                nameof(Person.PersonEmail) =>
+                    await _personsRepo.GetFilteredPersons(person =>
                     (!string.IsNullOrEmpty(person.PersonEmail) ?
-                    person.PersonEmail.Contains(searchString, StringComparison.OrdinalIgnoreCase) : true
-                )).ToList(); break;
+                    person.PersonEmail.Contains(searchString) : true
+                    )),
 
-                case nameof(Person.PersonAddress):
-                    matchingPeople = allPeople.Where(person =>
+                nameof(Person.PersonAddress) =>
+                    await _personsRepo.GetFilteredPersons(person =>
                     (!string.IsNullOrEmpty(person.PersonAddress) ?
-                    person.PersonAddress.Contains(searchString, StringComparison.OrdinalIgnoreCase) : true
-                )).ToList(); break;
+                    person.PersonAddress.Contains(searchString) : true
+                    )),
 
-                case nameof(Person.ReceivesNewsletters):
-                    matchingPeople = allPeople.Where(person =>
-                    person.ReceivesNewsletters.ToString().Contains(searchString, StringComparison.OrdinalIgnoreCase)
-                ).ToList(); break;
+                nameof(Person.ReceivesNewsletters) =>
+                    await _personsRepo.GetFilteredPersons(person =>
+                    person.ReceivesNewsletters.ToString().Contains(searchString)
+                    ),
 
-                case nameof(Person.DOB):
-                    matchingPeople = allPeople.Where(person =>
+                nameof(Person.DOB) =>
+                    await _personsRepo.GetFilteredPersons(person =>
                     (person.DOB != null) ?
-                    person.DOB.Value.ToString("dd MMMM yyyy").Contains(searchString, StringComparison.OrdinalIgnoreCase) : true
-                ).ToList(); break;
+                    person.DOB.Value.ToString("dd MMMM yyyy").Contains(searchString) : true
+                    ),
 
-                case nameof(Person.Gender):
-                    matchingPeople = allPeople.Where(person =>
+                nameof(Person.Gender) =>
+                    await _personsRepo.GetFilteredPersons(person =>
                     (!string.IsNullOrEmpty(person.Gender) ?
-                    person.Gender.Equals(searchString, StringComparison.OrdinalIgnoreCase) : true
-                )).ToList(); break;
+                    person.Gender.Equals(searchString) : true
+                    )),
 
-                default: matchingPeople = allPeople; break;
-            }
+                _ => await _personsRepo.GetAllPersons()
+            };
 
             // Return all matching PersonResponse objects
-            return matchingPeople;
+            return people.Select(temp => temp.ToPersonResponse()).ToList();
         }
 
         public async Task<List<PersonResponse>> GetSortedPersons(List<PersonResponse> allPersons, string sortBy, SortOrderEnum sortOrder)
@@ -291,55 +294,60 @@ namespace Services
             ValidationHelpers.ValidateObject(personUpdateRequest);
 
             // Get matching Person from List<Person> based on PersonId
-            Person? matchingPerson = await _personsDb.Persons.FirstOrDefaultAsync(p => p.PersonId == personUpdateRequest.PersonId);
+            Person? matchingPerson = await _personsRepo.GetPersonByPersonId(personUpdateRequest.PersonId);
 
             // Check if matchingPerson is not null
             if (matchingPerson == null) throw new ArgumentException("PersonId does not exist");
 
             // Call the stored procedure through the DbContext
-            _personsDb.sp_UpdatePerson(
-                personUpdateRequest.PersonId,
-                personUpdateRequest.DOB,
-                personUpdateRequest.Gender.ToString(),
-                personUpdateRequest.PersonAddress,
-                personUpdateRequest.PersonEmail,
-                personUpdateRequest.PersonName,
-                personUpdateRequest.ReceivesNewsletters,
-                personUpdateRequest.CountryId
-            );
+
+            matchingPerson.PersonId = personUpdateRequest.PersonId;
+            matchingPerson.DOB = personUpdateRequest.DOB;
+            matchingPerson.Gender = personUpdateRequest.Gender.ToString();
+            matchingPerson.PersonAddress = personUpdateRequest.PersonAddress;
+            matchingPerson.PersonEmail = personUpdateRequest.PersonEmail;
+            matchingPerson.PersonName = personUpdateRequest.PersonName;
+            matchingPerson.ReceivesNewsletters = personUpdateRequest.ReceivesNewsletters;
+            matchingPerson.CountryId = personUpdateRequest.CountryId;
+
+            //personUpdateRequest.DOB,
+            //personUpdateRequest.Gender.ToString(),
+            //personUpdateRequest.PersonAddress,
+            //personUpdateRequest.PersonEmail,
+            //personUpdateRequest.PersonName,
+            //personUpdateRequest.ReceivesNewsletters,
+            //personUpdateRequest.CountryId
+
 
             // Save changes to entity object
-            // _personsDb.SaveChanges(); // UPDATE
+            await _personsRepo.UpdatePerson(matchingPerson); // UPDATE
 
             return matchingPerson.ToPersonResponse();
         }
 
-        public async Task<bool> DeletePerson(Guid? PersonId)
+        public async Task<bool> DeletePersonByPersonId(Guid? PersonId)
         {
             // Check if ID is null
             if (PersonId == null) throw new ArgumentNullException("PersonId is null");
 
             // Get matching Person from List<Person>
-            Person? matchingPerson = await _personsDb.Persons.FirstOrDefaultAsync(p => p.PersonId == PersonId);
+            Person? matchingPerson = await _personsRepo.GetPersonByPersonId(PersonId.Value);
 
             // Check if Person is null
             if (matchingPerson == null) return false;
 
             // Delete Person object from List
-            _personsDb.sp_DeletePerson(matchingPerson);
+            return await _personsRepo.DeletePersonByPersonId(PersonId.Value);
 
             // Save changes to DbSet by saving DELETION of person - UNNECESSARY WHEN USING STORED PROCEDURES
-            await _personsDb.SaveChangesAsync(); // DELETE
-
-            // Return boolean value to indicate success of deletion
-            return _personsDb.Persons.Contains(matchingPerson) ? false : true;
+            // await _personsRepo.SaveChangesAsync(); // DELETE
         }
 
         public async Task<MemoryStream> GetAllPeopleCSV()
         {
             MemoryStream memStream = new MemoryStream();
             StreamWriter sw = new StreamWriter(memStream);
-            List<PersonResponse> persons = await _personsDb.Persons.Include("Country").Select(temp => temp.ToPersonResponse()).ToListAsync();
+            List<PersonResponse> persons = await GetAllPersons();
 
             CsvConfiguration csvConfig = new CsvConfiguration(CultureInfo.InvariantCulture);
             CsvWriter cw = new CsvWriter(sw, csvConfig);

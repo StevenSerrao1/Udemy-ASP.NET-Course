@@ -184,7 +184,7 @@ namespace CRUD_Example.Controllers
                 return RedirectToAction("Index");
             }
 
-            await _personsService.DeletePerson(person.PersonId);
+            await _personsService.DeletePersonByPersonId(person.PersonId);
 
             return RedirectToAction("Index");
         }

@@ -3,18 +3,19 @@ using ServiceContracts.DTO;
 using System.Runtime.CompilerServices;
 using Microsoft.EntityFrameworkCore;
 using Entities;
+using RepositoryContracts;
 
 namespace Services
 {
     public class CountriesService : ICountriesService
     {
         // Private fields
-        private readonly ApplicationDbContext _db;
+        private readonly ICountriesRepository _countriesRepository;
 
         // Constructor
-        public CountriesService(ApplicationDbContext dbContext)
+        public CountriesService(ICountriesRepository countriesRepo)
         {
-            _db = dbContext;
+            _countriesRepository = countriesRepo;
         }
 
         public async Task<CountryResponse> AddCountry(CountryAddRequest? countryAddRequest)
@@ -31,8 +32,8 @@ namespace Services
                 throw new ArgumentNullException(nameof(countryAddRequest.CountryName));
             }
 
-            // Check for duplicate in _db
-            if (await _db.Countries.CountAsync(c => c.CountryName == countryAddRequest.CountryName) > 0)
+            // Check for duplicate in _countriesRepository
+            if (await _countriesRepository.GetCountryByCountryName(countryAddRequest.CountryName) != null)
             {
                 throw new ArgumentException("Duplicate countries are not allowed");
             }
@@ -41,13 +42,10 @@ namespace Services
             Country country = countryAddRequest.ToCountry();
             
             // Generate a new CountryID (GUID)
-            country.CountryId = Guid.NewGuid();      
+            country.CountryId = Guid.NewGuid();
 
             // Add it into List<Country>
-            _db.Countries.Add(country);
-
-            // Save changes - NEW
-            await _db.SaveChangesAsync();
+            await _countriesRepository.AddCountry(country);
 
            // Return CountryResponse object with generated CountryID (GUID)
            return country.ToCountryResponse();
@@ -56,7 +54,13 @@ namespace Services
 
         public async Task<List<CountryResponse>> GetAllCountries()
         {
-            return await _db.Countries.Select(countries => countries.ToCountryResponse()).ToListAsync();
+            List<CountryResponse> countries = (await _countriesRepository.GetAllCountries())
+                .Select(countries => countries.ToCountryResponse())
+                .ToList();
+
+            Console.WriteLine();
+
+            return countries;
         }
 
         public async Task<CountryResponse>? GetCountryById(Guid? id)
@@ -65,7 +69,7 @@ namespace Services
             if (id == null) return null!;
 
             // Get matching country from List<Country> based id
-            Country? match = await _db.Countries.FirstOrDefaultAsync(c => c.CountryId == id);
+            Country? match = await _countriesRepository.GetCountryByCountryId(id.Value);
 
             // Check to see if matching country is null
             if (match == null) return null!;
@@ -77,13 +81,13 @@ namespace Services
             return resMatch;
         }
 
-        public async Task<CountryResponse?> GetCountryByName(string name)
+        public async Task<CountryResponse?> GetCountryByName(string? name)
         {
             // Check if "countryID" != null
             if (name == null) return null!;
 
-            // Get matching country from List<Country> based id
-            Country? match = await _db.Countries.FirstOrDefaultAsync(c => c.CountryName == name);
+            // Get matching country from List<Country> based on name
+            Country? match = await _countriesRepository.GetCountryByCountryName(name);
 
             // Check to see if matching country is null
             if (match == null) return null!;

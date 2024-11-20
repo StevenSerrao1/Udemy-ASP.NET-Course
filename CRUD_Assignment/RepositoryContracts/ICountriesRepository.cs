@@ -38,6 +38,6 @@ namespace RepositoryContracts
         /// </summary>
         /// <param name="countryName"></param>
         /// <returns>Object of Country type or null</returns>
-        Task<Country?> GetCountryByCountryName(string countryName);
+        Task<Country?> GetCountryByCountryName(string? countryName);
     }
 }

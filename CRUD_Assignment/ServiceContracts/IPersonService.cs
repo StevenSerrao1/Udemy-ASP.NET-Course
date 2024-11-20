@@ -59,7 +59,7 @@ namespace ServiceContracts
         /// </summary>
         /// <param name="PersonId"></param>
         /// <returns>Boolean value determining success in deleting person</returns>
-        public Task<bool> DeletePerson(Guid? PersonId);
+        public Task<bool> DeletePersonByPersonId(Guid? PersonId);
 
         /// <summary>
         /// Returns an object of Person type as a CSV file

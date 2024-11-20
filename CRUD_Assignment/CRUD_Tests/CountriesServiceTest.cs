@@ -8,6 +8,7 @@ using EntityFrameworkCoreMock;
 using Moq;
 using AutoFixture;
 using FluentAssertions;
+using RepositoryContracts;
 
 namespace CRUD_Tests
 {
@@ -15,11 +16,15 @@ namespace CRUD_Tests
     {
         private readonly ICountriesService _countriesService;
         private readonly IFixture _fixture;
+        private readonly ICountriesRepository _countriesRepository;
+        private readonly Mock<ICountriesRepository> _countriesRepoMock;
 
         public CountriesServiceTest()
         {
             // Initialize fixture for mock data
             _fixture = new Fixture();
+            _countriesRepoMock = new Mock<ICountriesRepository>();
+            _countriesRepository = _countriesRepoMock.Object;
 
             // Init empty countries list
             var countriesMockData = new List<Country>() { };
@@ -35,7 +40,7 @@ namespace CRUD_Tests
             // Create Mock DbSet of countries type
             dbContextMock.CreateDbSetMock(temp => temp.Countries, countriesMockData);
 
-            _countriesService = new CountriesService(dbContext);
+            _countriesService = new CountriesService(_countriesRepository);
         }
 
         #region AddCountry() Test Cases
@@ -84,44 +89,71 @@ namespace CRUD_Tests
 
         // If country name is duplicate, throw argument exception
         [Fact]
-        public async Task AddCountry_DuplicateCountryName()
+        public async Task AddCountry_DuplicateCountryName_ShouldThrowException()
         {
             // Arrange / Make two countries with identical names
-            CountryAddRequest country1 = new CountryAddRequest() { CountryName = "USA" };
-            CountryAddRequest country2 = new CountryAddRequest() { CountryName = "USA" };
+            CountryAddRequest countryAR =
+                _fixture.Build<CountryAddRequest>()
+                .With(c => c.CountryName, "U.S.A")
+                .Create();
 
-            await _countriesService.AddCountry(country1);
+            // Create mock implementation for adding country
+            _countriesRepoMock
+                .Setup(temp => temp.AddCountry(It.IsAny<Country>()))
+                .ReturnsAsync(countryAR.ToCountry());
 
-            // Assert / Throw an excpetion based on that
-            //await Assert.ThrowsAsync<ArgumentException>(async () =>
-            //{
-            //    // Act / use method that will err when duplicate country names are used
-            //    await _countriesService.AddCountry(country2);
-            //});
+            var duplicateCountry = new Country { CountryName = "U.S.A" };
 
-            Func<Task> action = async () => await _countriesService.AddCountry(country2);
+            // Mock GetCountryByCountryName to return the duplicate country
+            _countriesRepoMock
+                .Setup(temp => temp.GetCountryByCountryName("U.S.A"))
+                .ReturnsAsync(duplicateCountry);
 
-            await action.Should().ThrowAsync<ArgumentException>();
-
+            // Act & Assert
+            // The exception should be thrown, and we should catch it
+            await FluentActions
+                .Invoking(async () => await _countriesService.AddCountry(countryAR))
+                .Should()
+                .ThrowAsync<ArgumentException>()
+                .WithMessage("Duplicate countries are not allowed");
         }
+
 
         // If approved country name is supplied, add the country name into Countries list
         [Fact]
-        public async Task AddCountry_ProperCountryDetails()
+        public async Task AddCountry_ProperCountryDetails_ToSucceed()
         {
             // Arrange / Make a country with a null valued name
-            CountryAddRequest request = _fixture.Create<CountryAddRequest>();
+            CountryAddRequest request = _fixture
+                .Build<CountryAddRequest>()
+                .Create();
+
+            Country country = request.ToCountry();
+            CountryResponse countryResponse = country.ToCountryResponse();
+
+            // Create mock implementation
+            _countriesRepoMock
+                .Setup(temp => temp.AddCountry(It.IsAny<Country>()))
+                .ReturnsAsync(country);
+
+            Country duplicateCountry = new Country { CountryName = "U.S.A" };
+
+            // Mock GetCountryByCountryName to return the duplicate country
+            _countriesRepoMock
+                .Setup(temp => temp.GetCountryByCountryName("U.S.A"))
+                .ReturnsAsync(duplicateCountry);
 
             // Act
             CountryResponse response = await _countriesService.AddCountry(request);
+            countryResponse.CountryID = response.CountryID;
 
-            List<CountryResponse> countries_from_GetAllCountries = await _countriesService.GetAllCountries();
+            Console.WriteLine();
 
             // Assert
             //Assert.True(response.CountryID != Guid.Empty);
             response.CountryID.Should().NotBeEmpty(); // FLUENT ASSERTION
             //Assert.Contains(response, countries_from_GetAllCountries);
-            countries_from_GetAllCountries.Should().Contain(response); // FLUENT ASSERTION
+            response.Should().Be(countryResponse);
         }
         #endregion
 
@@ -129,8 +161,10 @@ namespace CRUD_Tests
 
         // List should be empty by default
         [Fact]
-        public async Task GetAllCountries_EmptyList()
+        public async Task GetAllCountries_EmptyList_ShouldBeEmpty()
         {
+            List<Country> countries = new List<Country>();
+            _countriesRepoMock.Setup(temp => temp.GetAllCountries()).ReturnsAsync(countries);
 
             // Act 
             List<CountryResponse> countriesList = await _countriesService.GetAllCountries();
@@ -142,31 +176,25 @@ namespace CRUD_Tests
 
         // If countries are added, the countires should be returned
         [Fact]
-        public async Task GetAllCountries_AddCountries()
+        public async Task GetAllCountries_ShouldHaveFewCountries()
         {
-            // Arrange
-            List<CountryAddRequest> country_request_list = _fixture.CreateMany<CountryAddRequest>(3).ToList();
+            //Arrange
+            List<Country> country_list = new List<Country>() {
+                _fixture.Build<Country>()
+                .With(temp => temp.Persons, null as List<Person>).Create(),
+                _fixture.Build<Country>()
+                .With(temp => temp.Persons, null as List<Person>).Create()
+            };
 
-            List<CountryResponse> countries_response_list = new List<CountryResponse>();
+            List<CountryResponse> country_response_list = country_list.Select(temp => temp.ToCountryResponse()).ToList();
 
-            // Act
+            _countriesRepoMock.Setup(temp => temp.GetAllCountries()).ReturnsAsync(country_list);
 
-            // for each country_request in request list, add it to response list
-            foreach (CountryAddRequest country_request in country_request_list)
-            {
-                countries_response_list.Add(await _countriesService.AddCountry(country_request));
-            }
+            //Act
+            List<CountryResponse> actualCountryResponseList = await _countriesService.GetAllCountries();
 
-            // create actual response list, gathering country responses using method
-            List<CountryResponse> actualResponseList = await _countriesService.GetAllCountries();
-
-            // Read each element from list
-            foreach(CountryResponse expected_country in countries_response_list)
-            {
-                // Assert
-                // Assert.Contains(expected_country, actualResponseList);
-                actualResponseList.Should().Contain(expected_country); // FLUENT ASSERTION
-            }
+            //Assert
+            actualCountryResponseList.Should().BeEquivalentTo(country_response_list);
         }
         #endregion
 

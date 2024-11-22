@@ -89,7 +89,7 @@ namespace CRUD_Example.Controllers
                     .Select(e => e.ErrorMessage)
                     .ToList();
 
-                return View();
+                return View(personAddRequest);
             }
 
             // Call the service method

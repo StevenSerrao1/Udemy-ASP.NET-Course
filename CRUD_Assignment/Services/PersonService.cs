@@ -149,7 +149,7 @@ namespace Services
             //return _personsRepo.Persons.Select(person => ConvertPersonToPersonResponse(person)).ToList();
         }
 
-        public async Task<PersonResponse?>? GetPersonByPersonId(Guid? personID)
+        public async Task<PersonResponse?> GetPersonByPersonId(Guid? personID)
         {
             // Check if PersonId is not null
             if (personID == null) return new PersonResponse() { PersonName = "ID is null"};

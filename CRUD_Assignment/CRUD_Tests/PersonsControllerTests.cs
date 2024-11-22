@@ -11,6 +11,7 @@ using ServiceContracts.DTO;
 using FluentAssertions;
 using ServiceContracts.Enums;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CRUD_Tests
 {
@@ -74,6 +75,144 @@ namespace CRUD_Tests
             // Final direct assertion
             viewResult.ViewData.Model.Should().Be(persons_response_list);
         }
+
+        #endregion
+
+        #region Create Action Tests
+
+        [Fact]
+        public async Task Create_GetRequest()
+        {
+            // Arrange // Create list of countryresponse type
+            List<CountryResponse> countries = _fixture.Create<List<CountryResponse>>();
+            // Create object of PersonController type (!)
+            PersonsController personsController = new PersonsController(_personsService, _countriesService);
+            // Create Mock method for GetAllCountries()
+            _countryMock
+                .Setup(temp => temp.GetAllCountries())
+                .ReturnsAsync(countries);
+
+            // Act
+            IActionResult action = await personsController.Create();
+
+            // Assert
+            ViewResult result = Assert.IsType<ViewResult>(action);
+            var selectLisItems = Assert.IsAssignableFrom<List<SelectListItem>>(result.ViewData["Countries"]);    
+        }
+
+        [Fact]
+        public async Task Create_PostRequest_InvalidModelState()
+        {
+            // Arrange // Initialize PAR due to parameter of controller action method
+            PersonAddRequest personAdd = _fixture.Create<PersonAddRequest>();
+
+            // Initialize PR to be returned by mock method of AddPerson()
+            PersonResponse personResponse = _fixture.Create<PersonResponse>();
+
+            // Create list of countryresponse type
+            List<CountryResponse> countries = _fixture.Create<List<CountryResponse>>();
+
+            // Create object of PersonController type (!)
+            PersonsController personsController = new PersonsController(_personsService, _countriesService);
+
+            // Create Mock method for GetAllCountries()
+            _countryMock
+                .Setup(temp => temp.GetAllCountries())
+                .ReturnsAsync(countries);
+
+            // Create Mock method for GetAllCountries()
+            _personMock
+                .Setup(temp => temp.AddPerson(It.IsAny<PersonAddRequest>()))
+                .ReturnsAsync(personResponse);
+
+            // *** ADD MODEL ERROR TO SIMULATE !MODELSTATE.ISVALID ** //
+            personsController.ModelState.AddModelError("PersonName", "Person Name can't be blank.");
+
+            // Act
+            IActionResult actionResult = await personsController.Create(personAdd);
+
+            // Assert // Assert type into viewresult, assert type is PAR, assert equal value to above PAR
+            ViewResult viewResult = Assert.IsType<ViewResult>(actionResult);
+            viewResult.ViewData.Model.Should().BeAssignableTo<PersonAddRequest>();
+            viewResult.ViewData.Model.Should().Be(personAdd);
+        }
+
+        [Fact]
+        public async Task Create_PostRequest_ValidModelState()
+        {
+            // Arrange // Initialize PAR due to parameter of controller action method
+            PersonAddRequest personAdd = _fixture.Create<PersonAddRequest>();
+
+            // Initialize PR to be returned by mock method of AddPerson()
+            PersonResponse personResponse = _fixture.Create<PersonResponse>();
+
+            // Create list of countryresponse type
+            List<CountryResponse> countries = _fixture.Create<List<CountryResponse>>();
+
+            // Create object of PersonController type (!)
+            PersonsController personsController = new PersonsController(_personsService, _countriesService);
+
+            // Create Mock method for GetAllCountries()
+            _countryMock
+                .Setup(temp => temp.GetAllCountries())
+                .ReturnsAsync(countries);
+
+            // Create Mock method for GetAllCountries()
+            _personMock
+                .Setup(temp => temp.AddPerson(It.IsAny<PersonAddRequest>()))
+                .ReturnsAsync(personResponse);
+
+            // Act
+            IActionResult actionResult = await personsController.Create(personAdd);
+
+            // Assert // Assert type into RedirectToActionResult
+            RedirectToActionResult redirectResult = Assert.IsType<RedirectToActionResult>(actionResult);
+            // Assert that the redirect result is Index
+            redirectResult.ActionName.Should().Be("Index");
+        }
+
+        #endregion
+
+        #region Edit Test Cases
+
+        [Fact]
+        public async Task Edit_Valid_GetRequest_ShouldReturnPersonToBeUpdated()
+        {
+            // Arrange // Create list of countryresponse type
+            List<CountryResponse> countries = _fixture.Create<List<CountryResponse>>();
+
+            // Create mock PersonResponse
+            PersonResponse? personResponse = _fixture
+                .Build<PersonResponse?>()
+                .With(p => p.Gender, GenderEnum.Male.ToString())
+                .Create();
+
+            // Create mock PUR
+            PersonUpdateRequest personUpdate = personResponse.ToPersonUpdateRequest();
+
+            // Create object of PersonController type (!)
+            PersonsController personsController = new PersonsController(_personsService, _countriesService);
+
+            // Create Mock method for GetAllCountries()
+            _countryMock
+                .Setup(temp => temp.GetAllCountries())
+                .ReturnsAsync(countries);
+
+            // Create Mock method for GetPersonByPersonId()
+            _personMock
+                .Setup(temp => temp.GetPersonByPersonId(It.IsAny<Guid>()))
+                .ReturnsAsync(personResponse);
+
+            // Act
+            IActionResult action = await personsController.Edit(personResponse.PersonId);
+
+            // Assert
+            ViewResult result = Assert.IsType<ViewResult>(action);
+            result.ViewData.Model.Should().BeAssignableTo<PersonUpdateRequest>();
+            result.ViewData.Model.Should().BeEquivalentTo(personUpdate);
+        }
+
+        // ADD FURTHER TESTS HERE
 
         #endregion
 

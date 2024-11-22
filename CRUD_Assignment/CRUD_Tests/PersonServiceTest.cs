@@ -449,7 +449,10 @@ namespace CRUD_Tests
         [Fact]
         public async Task UpdatePerson_InvalidId_ToBeArgumentException()
         {
-            PersonUpdateRequest? pur = new PersonUpdateRequest() { PersonId = Guid.NewGuid() };
+            PersonUpdateRequest? pur = _fixture
+                .Build<PersonUpdateRequest>()
+                .With(pur => pur.PersonId, Guid.NewGuid())
+                .Create();
 
             //await Assert.ThrowsAsync<ArgumentException>(async () =>
             //{

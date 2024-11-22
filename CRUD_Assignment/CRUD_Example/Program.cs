@@ -8,6 +8,8 @@ using Repositories;
 // Create builder 
 var builder = WebApplication.CreateBuilder(args);
 
+Console.WriteLine($"Current Environment: {builder.Environment.EnvironmentName}");
+
 // Enable SERVICE that allows using controllers with views
 builder.Services.AddControllersWithViews();
 
@@ -17,10 +19,19 @@ builder.Services.AddScoped<ICountriesRepository, CountriesRepository>();
 builder.Services.AddScoped<ICountriesService, CountriesService>();
 builder.Services.AddScoped<IPersonService, PersonService>();
 
-// Initialize DbContext use
-builder.Services.AddDbContext<ApplicationDbContext>(options => {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection"));
-});
+if (!builder.Environment.IsEnvironment("Test"))
+{
+    var connectionString = builder.Configuration.GetConnectionString("DbConnection");
+    Console.WriteLine($"Connection String: {connectionString}");
+
+    builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    {
+        options.UseSqlServer(connectionString);
+    });
+
+    // Register Rotativa pdf services for development environment
+    Rotativa.AspNetCore.RotativaConfiguration.Setup("wwwroot", wkhtmltopdfRelativePath: "Rotativa");
+}
 
 // Build app
 var app = builder.Build();
@@ -31,7 +42,6 @@ if(builder.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 }
 
-Rotativa.AspNetCore.RotativaConfiguration.Setup("wwwroot", wkhtmltopdfRelativePath: "Rotativa");
 
 // Enable features such as static file use, routing and controller mapping
 app.UseStaticFiles();
@@ -40,3 +50,6 @@ app.MapControllers();
 
 // LET'S GOOOO
 app.Run();
+
+// ** CREATE PARTIAL CLASS CALLED PROGRAM IN ORDER TO ACCESS AUTO-GENERATED PROGRAM CLASS PROGRAMATICALLY
+public partial class Program { }

@@ -28,7 +28,7 @@ namespace ServiceContracts
         /// </summary>
         /// <param name="personID"></param>
         /// <returns>PersonResponse</returns>
-        public Task<PersonResponse?>? GetPersonByPersonId(Guid? personID);
+        public Task<PersonResponse?> GetPersonByPersonId(Guid? personID);
 
         /// <summary>
         /// Get a list of people matching certain criteria

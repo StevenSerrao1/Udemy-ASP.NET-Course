@@ -23,10 +23,12 @@
 
                     <div class="flex-1 pr" id="search-box-div">
 
-                        <input type="search" class="search-text" placeholder="Search Stocks" name="SearchText" />
-                        <i class="fa-solid fa-gear"></i>
+                        <form method="get" asp-action="Index" asp-route-stockSymbol="@Model.StockSymbol">
+                            <input type="search" class="search-text" placeholder="Search Stocks" name="stockSymbol" />
+                            <button class="button button-blue-back search-button mr">Search</button>
+                            <i class="fa-solid fa-gear"></i>
+                        </form>
 
-                        <button class="button button-blue-back ml login-button">Login</button>
                     </div>
                 </div>
 

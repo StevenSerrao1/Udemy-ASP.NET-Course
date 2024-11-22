@@ -250,3 +250,7 @@ C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\StocksApp_
 C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\StocksApp_Whole\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\StocksApp_Whole\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\StocksApp_Whole\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\StocksApp_Whole\bin\Debug\net8.0\StocksApp_Whole.staticwebassets.endpoints.json
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\StocksApp_Whole\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\StocksApp_Whole\obj\Debug\net8.0\staticwebassets\msbuild.StocksApp_Whole.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\Steven\Desktop\Udemy-Assignments\Stocks-App-With-Config-Repo\StocksApp_Whole\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

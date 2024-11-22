@@ -1,0 +1,28 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/StocksApp_Whole/Scripts/JavaScript.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Scripts\JavaScript.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-1FGuiXQBzWOsugZ2WFFOsTvb218dlDOQxTBbLakfqn0="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1867"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00221FGuiXQBzWOsugZ2WFFOsTvb218dlDOQxTBbLakfqn0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Oct 2024 13:53:28 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/StocksApp_Whole/Scripts/JavaScript.s0lfqvqvxs.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Scripts\JavaScript.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"s0lfqvqvxs"},{"Name":"integrity","Value":"sha256-1FGuiXQBzWOsugZ2WFFOsTvb218dlDOQxTBbLakfqn0="},{"Name":"label","Value":"_content/StocksApp_Whole/Scripts/JavaScript.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1867"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00221FGuiXQBzWOsugZ2WFFOsTvb218dlDOQxTBbLakfqn0=\u0022"},{"Name":"Last-Modified","Value":"Sat, 19 Oct 2024 13:53:28 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/StocksApp_Whole/StyleSheet.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\StyleSheet.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-iDdvFBO4c05TYgSBuiYQLdgS6xzlYw3EuJFvzcKkqBg="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"8423"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022iDdvFBO4c05TYgSBuiYQLdgS6xzlYw3EuJFvzcKkqBg=\u0022"},{"Name":"Last-Modified","Value":"Tue, 08 Oct 2024 13:48:28 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/StocksApp_Whole/StyleSheet.okagqheipi.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\StyleSheet.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"okagqheipi"},{"Name":"integrity","Value":"sha256-iDdvFBO4c05TYgSBuiYQLdgS6xzlYw3EuJFvzcKkqBg="},{"Name":"label","Value":"_content/StocksApp_Whole/StyleSheet.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"8423"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022iDdvFBO4c05TYgSBuiYQLdgS6xzlYw3EuJFvzcKkqBg=\u0022"},{"Name":"Last-Modified","Value":"Tue, 08 Oct 2024 13:48:28 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

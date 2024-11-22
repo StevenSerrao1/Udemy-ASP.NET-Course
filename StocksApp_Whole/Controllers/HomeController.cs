@@ -28,26 +28,15 @@ namespace StocksApp_Whole.Controllers
         }
 
         [Route("/")]
-        public async Task<IActionResult> Index()
-        {
-            // Load default stock info for non-empty home page
-            StockViewModel fullStock = await _stocksService.GetStockInfo("MSFT");
-
-            // Register current URL in ViewBag
-            ViewBag.CurrentUrl = "~/Trade/Index";
-            ViewBag.FinnhubToken = _configuration["FinnhubToken"];
-
-            // Return view with model data
-            return View(fullStock);
-        }
-
-        [Route("[action]/{stockSymbol?}")]
         public async Task<IActionResult> Index(string? stockSymbol)
         {
-            // Populate fullStock with stockinfo
+            // Set the default stockSymbol to "MSFT" if none is provided
+            stockSymbol ??= "MSFT";
+
+            // Populate fullStock with stock info
             StockViewModel fullStock = await _stocksService.GetStockInfo(stockSymbol);
 
-            // Register current URL in ViewBag
+            // Register current URL and Finnhub token in ViewBag
             ViewBag.CurrentUrl = "~/Trade/Index";
             ViewBag.FinnhubToken = _configuration["FinnhubToken"];
 

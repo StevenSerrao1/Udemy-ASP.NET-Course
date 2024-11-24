@@ -13,6 +13,17 @@ Console.WriteLine($"Current Environment: {builder.Environment.EnvironmentName}")
 // Enable SERVICE that allows using controllers with views
 builder.Services.AddControllersWithViews();
 
+//// Configure logging provider / Old way of doing it (pre .NET 7)
+//builder.Host.ConfigureLogging(logging => 
+//{
+//    logging.ClearProviders();
+//    logging.AddConsole();
+//});
+
+// Configure logging provider
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
+
 // Add services into the IoC container to use them
 builder.Services.AddScoped<IPersonsRepository, PersonsRepository>();
 builder.Services.AddScoped<ICountriesRepository, CountriesRepository>();
@@ -42,6 +53,11 @@ if(builder.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 }
 
+app.Logger.LogDebug("Debug log message");
+app.Logger.LogInformation("Information log message");
+app.Logger.LogWarning("Warning log message");
+app.Logger.LogError("Error log message");
+app.Logger.LogCritical("Critical log message");
 
 // Enable features such as static file use, routing and controller mapping
 app.UseStaticFiles();

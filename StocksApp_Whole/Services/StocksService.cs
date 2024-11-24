@@ -6,17 +6,18 @@ using StocksApp_Whole.ViewModels;
 using System.Globalization;
 using Microsoft.EntityFrameworkCore;
 using StocksApp_Whole.Services;
+using Services;
 
 namespace StocksApp_Whole.Services
 {
     public class StocksService : IStocksService
     {
 
-        private readonly StockMarketDbContext _buyOrdersDb;
-        private readonly StockMarketDbContext _sellOrdersDb;
+        private readonly ApplicationDbContext _buyOrdersDb;
+        private readonly ApplicationDbContext _sellOrdersDb;
         private readonly FinnhubService _finnhubService;
 
-        public StocksService(StockMarketDbContext sellOrders, StockMarketDbContext buyOrders, FinnhubService finnhub)
+        public StocksService(ApplicationDbContext sellOrders, ApplicationDbContext buyOrders, FinnhubService finnhub)
         {
             _buyOrdersDb = buyOrders;
             _sellOrdersDb = sellOrders;

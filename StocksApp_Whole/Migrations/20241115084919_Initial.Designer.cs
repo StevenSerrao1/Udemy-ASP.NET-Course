@@ -11,7 +11,7 @@ using StocksApp_Whole.Entities;
 
 namespace StocksApp_Whole.Migrations
 {
-    [DbContext(typeof(StockMarketDbContext))]
+    [DbContext(typeof(ApplicationDbContext))]
     [Migration("20241115084919_Initial")]
     partial class Initial
     {

@@ -7,6 +7,7 @@ using Moq;
 using Xunit.Abstractions;
 using Xunit.Sdk;
 using StocksApp_Whole.ViewModels;
+using Services;
 
 namespace StocksApp_Whole.UnitTests
 {
@@ -15,8 +16,8 @@ namespace StocksApp_Whole.UnitTests
         private readonly IStocksService _stocksService;
         private readonly ITestOutputHelper _outputHelper;
         private readonly Mock<FinnhubService> _finnhubServiceMock;
-        private readonly StockMarketDbContext _stocksDb;
-        private readonly StockMarketDbContext _stocksDb2;
+        private readonly ApplicationDbContext _stocksDb;
+        private readonly ApplicationDbContext _stocksDb2;
 
         public StocksServiceTest(ITestOutputHelper testOutputHelper)
         {

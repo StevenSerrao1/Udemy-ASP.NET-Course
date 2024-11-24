@@ -1,2 +1,0 @@
-wwwroot\Scripts\JavaScript.js
-wwwroot\StyleSheet.css

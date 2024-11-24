@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ServiceContracts
+﻿namespace RepositoryContracts
 {
     /// <summary>
-    /// Represents a service that makes HTTP requests to finnhub.io
+    /// Represents a repository that makes HTTP requests to finnhub.io
     /// </summary>
-    public interface IFinnhubService
+    public interface IFinnhubRepository
     {
         /// <summary>
         /// Returns company details such as company country, currency, exchange, IPO date, logo image, market capitalization, name of the company, phone number etc.

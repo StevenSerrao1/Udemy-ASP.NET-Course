@@ -8,6 +8,7 @@ namespace StocksApp_Whole.Models
     public class OrdersModel
     {
         public List<BuyOrderResponse> BuyOrders { get; set; } = new List<BuyOrderResponse>();
+        public string StockSymbol { get; set; }
         public List<SellOrderResponse> SellOrders { get; set; } = new List<SellOrderResponse>();
     }
 }

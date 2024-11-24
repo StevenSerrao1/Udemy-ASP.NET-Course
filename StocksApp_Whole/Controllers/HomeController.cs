@@ -8,6 +8,7 @@ using StocksApp_Whole.Options;
 using StocksApp_Whole.ViewModels;
 using StocksApp_Whole.DTO;
 using System.Diagnostics;
+using Services;
 
 namespace StocksApp_Whole.Controllers
 {

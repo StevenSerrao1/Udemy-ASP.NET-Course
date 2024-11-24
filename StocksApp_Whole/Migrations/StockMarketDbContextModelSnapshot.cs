@@ -10,7 +10,7 @@ using StocksApp_Whole.Entities;
 
 namespace StocksApp_Whole.Migrations
 {
-    [DbContext(typeof(StockMarketDbContext))]
+    [DbContext(typeof(ApplicationDbContext))]
     partial class StockMarketDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

@@ -1177,6 +1177,19 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "Serilog/4.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Serilog.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Serilog.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.ClientModel/1.0.0": {
         "type": "package",
         "dependencies": {
@@ -4100,6 +4113,29 @@
         "rotativa.aspnetcore.nuspec"
       ]
     },
+    "Serilog/4.1.0": {
+      "sha512": "u1aZI8HZ62LWlq5dZLFwm6jMax/sUwnWZSw5lkPsCt518cJBxFKoNmc7oSxe5aA5BgSkzy9rzwFGR/i/acnSPw==",
+      "type": "package",
+      "path": "serilog/4.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net462/Serilog.dll",
+        "lib/net462/Serilog.xml",
+        "lib/net471/Serilog.dll",
+        "lib/net471/Serilog.xml",
+        "lib/net6.0/Serilog.dll",
+        "lib/net6.0/Serilog.xml",
+        "lib/net8.0/Serilog.dll",
+        "lib/net8.0/Serilog.xml",
+        "lib/netstandard2.0/Serilog.dll",
+        "lib/netstandard2.0/Serilog.xml",
+        "serilog.4.1.0.nupkg.sha512",
+        "serilog.nuspec"
+      ]
+    },
     "System.ClientModel/1.0.0": {
       "sha512": "I3CVkvxeqFYjIVEP59DnjbeoGNfo/+SZrCLpRz2v/g0gpCHaEMPtWSY0s9k/7jR1rAsLNg2z2u1JRB76tPjnIw==",
       "type": "package",
@@ -5451,6 +5487,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.0",
       "Repositories >= 1.0.0",
       "Rotativa.AspNetCore >= 1.4.0",
+      "Serilog >= 4.1.0",
       "ServiceContracts >= 1.0.0",
       "Services >= 1.0.0"
     ]
@@ -5536,6 +5573,10 @@
           "Rotativa.AspNetCore": {
             "target": "Package",
             "version": "[1.4.0, )"
+          },
+          "Serilog": {
+            "target": "Package",
+            "version": "[4.1.0, )"
           }
         },
         "imports": [

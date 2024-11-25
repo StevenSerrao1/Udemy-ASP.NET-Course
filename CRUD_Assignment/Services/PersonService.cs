@@ -17,6 +17,7 @@ using System.Globalization;
 using CsvHelper.Configuration;
 using RepositoryContracts;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace Services
 {
@@ -24,11 +25,13 @@ namespace Services
     {
         private readonly IPersonsRepository _personsRepo;
         private readonly ICountriesService _countriesService;
+        private readonly ILogger<PersonService> _logger;
 
-        public PersonService(IPersonsRepository dbContext, ICountriesService countriesService)
+        public PersonService(IPersonsRepository dbContext, ICountriesService countriesService, ILogger<PersonService> logger)
         {
             _personsRepo = dbContext;
             _countriesService = countriesService;
+            _logger = logger;
         }
 
         public async Task<PersonResponse> AddPerson(PersonAddRequest personAddRequest)
@@ -166,6 +169,9 @@ namespace Services
 
         public async Task<List<PersonResponse>> GetFilteredPersons(string searchBy, string? searchString)
         {
+            // Leave logging message of Info type
+            _logger.LogInformation("GetFilteredPersons method of PersonService");
+
             // Get the default list of all people
             List<PersonResponse> allPeople = await GetAllPersons();
 
@@ -225,6 +231,9 @@ namespace Services
 
         public async Task<List<PersonResponse>> GetSortedPersons(List<PersonResponse> allPersons, string sortBy, SortOrderEnum sortOrder)
         {
+            // Leave logging message of Info type
+            _logger.LogInformation("GetSortedPersons method of PersonService");
+
             // If sortBy param is empty/null, return allPersons as is
             if (string.IsNullOrEmpty(sortBy)) return allPersons;
 

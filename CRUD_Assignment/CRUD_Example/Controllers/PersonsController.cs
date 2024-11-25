@@ -15,17 +15,22 @@ namespace CRUD_Example.Controllers
         // private fields to reference services
         private readonly ICountriesService _countriesService;
         private readonly IPersonService _personsService;
+        private readonly ILogger<PersonsController> _logger;
 
-        public PersonsController(IPersonService person, ICountriesService country)
+        public PersonsController(IPersonService person, ICountriesService country, ILogger<PersonsController> logger)
         {
             _personsService = person;
             _countriesService = country;
+            _logger = logger;
         }
 
         [Route("[action]")]
         [Route("/")]
         public async Task<IActionResult> Index(string searchBy, string? searchString, string sortBy = nameof(PersonResponse.PersonName), SortOrderEnum sortOrder = SortOrderEnum.Ascending)
         {
+            _logger.LogInformation("Index Action Method of PersonsController");
+
+            _logger.LogDebug($"searchBy: {searchBy}, searchString: {searchString}, sortBy: {sortBy}, sortOrder: {sortOrder}");
             // Search
             ViewBag.SearchFields = new Dictionary<string, string>()
             {

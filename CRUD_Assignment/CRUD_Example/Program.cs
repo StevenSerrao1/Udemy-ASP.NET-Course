@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Entities;
 using RepositoryContracts;
 using Repositories;
+using Microsoft.AspNetCore.HttpLogging;
 
 // Create builder 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +13,10 @@ Console.WriteLine($"Current Environment: {builder.Environment.EnvironmentName}")
 
 // Enable SERVICE that allows using controllers with views
 builder.Services.AddControllersWithViews();
+builder.Services.AddHttpLogging(options =>
+{
+    options.LoggingFields = HttpLoggingFields.RequestPropertiesAndHeaders | HttpLoggingFields.ResponsePropertiesAndHeaders;
+});
 
 //// Configure logging provider / Old way of doing it (pre .NET 7)
 //builder.Host.ConfigureLogging(logging => 
@@ -21,8 +26,8 @@ builder.Services.AddControllersWithViews();
 //});
 
 // Configure logging provider
-builder.Logging.ClearProviders();
-builder.Logging.AddConsole();
+//builder.Logging.ClearProviders();
+//builder.Logging.AddConsole();
 
 // Add services into the IoC container to use them
 builder.Services.AddScoped<IPersonsRepository, PersonsRepository>();
@@ -53,14 +58,15 @@ if(builder.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 }
 
-app.Logger.LogDebug("Debug log message");
-app.Logger.LogInformation("Information log message");
-app.Logger.LogWarning("Warning log message");
-app.Logger.LogError("Error log message");
-app.Logger.LogCritical("Critical log message");
+//app.Logger.LogDebug("Debug log message");
+//app.Logger.LogInformation("Information log message");
+//app.Logger.LogWarning("Warning log message");
+//app.Logger.LogError("Error log message");
+//app.Logger.LogCritical("Critical log message");
 
-// Enable features such as static file use, routing and controller mapping
+// Enable features such as HTTPLOGGING, static file use, routing and controller mapping
 app.UseStaticFiles();
+app.UseHttpLogging();
 app.UseRouting();
 app.MapControllers();
 

@@ -43,10 +43,10 @@ namespace Entities
             }
                 
             // Print values for verification - not necessary but nice
-            foreach (var person in persons!)
-            {
-                Console.WriteLine($"PersonName: {person.PersonName}, PersonId: {person.PersonId}, CountryId: {person.CountryId}");
-            }
+            //foreach (var person in persons!)
+            //{
+            //    Console.WriteLine($"PersonName: {person.PersonName}, PersonId: {person.PersonId}, CountryId: {person.CountryId}");
+            //}
 
             //
             // F L U E N T API

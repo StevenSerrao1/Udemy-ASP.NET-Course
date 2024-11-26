@@ -5,9 +5,17 @@ using Entities;
 using RepositoryContracts;
 using Repositories;
 using Microsoft.AspNetCore.HttpLogging;
+using Serilog;
 
 // Create builder 
 var builder = WebApplication.CreateBuilder(args);
+
+// SERILOG // HOW TO ENABLE AND IMPLEMENT (see 'appsettings.json' and 'appsettings.development.json')
+builder.Host.UseSerilog((HostBuilderContext context, IServiceProvider services, LoggerConfiguration loggerconf) =>
+{
+    loggerconf.ReadFrom.Configuration(context.Configuration);
+    loggerconf.ReadFrom.Services(services);
+});
 
 Console.WriteLine($"Current Environment: {builder.Environment.EnvironmentName}");
 
@@ -18,16 +26,6 @@ builder.Services.AddHttpLogging(options =>
     options.LoggingFields = HttpLoggingFields.RequestPropertiesAndHeaders | HttpLoggingFields.ResponsePropertiesAndHeaders;
 });
 
-//// Configure logging provider / Old way of doing it (pre .NET 7)
-//builder.Host.ConfigureLogging(logging => 
-//{
-//    logging.ClearProviders();
-//    logging.AddConsole();
-//});
-
-// Configure logging provider
-//builder.Logging.ClearProviders();
-//builder.Logging.AddConsole();
 
 // Add services into the IoC container to use them
 builder.Services.AddScoped<IPersonsRepository, PersonsRepository>();
@@ -58,11 +56,6 @@ if(builder.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 }
 
-//app.Logger.LogDebug("Debug log message");
-//app.Logger.LogInformation("Information log message");
-//app.Logger.LogWarning("Warning log message");
-//app.Logger.LogError("Error log message");
-//app.Logger.LogCritical("Critical log message");
 
 // Enable features such as HTTPLOGGING, static file use, routing and controller mapping
 app.UseStaticFiles();
